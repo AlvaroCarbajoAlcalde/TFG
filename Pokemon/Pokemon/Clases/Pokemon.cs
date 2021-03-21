@@ -155,8 +155,7 @@ namespace Pokemon
         {
             new System.Threading.Thread(() =>
             {
-                try { new SoundPlayer("Sonido\\Pokemon\\Grito_de_" + nombrePokedex + ".wav").PlaySync(); }
-                catch (Exception) { }
+                new SoundPlayer($@"Sonido\Grito\{fkPokedex}.wav").PlaySync();
             }).Start();
         }
 

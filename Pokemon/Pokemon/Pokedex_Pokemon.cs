@@ -230,15 +230,9 @@ namespace Pokemon
 
         private void ButtonGrito_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //Reproducimos audio pokemon
-                SoundPlayer soundPlayer = new SoundPlayer("Sonido\\Pokemon\\Grito_de_" + labelNombrePokemon.Text + ".wav");
-                soundPlayer.Play();
-            }
-            catch (Exception)
-            {
-            }
+            //Reproducimos audio pokemon
+            SoundPlayer soundPlayer = new SoundPlayer($@"Sonido\Grito\{idActual}.wav");
+            soundPlayer.Play();
         }
 
         #endregion
