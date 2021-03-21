@@ -116,7 +116,7 @@ namespace Pokemon
             Entrenador entrenadorRandom = new Entrenador();
             listaEntrenadores[idActual - 1].GenerarEquipo();
             listaEntrenadores[idActual - 1].GenerarBolsa();
-            new Form_Combate(listaEntrenadores[idActual - 1], entrenadorRandom, null, true).Show();
+            new Form_Combate(this, listaEntrenadores[idActual - 1], entrenadorRandom, null, true).Show();
         }
 
         private void BtnSiguiente_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace Pokemon
             Entrenador entrenadorRandom = new Entrenador();
             listaEntrenadores[idActual - 1].GenerarEquipo();
             listaEntrenadores[idActual - 1].GenerarBolsa();
-            new Form_Combate(listaEntrenadores[idActual - 1], entrenadorRandom).Show();
+            new Form_Combate(this, listaEntrenadores[idActual - 1], entrenadorRandom).Show();
         }
 
         private void ImagenEntrenador_Click(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace Pokemon
 
         private void RogueLike_Click(object sender, EventArgs e)
         {
-            new Form_RogueLike().Show();
+            new Form_RogueLike(this).Show();
         }
 
         private void MenuLogCombate_Click(object sender, EventArgs e)
@@ -188,7 +188,7 @@ namespace Pokemon
 
         private void ElegirRivalClick(object sender, EventArgs e)
         {
-            new Form_MenuCombate(listaEntrenadores[idActual - 1]).Show();
+            new Form_MenuCombate(this, listaEntrenadores[idActual - 1]).Show();
         }
 
         #endregion

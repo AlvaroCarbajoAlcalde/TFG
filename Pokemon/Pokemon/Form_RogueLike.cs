@@ -23,12 +23,15 @@ namespace Pokemon
 
         private List<int> listaNivel1, listaNivel2, listaNivel3, listaNivel4, listaTodos;
         private int[] listaRivalesNvl1, listaRivalesNvl2, listaRivalesNvl3, listaRivalesNvl4, listaRivalesLegendarios;
+
+        private Form_Inicio inicio;
         #endregion
 
         #region Constructor
 
-        public Form_RogueLike()
+        public Form_RogueLike(Form_Inicio inicio)
         {
+            this.inicio = inicio;
             InitializeComponent();
             numCombate = 1;
             auxEquipo = 0;
@@ -286,7 +289,7 @@ namespace Pokemon
             }
 
             entrenador.GenerarEquipo();
-            Form_Combate combate = new Form_Combate(entrenador, entrenadorRival, this);
+            Form_Combate combate = new Form_Combate(inicio, entrenador, entrenadorRival, this);
             combate.Show();
             Hide();
             combate.Text = $"Combate {numCombate}";

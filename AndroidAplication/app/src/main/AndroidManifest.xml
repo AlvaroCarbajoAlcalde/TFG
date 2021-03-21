@@ -17,10 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PokedexListaActivity"></activity>
         <activity
             android:name=".CombateActivity"
             android:label="@string/title_activity_combate"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PokedexActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

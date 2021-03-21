@@ -12,7 +12,7 @@ namespace Pokemon.TFG
         #region Variables
 
         private static readonly int TAM_BUFFER = 1024;
-        private static readonly int PUERTO_RECIBIR = 6060;
+        public static readonly int PUERTO_RECIBIR = 6060;
         private static readonly int PUERTO_ENVIAR = 6061;
         private static readonly string IP_MOVIL = "192.168.1.128";
 
@@ -58,19 +58,16 @@ namespace Pokemon.TFG
 
         #region Servidor
 
-        public static void Servidor(Form_Combate form_Combate)
+        public static void Servidor(Form_Combate form_Combate, TcpListener server)
         {
             try
             {
-                TcpListener server = new TcpListener(IPAddress.Any, PUERTO_RECIBIR);
-
                 server.Start();
 
-                // Buffer for reading data
+                //Buffer
                 byte[] bytes = new byte[256];
                 string data = null;
 
-                // Enter the listening loop.
                 while (true)
                 {
                     TcpClient client = server.AcceptTcpClient();
@@ -78,31 +75,37 @@ namespace Pokemon.TFG
                     NetworkStream stream = client.GetStream();
                     int i;
 
-                    // Loop to receive all the data sent by the client.
+                    //Recibir datos
                     while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
                     {
-                        // Translate data bytes to a ASCII string.
                         data = Encoding.ASCII.GetString(bytes, 0, i);
-                        Console.WriteLine("Received: {0}", data);
-
-                        // Process the data sent by the client.
                         data = data.ToUpper();
 
                         byte[] msg = Encoding.ASCII.GetBytes(data);
 
-                        // Send back a response.
+                        //Respuesta.
                         stream.Write(msg, 0, msg.Length);
-                        form_Combate.ataqueSeleccionadoMultiplayer = int.Parse(data.Substring(0,1));
-                        Console.WriteLine("Sent: {0}", data);
+
+                        //Seleccionamos el tipo de accion dependiendo del dato recibido
+                        form_Combate.multiplayer = true;
+                        int ataque = 0;
+
+                        //Ataque
+                        if (int.TryParse(data.Substring(0, 1), out ataque))
+                            form_Combate.ataqueSeleccionadoMultiplayer = ataque;
+
+                        //Salir multijugador
+                        if (data.ToUpper().Contains("STOP"))
+                            form_Combate.multiplayer = false;
                     }
 
-                    // Shutdown and end connection
+                    //Cerrar cliente
                     client.Close();
                 }
             }
             catch (Exception e)
             {
-                Console.WriteLine("ServerException: {0}", e);
+                Console.WriteLine("Excepcion Servidor: {0}", e);
             }
         }
 

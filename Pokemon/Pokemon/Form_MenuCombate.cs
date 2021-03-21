@@ -8,9 +8,11 @@ namespace Pokemon
     public partial class Form_MenuCombate : Form
     {
         public Entrenador entrenador, rival;
+        private Form_Inicio inicio;
 
-        public Form_MenuCombate(Entrenador entrenador)
+        public Form_MenuCombate(Form_Inicio inicio, Entrenador entrenador)
         {
+            this.inicio = inicio;
             InitializeComponent();
             rival = new Entrenador();
             picBoxEntrenadorRival.Image = rival.imageFront;
@@ -39,7 +41,7 @@ namespace Pokemon
         {
             entrenador.GenerarEquipo();
             entrenador.GenerarBolsa();
-            new Form_Combate(entrenador, rival).Show();
+            new Form_Combate(inicio, entrenador, rival).Show();
             Close();
         }
     }

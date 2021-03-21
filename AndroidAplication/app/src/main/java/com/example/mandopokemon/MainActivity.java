@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btnCombate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Client.enviarMensaje("START");
                 Intent intent = new Intent (v.getContext(), CombateActivity.class);
                 startActivityForResult(intent, 0);
             }
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         btnPokedex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (v.getContext(), PokedexActivity.class);
+                Intent intent = new Intent (v.getContext(), PokedexListaActivity.class);
                 startActivityForResult(intent, 0);
             }
         });

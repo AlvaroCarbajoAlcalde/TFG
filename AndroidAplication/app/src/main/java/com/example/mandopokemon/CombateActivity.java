@@ -14,6 +14,7 @@ import androidx.appcompat.content.res.AppCompatResources;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.w3c.dom.Document;
@@ -45,8 +46,11 @@ public class CombateActivity extends AppCompatActivity {
     //Variables
     private Pokemon[] pokemonsLuchando;
     private Button btnMov1, btnMov2, btnMov3, btnMov4;
-    private TextView tvPokFront, tvPokBack, tvPokFrontVida, tvPokBackVida;
+    private TextView tvPokFront, tvPokBack, tvPokFrontVida, tvPokBackVida, txtViewEspera;
     private ImageView ivPokFront, ivPokBack;
+    private LinearLayout layoutCombate;
+    private Thread hiloServidor;
+    private ServerSocket server;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +61,9 @@ public class CombateActivity extends AppCompatActivity {
 
         //Inicializamos componentes
         initComponents();
+
+        //Mostramos espera
+        layoutCombate.setVisibility(View.GONE);
 
         //Abrimos servidor
         startServerSocket();
@@ -84,6 +91,9 @@ public class CombateActivity extends AppCompatActivity {
         ivPokBack = findViewById(R.id.imagePokemonBack);
         ivPokFront = findViewById(R.id.imagePokemonFront);
 
+        //Texto de espera
+        txtViewEspera = findViewById(R.id.txtViewEspera);
+
         //Listeners Botones ataques
         btnMov1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +119,9 @@ public class CombateActivity extends AppCompatActivity {
                 Client.enviarMensaje("4");
             }
         });
+
+        //Layout
+        layoutCombate = findViewById(R.id.layoutCombate);
     }
 
     /**
@@ -116,8 +129,7 @@ public class CombateActivity extends AppCompatActivity {
      */
     private void startServerSocket() {
 
-        Thread thread = new Thread(new Runnable() {
-            boolean end = false;
+        hiloServidor = new Thread(new Runnable() {
             Socket connection;
 
             DataInputStream dataInputStream;
@@ -131,8 +143,8 @@ public class CombateActivity extends AppCompatActivity {
             public void run() {
                 try {
                     System.out.println("Servidor Iniciado.");
-                    ServerSocket server = new ServerSocket(Configuracion.PUERTO_SERVIDOR);
-                    while (!end) {
+                    server = new ServerSocket(Configuracion.PUERTO_SERVIDOR);
+                    while (true) {
                         //Aceptar conexiones
                         connection = server.accept();
 
@@ -163,18 +175,19 @@ public class CombateActivity extends AppCompatActivity {
                                 //Cambio botones
                                 setDatosBotones();
                                 setDatosPokemons();
+                                txtViewEspera.setVisibility(View.GONE);
+                                layoutCombate.setVisibility(View.VISIBLE);
                             }
                         });
 
                     }
-                    server.close();
                 } catch (IOException e) {
-                    System.out.println("ERROR SERVIDOR TCP: " + e.getMessage());
-                    e.printStackTrace();
+                    if (e.getMessage() != "Socket closed")
+                        System.out.println("ERROR SERVIDOR TCP: " + e.getMessage());
                 }
             }
         });
-        thread.start();
+        hiloServidor.start();
     }
 
     /**
@@ -381,6 +394,20 @@ public class CombateActivity extends AppCompatActivity {
         }
         myDrawable.setBounds(0, 0, 110, 110);
         button.setCompoundDrawables(myDrawable, null, null, null);
+    }
+
+    @Override
+    public void onBackPressed() {
+        try {
+            //Cerramos el servidor al salir
+            hiloServidor.interrupt();
+            server.close();
+            System.out.println("Servidor Cerrado");
+            Client.enviarMensaje("STOP");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        super.onBackPressed();
     }
 
 }

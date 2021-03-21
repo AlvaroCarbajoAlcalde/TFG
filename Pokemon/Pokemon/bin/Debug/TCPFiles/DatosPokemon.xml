@@ -5,98 +5,98 @@
 
 	<Pokemon>
 
-			<IdPok>1101</IdPok>
-			<NumPokedex>282</NumPokedex>
-			<Nombre>Gardevoir</Nombre>
+			<IdPok>1065</IdPok>
+			<NumPokedex>169</NumPokedex>
+			<Nombre>Crobat</Nombre>
 
-			<VidaMax>151</VidaMax>
+			<VidaMax>168</VidaMax>
 
-			<VidaAct>67</VidaAct>
+			<VidaAct>168</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>131</MovId>
-				<MovNombre>Hipnosis</MovNombre>
-				<MovTipo>13</MovTipo>
-				<PP>18</PP>
-				<PPmax>20</PPmax>
+				<MovId>21</MovId>
+				<MovNombre>Rayo confuso</MovNombre>
+				<MovTipo>6</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>126</MovId>
-				<MovNombre>Amnesia</MovNombre>
-				<MovTipo>13</MovTipo>
-				<PP>20</PP>
-				<PPmax>20</PPmax>
+				<MovId>156</MovId>
+				<MovNombre>Tóxico</MovNombre>
+				<MovTipo>17</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>137</MovId>
-				<MovNombre>Psiquico</MovNombre>
-				<MovTipo>13</MovTipo>
-				<PP>7</PP>
-				<PPmax>10</PPmax>
+				<MovId>299</MovId>
+				<MovNombre>Puya Nociva</MovNombre>
+				<MovTipo>17</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>128</MovId>
-				<MovNombre>Comesueños</MovNombre>
-				<MovTipo>13</MovTipo>
+				<MovId>163</MovId>
+				<MovNombre>Vuelo</MovNombre>
+				<MovTipo>18</MovTipo>
 				<PP>15</PP>
 				<PPmax>15</PPmax>
 			</Mov4>
 
-			<Tipo1>13</Tipo1>
-			<Tipo2>0</Tipo2>
+			<Tipo1>17</Tipo1>
+			<Tipo2>18</Tipo2>
 
 	</Pokemon>
 
 	<Pokemon>
 
-			<IdPok>70</IdPok>
-			<NumPokedex>449</NumPokedex>
-			<Nombre>Hippopotas</Nombre>
+			<IdPok>606</IdPok>
+			<NumPokedex>303</NumPokedex>
+			<Nombre>Mawile</Nombre>
 
-			<VidaMax>151</VidaMax>
+			<VidaMax>133</VidaMax>
 
-			<VidaAct>39</VidaAct>
+			<VidaAct>133</VidaAct>
 
-			<Estado>4</Estado>
+			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>143</MovId>
-				<MovNombre>Ataque arena</MovNombre>
-				<MovTipo>11</MovTipo>
+				<MovId>294</MovId>
+				<MovNombre>Castigo</MovNombre>
+				<MovTipo>15</MovTipo>
 				<PP>15</PP>
 				<PPmax>15</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>97</MovId>
-				<MovNombre>Placaje</MovNombre>
-				<MovTipo>11</MovTipo>
-				<PP>34</PP>
-				<PPmax>35</PPmax>
+				<MovId>236</MovId>
+				<MovNombre>Camelo</MovNombre>
+				<MovTipo>15</MovTipo>
+				<PP>15</PP>
+				<PPmax>15</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>239</MovId>
-				<MovNombre>Disparo Lodo</MovNombre>
-				<MovTipo>16</MovTipo>
+				<MovId>202</MovId>
+				<MovNombre>Triturar</MovNombre>
+				<MovTipo>15</MovTipo>
 				<PP>15</PP>
 				<PPmax>15</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>144</MovId>
-				<MovNombre>Excavar</MovNombre>
-				<MovTipo>16</MovTipo>
-				<PP>9</PP>
-				<PPmax>10</PPmax>
+				<MovId>166</MovId>
+				<MovNombre>Garra Metal</MovNombre>
+				<MovTipo>1</MovTipo>
+				<PP>35</PP>
+				<PPmax>35</PPmax>
 			</Mov4>
 
-			<Tipo1>16</Tipo1>
+			<Tipo1>1</Tipo1>
 			<Tipo2>0</Tipo2>
 
 	</Pokemon>

@@ -8,7 +8,19 @@
     android:background="@android:color/background_light"
     tools:context=".CombateActivity">
 
+    <TextView
+        android:id="@+id/txtViewEspera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Esperando Conexion"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <LinearLayout
+        android:id="@+id/layoutCombate"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="24dp"
@@ -44,7 +56,8 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:text="Umbreon"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/txtViewVidaFront"
@@ -53,7 +66,8 @@
                     android:layout_marginRight="20dp"
                     android:layout_weight="1"
                     android:text="134 / 432"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 
@@ -98,7 +112,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="Mr. PolloFuego"
-                    android:textAlignment="gravity" />
+                    android:textAlignment="gravity"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/txtViewVidaBack"
@@ -107,7 +122,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_weight="1"
                     android:text="34 / 123"
-                    android:textAlignment="gravity" />
+                    android:textAlignment="gravity"
+                    android:textSize="16sp" />
 
             </LinearLayout>
 

@@ -5,6 +5,8 @@ using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -15,8 +17,9 @@ namespace Pokemon
 
         #region Propiedades
 
+        private TcpListener server;
         public int ataqueSeleccionadoMultiplayer;
-        private bool multiplayer;
+        public bool multiplayer;
         private Random random;
         private UC_PokemonRestantes indicadorRestantesTu, indicadorRestantesRival;
         public int numTurnos, ticks;
@@ -34,19 +37,24 @@ namespace Pokemon
         private bool rendido;
         private Form_RogueLike formRogueLike;
         private string nombreGanador;
+        private bool endEnvio;
+        private Form_Inicio inicio;
 
         #endregion
 
-        #region Constructores
+        #region Constructor
 
-        public Form_Combate(Entrenador entrenadorTu, Entrenador entrenadorRival, Form_RogueLike formRogueLike = null, bool multiplayer = false)
+        public Form_Combate(Form_Inicio inicio, Entrenador entrenadorTu, Entrenador entrenadorRival, Form_RogueLike formRogueLike = null, bool multiplayer = false)
         {
+            this.inicio = inicio;
+            inicio.Visible = false;
             InitializeComponent();
 
             //TCP SERVER
             new Thread(() =>
             {
-                TCP.Servidor(this);
+                server = new TcpListener(IPAddress.Any, TCP.PUERTO_RECIBIR);
+                TCP.Servidor(this, server);
             }).Start();
 
             this.multiplayer = multiplayer;
@@ -328,7 +336,7 @@ namespace Pokemon
                     if (RivalSacaPokemon() == null && !rendido)
                     {
                         nombreGanador = entrenadorTu.nombre;
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\victoria.wav").PlaySync(); }).Start();
+                        new Thread(() => { new SoundPlayer("Sonido\\Hit\\victoria.wav").PlaySync(); }).Start();
 
                         //Insertar datos base datos
                         sql = "UPDATE entrenador SET victorias=@vic WHERE id=@id";
@@ -355,7 +363,13 @@ namespace Pokemon
                         formRogueLike.CombateFinalizado(nombreGanador == entrenadorTu.nombre);
                     break;
                 default:
+                    //Matamos hilos
+                    server.Stop();
+                    server.Server.Close();
+                    endEnvio = true;
+                    inicio.Visible = true;
                     this.Close();
+                    this.Dispose();
                     break;
             }
             ticks++;
@@ -387,8 +401,18 @@ namespace Pokemon
                     menuBloqueado = false;
                     timerAnimacionInicial.Enabled = false;
                     //Si es multiplayer enviamos datos combate
-                    if (multiplayer)
-                        EnviarDatosMultijugador();
+                    new Thread(() =>
+                    {
+                        while (!endEnvio)
+                        {
+                            if (multiplayer)
+                            {
+                                XML.CrearXMLDatosCombate(pokemonBack, pokemonFront);
+                                TCP.EnviarTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
+                                Thread.Sleep(5000);
+                            }
+                        }
+                    }).Start();
                     break;
             }
             ticks++;
@@ -498,9 +522,10 @@ namespace Pokemon
             //Si es multijugador se recoge el dato del ataque elegido
             if (multiplayer)
             {
+                int timeout = 0;
                 while (true)
                 {
-                    Console.WriteLine("____________________________Multiplayer waiting______________________________________");
+                    timeout++;
                     switch (ataqueSeleccionadoMultiplayer)
                     {
                         case 1:
@@ -515,6 +540,8 @@ namespace Pokemon
                             Thread.Sleep(3000);
                             break;
                     }
+                    if (timeout > 8)
+                        return new Ataque(0);
                 }
             }
             //Si no es multijugador se devuelve un ataque aleatorio
