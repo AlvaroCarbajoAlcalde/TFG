@@ -3579,7 +3579,7 @@ namespace Pokemon
             return 5;
         }
 
-        public String MuestraEficacia(Ataque ataqueRealizado, Pokemon destino)
+        public string MuestraEficacia(Ataque ataqueRealizado, Pokemon destino)
         {
             switch (CalculoEficacia(ataqueRealizado, destino))
             {
@@ -3598,7 +3598,7 @@ namespace Pokemon
             }
         }
 
-        public Boolean EsCritico(EstadisticasActuales estadisticasActuales, double baseAtaque)
+        public bool EsCritico(EstadisticasActuales estadisticasActuales, double baseAtaque)
         {
             double probabilidad = baseAtaque;
             switch (estadisticasActuales.modificadorCritico)
@@ -3707,7 +3707,7 @@ namespace Pokemon
             return eficacia1 * eficacia2;
         }
 
-        public Boolean AciertaAtaque(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public bool AciertaAtaque(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
             //Para comesuegnos
             if (ataqueRealizado.ataqueID == AtaqueID.COMESUEGNOS && destino.estadisticasActuales.estadoActual != Estado.DORMIDO)
@@ -3759,7 +3759,7 @@ namespace Pokemon
             return false;
         }
 
-        public Boolean AciertaProbabilidad(double probabilidad)
+        public bool AciertaProbabilidad(double probabilidad)
         {
             if (random.NextDouble() <= probabilidad / (double)100)
                 return true;

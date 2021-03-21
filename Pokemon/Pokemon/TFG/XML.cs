@@ -12,10 +12,7 @@ namespace Pokemon.TFG
         public static readonly string RUTA_FICHERO_XML_POKEMON = "TCPFiles\\XML_Pokemons.XML";
         public static readonly string RUTA_FICHERO_DATOS_POKEMON = "TCPFiles\\DatosPokemon.xml";
 
-        private static readonly string CONSULTA_POKEMON =
-            "SELECT ID, NOMBRE, FK_TIPO1, FK_TIPO2, DESCRIPCION " +
-            "FROM POKEMON " +
-            "ORDER BY ID";
+        private static readonly string CONSULTA_POKEMON = "SELECT * FROM POKEMON ORDER BY ID";
 
         private static readonly string CABECERA_XML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>";
 
@@ -106,9 +103,12 @@ namespace Pokemon.TFG
 
                     file.WriteLine($"\t\t<IdPok>{reader.GetInt32(0)}</IdPok>");
                     file.WriteLine($"\t\t<Nombre>{reader.GetString(1)}</Nombre>");
-                    file.WriteLine($"\t\t<Tipo1>{reader.GetInt32(2)}</Tipo1>");
-                    file.WriteLine($"\t\t<Tipo2>{reader.GetInt32(3)}</Tipo2>");
-                    file.WriteLine($"\t\t<Descripcion>{reader.GetString(4)}</Descripcion>");
+                    file.WriteLine($"\t\t<Categoria>{reader.GetString(2)}</Categoria>");
+                    file.WriteLine($"\t\t<Tipo1>{reader.GetInt32(3)}</Tipo1>");
+                    file.WriteLine($"\t\t<Tipo2>{reader.GetInt32(4)}</Tipo2>");
+                    file.WriteLine($"\t\t<Descripcion>{reader.GetString(5)}</Descripcion>");
+                    file.WriteLine($"\t\t<Peso>{reader.GetString(6)}</Peso>");
+                    file.WriteLine($"\t\t<Altura>{reader.GetString(7)}</Altura>");
 
                     file.WriteLine("\t</Pokemon>\n");
                 }
@@ -117,9 +117,9 @@ namespace Pokemon.TFG
 
                 con.Close();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                Console.WriteLine("ERROR al crear XML de pokedex: " + e.Message);
             }
         }
 

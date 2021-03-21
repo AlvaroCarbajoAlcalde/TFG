@@ -5,99 +5,99 @@
 
 	<Pokemon>
 
-			<IdPok>693</IdPok>
-			<NumPokedex>361</NumPokedex>
-			<Nombre>Snorunt</Nombre>
+			<IdPok>1101</IdPok>
+			<NumPokedex>282</NumPokedex>
+			<Nombre>Gardevoir</Nombre>
 
-			<VidaMax>133</VidaMax>
+			<VidaMax>151</VidaMax>
 
-			<VidaAct>133</VidaAct>
+			<VidaAct>67</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>33</MovId>
-				<MovNombre>Ventisca</MovNombre>
-				<MovTipo>9</MovTipo>
-				<PP>5</PP>
-				<PPmax>5</PPmax>
+				<MovId>131</MovId>
+				<MovNombre>Hipnosis</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>18</PP>
+				<PPmax>20</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>28</MovId>
-				<MovNombre>Neblina</MovNombre>
-				<MovTipo>9</MovTipo>
-				<PP>30</PP>
-				<PPmax>30</PPmax>
+				<MovId>126</MovId>
+				<MovNombre>Amnesia</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>321</MovId>
-				<MovNombre>Chuzos</MovNombre>
-				<MovTipo>9</MovTipo>
-				<PP>15</PP>
-				<PPmax>15</PPmax>
+				<MovId>137</MovId>
+				<MovNombre>Psiquico</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>7</PP>
+				<PPmax>10</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>21</MovId>
-				<MovNombre>Rayo confuso</MovNombre>
-				<MovTipo>6</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
+				<MovId>128</MovId>
+				<MovNombre>Comesueños</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>15</PP>
+				<PPmax>15</PPmax>
 			</Mov4>
 
-			<Tipo1>9</Tipo1>
+			<Tipo1>13</Tipo1>
 			<Tipo2>0</Tipo2>
 
 	</Pokemon>
 
 	<Pokemon>
 
-			<IdPok>703</IdPok>
-			<NumPokedex>334</NumPokedex>
-			<Nombre>Altaria</Nombre>
+			<IdPok>70</IdPok>
+			<NumPokedex>449</NumPokedex>
+			<Nombre>Hippopotas</Nombre>
 
-			<VidaMax>158</VidaMax>
+			<VidaMax>151</VidaMax>
 
-			<VidaAct>158</VidaAct>
+			<VidaAct>39</VidaAct>
 
-			<Estado>0</Estado>
+			<Estado>4</Estado>
 
 			<Mov1>
-				<MovId>302</MovId>
-				<MovNombre>Tajo Aereo</MovNombre>
-				<MovTipo>18</MovTipo>
+				<MovId>143</MovId>
+				<MovNombre>Ataque arena</MovNombre>
+				<MovTipo>11</MovTipo>
 				<PP>15</PP>
 				<PPmax>15</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>206</MovId>
-				<MovNombre>Aerochorro</MovNombre>
-				<MovTipo>18</MovTipo>
-				<PP>5</PP>
-				<PPmax>5</PPmax>
+				<MovId>97</MovId>
+				<MovNombre>Placaje</MovNombre>
+				<MovTipo>11</MovTipo>
+				<PP>34</PP>
+				<PPmax>35</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>216</MovId>
-				<MovNombre>Danza Dragon</MovNombre>
-				<MovTipo>4</MovTipo>
-				<PP>20</PP>
-				<PPmax>20</PPmax>
+				<MovId>239</MovId>
+				<MovNombre>Disparo Lodo</MovNombre>
+				<MovTipo>16</MovTipo>
+				<PP>15</PP>
+				<PPmax>15</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>258</MovId>
-				<MovNombre>Cometa Draco</MovNombre>
-				<MovTipo>4</MovTipo>
-				<PP>5</PP>
-				<PPmax>5</PPmax>
+				<MovId>144</MovId>
+				<MovNombre>Excavar</MovNombre>
+				<MovTipo>16</MovTipo>
+				<PP>9</PP>
+				<PPmax>10</PPmax>
 			</Mov4>
 
-			<Tipo1>4</Tipo1>
-			<Tipo2>18</Tipo2>
+			<Tipo1>16</Tipo1>
+			<Tipo2>0</Tipo2>
 
 	</Pokemon>
 

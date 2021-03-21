@@ -8,15 +8,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -24,20 +20,33 @@
             android:id="@+id/txtViewNombre"
             android:layout_width="match_parent"
             android:layout_height="39dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
             android:text="Gliscor"
             android:textAlignment="center"
             android:textSize="30sp" />
 
+        <TextView
+            android:id="@+id/txtViewCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
         <ImageView
             android:id="@+id/imageViewPokemon"
             android:layout_width="match_parent"
-            android:layout_height="308dp"
+            android:layout_height="262dp"
+            android:padding="10dp"
             app:srcCompat="@mipmap/pokemon472" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <ImageView
@@ -45,6 +54,7 @@
                 android:layout_width="142dp"
                 android:layout_height="52dp"
                 android:layout_weight="1"
+                android:padding="5dp"
                 app:srcCompat="@mipmap/dragon" />
 
             <ImageView
@@ -52,8 +62,35 @@
                 android:layout_width="142dp"
                 android:layout_height="52dp"
                 android:layout_weight="1"
+                android:padding="5dp"
                 app:srcCompat="@mipmap/dragon" />
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtViewPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtViewAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <TextView
@@ -61,6 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_marginTop="15dp"
+            android:padding="10dp"
             android:text="TextView"
             android:textAlignment="center"
             android:textSize="18sp" />

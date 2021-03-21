@@ -11,7 +11,7 @@ namespace Pokemon
         private Label labelTexto;
         private Timer timerAnimacion;
         public string texto;
-        private int numTics, ticks;
+        private int ticks;
 
         #endregion
 
@@ -47,7 +47,6 @@ namespace Pokemon
         {
             this.texto = texto;
             labelTexto.Text = "";
-            numTics = texto.Length;
             ticks = 0;
             timerAnimacion.Enabled = true;
         }

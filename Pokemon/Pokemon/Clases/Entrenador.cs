@@ -95,7 +95,7 @@ namespace Pokemon
             rutaImagenFront = @"Img\Entrenadores\NoElegibles\" + nombre + ".png";
         }
 
-        public Entrenador(String nombre, int pok1, int pok2, int pok3, int pok4, int pok5, int pok6, String rutaImagenEntrenador)
+        public Entrenador(string nombre, int pok1, int pok2, int pok3, int pok4, int pok5, int pok6, string rutaImagenEntrenador)
         {
             random = new Random((int)System.DateTime.Now.Ticks);
             equipo = new Pokemon[6];
