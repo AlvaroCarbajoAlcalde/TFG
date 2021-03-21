@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF0000</color>
+    <color name="colorPrimaryDark">#FF0000</color>
+    <color name="colorAccent">#FF0000</color>
+
+    <color name="colorAcero">#90a9b3</color>
+    <color name="colorAgua">#65b5f6</color>
+    <color name="colorBicho">#03DAC5</color>
+    <color name="colorDragon">#03DAC5</color>
+    <color name="colorElectrico">#03DAC5</color>
+    <color name="colorFantasma">#03DAC5</color>
+    <color name="colorFuego">#03DAC5</color>
+    <color name="colorHielo">#03DAC5</color>
+    <color name="colorLucha">#03DAC5</color>
+    <color name="colorNormal">#03DAC5</color>
+    <color name="colorHierba">#03DAC5</color>
+    <color name="colorPsiquico">#03DAC5</color>
+    <color name="colorRoca">#03DAC5</color>
+    <color name="colorSiniestro">#03DAC5</color>
+    <color name="colorTierra">#03DAC5</color>
+    <color name="colorVeneno">#03DAC5</color>
+    <color name="colorVolador">#03DAC5</color>
+
+</resources>

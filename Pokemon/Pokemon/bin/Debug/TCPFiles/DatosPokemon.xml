@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Pokemons>
+
+	<Pokemon>
+
+			<IdPok>693</IdPok>
+			<NumPokedex>361</NumPokedex>
+			<Nombre>Snorunt</Nombre>
+
+			<VidaMax>133</VidaMax>
+
+			<VidaAct>133</VidaAct>
+
+			<Estado>0</Estado>
+
+			<Mov1>
+				<MovId>33</MovId>
+				<MovNombre>Ventisca</MovNombre>
+				<MovTipo>9</MovTipo>
+				<PP>5</PP>
+				<PPmax>5</PPmax>
+			</Mov1>
+
+			<Mov2>
+				<MovId>28</MovId>
+				<MovNombre>Neblina</MovNombre>
+				<MovTipo>9</MovTipo>
+				<PP>30</PP>
+				<PPmax>30</PPmax>
+			</Mov2>
+
+			<Mov3>
+				<MovId>321</MovId>
+				<MovNombre>Chuzos</MovNombre>
+				<MovTipo>9</MovTipo>
+				<PP>15</PP>
+				<PPmax>15</PPmax>
+			</Mov3>
+
+			<Mov4>
+				<MovId>21</MovId>
+				<MovNombre>Rayo confuso</MovNombre>
+				<MovTipo>6</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
+			</Mov4>
+
+			<Tipo1>9</Tipo1>
+			<Tipo2>0</Tipo2>
+
+	</Pokemon>
+
+	<Pokemon>
+
+			<IdPok>703</IdPok>
+			<NumPokedex>334</NumPokedex>
+			<Nombre>Altaria</Nombre>
+
+			<VidaMax>158</VidaMax>
+
+			<VidaAct>158</VidaAct>
+
+			<Estado>0</Estado>
+
+			<Mov1>
+				<MovId>302</MovId>
+				<MovNombre>Tajo Aereo</MovNombre>
+				<MovTipo>18</MovTipo>
+				<PP>15</PP>
+				<PPmax>15</PPmax>
+			</Mov1>
+
+			<Mov2>
+				<MovId>206</MovId>
+				<MovNombre>Aerochorro</MovNombre>
+				<MovTipo>18</MovTipo>
+				<PP>5</PP>
+				<PPmax>5</PPmax>
+			</Mov2>
+
+			<Mov3>
+				<MovId>216</MovId>
+				<MovNombre>Danza Dragon</MovNombre>
+				<MovTipo>4</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
+			</Mov3>
+
+			<Mov4>
+				<MovId>258</MovId>
+				<MovNombre>Cometa Draco</MovNombre>
+				<MovTipo>4</MovTipo>
+				<PP>5</PP>
+				<PPmax>5</PPmax>
+			</Mov4>
+
+			<Tipo1>4</Tipo1>
+			<Tipo2>18</Tipo2>
+
+	</Pokemon>
+
+</Pokemons>
