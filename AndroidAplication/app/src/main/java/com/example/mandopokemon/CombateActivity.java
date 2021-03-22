@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -48,8 +49,8 @@ public class CombateActivity extends AppCompatActivity {
     private Button btnMov1, btnMov2, btnMov3, btnMov4;
     private TextView tvPokFront, tvPokBack, tvPokFrontVida, tvPokBackVida, txtViewEspera;
     private ImageView ivPokFront, ivPokBack;
-    private LinearLayout layoutCombate;
-    private Thread hiloServidor;
+    private LinearLayout layoutCombate, linearBotonesMovimientos;
+    private Thread hiloServidorArchivos, hiloServidorMensajes;
     private ServerSocket server;
 
     @Override
@@ -122,14 +123,17 @@ public class CombateActivity extends AppCompatActivity {
 
         //Layout
         layoutCombate = findViewById(R.id.layoutCombate);
+        linearBotonesMovimientos = findViewById(R.id.linearBotones);
     }
 
     /**
      * Inicia el servidor.
      */
     private void startServerSocket() {
+        System.out.println("Servidor Iniciado.");
 
-        hiloServidor = new Thread(new Runnable() {
+        //Hilo del servidor de archivos
+        hiloServidorArchivos = new Thread(new Runnable() {
             Socket connection;
 
             DataInputStream dataInputStream;
@@ -142,7 +146,6 @@ public class CombateActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    System.out.println("Servidor Iniciado.");
                     server = new ServerSocket(Configuracion.PUERTO_SERVIDOR);
                     while (true) {
                         //Aceptar conexiones
@@ -187,7 +190,53 @@ public class CombateActivity extends AppCompatActivity {
                 }
             }
         });
-        hiloServidor.start();
+        hiloServidorArchivos.start();
+
+        //Hilo del servidor de mensajes
+        hiloServidorMensajes = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                ServerSocket servidor;
+                Socket sc;
+                DataInputStream in;
+
+                try {
+                    servidor = new ServerSocket(Configuracion.PUERTO_SERVIDOR_MENSAJES);
+
+                    while (true) {
+                        //Espero a que un cliente se conecte
+                        sc = servidor.accept();
+                        in = new DataInputStream(sc.getInputStream());
+
+                        //Leo el mensaje que me envia
+                        final String mensaje = in.readUTF();
+
+                        System.out.println("Mensaje recibido : " + mensaje);
+
+                        //Necesario para cambiar la vista
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                //Trato el contenido
+                                if (mensaje.contains("END")) {
+                                    linearBotonesMovimientos.setVisibility(View.VISIBLE);
+                                } else {
+                                    linearBotonesMovimientos.setVisibility(View.GONE);
+                                    Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+
+                        //Cierro el socket
+                        sc.close();
+                    }
+                } catch (IOException ex) {
+                    System.out.println("ErrorServidor: " + ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }
+        });
+        hiloServidorMensajes.start();
     }
 
     /**
@@ -400,7 +449,8 @@ public class CombateActivity extends AppCompatActivity {
     public void onBackPressed() {
         try {
             //Cerramos el servidor al salir
-            hiloServidor.interrupt();
+            hiloServidorArchivos.interrupt();
+            hiloServidorMensajes.interrupt();
             server.close();
             System.out.println("Servidor Cerrado");
             Client.enviarMensaje("STOP");

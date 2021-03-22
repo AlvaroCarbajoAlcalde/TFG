@@ -5,98 +5,94 @@
 
 	<Pokemon>
 
-			<IdPok>1065</IdPok>
-			<NumPokedex>169</NumPokedex>
-			<Nombre>Crobat</Nombre>
-
-			<VidaMax>168</VidaMax>
-
-			<VidaAct>168</VidaAct>
+			<IdPok>794</IdPok>
+			<NumPokedex>310</NumPokedex>
+			<Nombre>Manectric</Nombre>
+			<VidaMax>153</VidaMax>
+			<VidaAct>52</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>21</MovId>
-				<MovNombre>Rayo confuso</MovNombre>
-				<MovTipo>6</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
+				<MovId>18</MovId>
+				<MovNombre>Rayo</MovNombre>
+				<MovTipo>5</MovTipo>
+				<PP>13</PP>
+				<PPmax>15</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>156</MovId>
-				<MovNombre>Tóxico</MovNombre>
-				<MovTipo>17</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
+				<MovId>218</MovId>
+				<MovNombre>Onda Voltio</MovNombre>
+				<MovTipo>5</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>299</MovId>
-				<MovNombre>Puya Nociva</MovNombre>
-				<MovTipo>17</MovTipo>
-				<PP>20</PP>
-				<PPmax>20</PPmax>
+				<MovId>19</MovId>
+				<MovNombre>Trueno</MovNombre>
+				<MovTipo>5</MovTipo>
+				<PP>8</PP>
+				<PPmax>10</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>163</MovId>
-				<MovNombre>Vuelo</MovNombre>
-				<MovTipo>18</MovTipo>
-				<PP>15</PP>
+				<MovId>263</MovId>
+				<MovNombre>Colmillo Rayo</MovNombre>
+				<MovTipo>5</MovTipo>
+				<PP>14</PP>
 				<PPmax>15</PPmax>
 			</Mov4>
 
-			<Tipo1>17</Tipo1>
-			<Tipo2>18</Tipo2>
+			<Tipo1>5</Tipo1>
+			<Tipo2>0</Tipo2>
 
 	</Pokemon>
 
 	<Pokemon>
 
-			<IdPok>606</IdPok>
-			<NumPokedex>303</NumPokedex>
-			<Nombre>Mawile</Nombre>
-
+			<IdPok>932</IdPok>
+			<NumPokedex>106</NumPokedex>
+			<Nombre>Hitmonlee</Nombre>
 			<VidaMax>133</VidaMax>
-
-			<VidaAct>133</VidaAct>
+			<VidaAct>50</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>294</MovId>
-				<MovNombre>Castigo</MovNombre>
-				<MovTipo>15</MovTipo>
-				<PP>15</PP>
-				<PPmax>15</PPmax>
+				<MovId>35</MovId>
+				<MovNombre>Doble patada</MovNombre>
+				<MovTipo>10</MovTipo>
+				<PP>30</PP>
+				<PPmax>30</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>236</MovId>
-				<MovNombre>Camelo</MovNombre>
-				<MovTipo>15</MovTipo>
-				<PP>15</PP>
-				<PPmax>15</PPmax>
+				<MovId>37</MovId>
+				<MovNombre>Patada baja</MovNombre>
+				<MovTipo>10</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>202</MovId>
-				<MovNombre>Triturar</MovNombre>
-				<MovTipo>15</MovTipo>
+				<MovId>38</MovId>
+				<MovNombre>Patada giro</MovNombre>
+				<MovTipo>10</MovTipo>
 				<PP>15</PP>
 				<PPmax>15</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>166</MovId>
-				<MovNombre>Garra Metal</MovNombre>
-				<MovTipo>1</MovTipo>
-				<PP>35</PP>
-				<PPmax>35</PPmax>
+				<MovId>40</MovId>
+				<MovNombre>Patada salto alta</MovNombre>
+				<MovTipo>10</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
 			</Mov4>
 
-			<Tipo1>1</Tipo1>
+			<Tipo1>10</Tipo1>
 			<Tipo2>0</Tipo2>
 
 	</Pokemon>

@@ -408,7 +408,7 @@ namespace Pokemon
                             if (multiplayer)
                             {
                                 XML.CrearXMLDatosCombate(pokemonBack, pokemonFront);
-                                TCP.EnviarTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
+                                TCP.EnviarArchivoTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
                                 Thread.Sleep(5000);
                             }
                         }
@@ -637,7 +637,7 @@ namespace Pokemon
         {
             //Creamos los datos para enviar al otro jugador
             XML.CrearXMLDatosCombate(pokemonBack, pokemonFront);
-            TCP.EnviarTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
+            TCP.EnviarArchivoTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
         }
 
         public void ForzarCambioTu()

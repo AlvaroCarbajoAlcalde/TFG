@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokemon.TFG;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Drawing;
@@ -63,7 +64,7 @@ namespace Pokemon
 
         public void Timer_Tick(object sender, EventArgs e)
         {
-            String msgMostrar = "";
+            string msgMostrar = "";
             switch (ticks)
             {
                 //Primer subturno
@@ -189,6 +190,17 @@ namespace Pokemon
                     combate.TerminarTurno();
                     break;
             }
+
+            //Enviamos el mensaje de lo sucedido durante el turno si es multiplayer
+            if (combate.multiplayer)
+            {
+                if (ticks >= 4)
+                    TCP.EnviarMensajeTCP("END");
+
+                if (!string.IsNullOrEmpty(msgMostrar))
+                    TCP.EnviarMensajeTCP(msgMostrar);
+            }
+
             ticks++;
         }
 
@@ -2723,13 +2735,13 @@ namespace Pokemon
                     break;
             }
             //Falta sustituto 
-            if (origen.fkPokedex == (int)PokemonNombre.Meowth) 
+            if (origen.fkPokedex == (int)PokemonNombre.Meowth)
                 //Si es meawth te insulta. Es lo que tiene poder hablar. F
                 textoMostrar += GetInsulto(origen);
             return textoMostrar;
         }
 
-#endregion
+        #endregion
 
         #region Ataques
 

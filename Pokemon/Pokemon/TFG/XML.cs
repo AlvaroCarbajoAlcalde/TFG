@@ -9,8 +9,8 @@ namespace Pokemon.TFG
 
         #region Variables 
 
-        public static readonly string RUTA_FICHERO_XML_POKEMON = "TCPFiles\\XML_Pokemons.XML";
-        public static readonly string RUTA_FICHERO_DATOS_POKEMON = "TCPFiles\\DatosPokemon.xml";
+        public static readonly string RUTA_FICHERO_XML_POKEMON = @"TCPFiles\XML_Pokemons.XML";
+        public static readonly string RUTA_FICHERO_DATOS_POKEMON = @"TCPFiles\DatosPokemon.xml";
 
         private static readonly string CONSULTA_POKEMON = "SELECT * FROM POKEMON ORDER BY ID";
 
@@ -43,8 +43,8 @@ namespace Pokemon.TFG
             //Datos del pokemon
             file.WriteLine($"\t\t\t<IdPok>{pokemon.numAlmacenamiento}</IdPok>");
             file.WriteLine($"\t\t\t<NumPokedex>{pokemon.fkPokedex}</NumPokedex>");
-            file.WriteLine($"\t\t\t<Nombre>{pokemon.nombre}</Nombre>\n");
-            file.WriteLine($"\t\t\t<VidaMax>{pokemon.vidaMax}</VidaMax>\n");
+            file.WriteLine($"\t\t\t<Nombre>{pokemon.nombre}</Nombre>");
+            file.WriteLine($"\t\t\t<VidaMax>{pokemon.vidaMax}</VidaMax>");
             file.WriteLine($"\t\t\t<VidaAct>{pokemon.vidaActual}</VidaAct>\n");
             file.WriteLine($"\t\t\t<Estado>{(int)pokemon.estadisticasActuales.estadoActual}</Estado>\n");
 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -14,20 +13,27 @@ namespace Pokemon.TFG
         private static readonly int TAM_BUFFER = 1024;
         public static readonly int PUERTO_RECIBIR = 6060;
         private static readonly int PUERTO_ENVIAR = 6061;
+        private static readonly int PUERTO_ENVIAR_MENSAJE = 6062;
         private static readonly string IP_MOVIL = "192.168.1.128";
 
         #endregion
 
         #region Cliente
 
-        public static void EnviarTCP(string rutaArchivo)
+        public static void EnviarArchivoTCP(string rutaArchivo)
         {
             try
             {
                 byte[] sendingBuffer;
+
+                //Abrimos el cliente
                 TcpClient client = new TcpClient(IP_MOVIL, PUERTO_ENVIAR);
                 NetworkStream netStream = client.GetStream();
+
+                //Abrimkos el archivo a enviar
                 FileStream fileStream = new FileStream(rutaArchivo, FileMode.Open, FileAccess.Read);
+
+                //Vamos leyeendo el archivo para enviarlo
                 int numPaquetes = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(fileStream.Length) / Convert.ToDouble(TAM_BUFFER)));
                 int tamagnoTotal = (int)fileStream.Length, tamPaquete;
                 for (int i = 0; i < numPaquetes; i++)
@@ -42,9 +48,36 @@ namespace Pokemon.TFG
 
                     sendingBuffer = new byte[tamPaquete];
                     fileStream.Read(sendingBuffer, 0, tamPaquete);
+                    
+                    //Enviamos datos leidos
                     netStream.Write(sendingBuffer, 0, sendingBuffer.Length);
                 }
+
+                //Cerramos todo 
                 fileStream.Close();
+                netStream.Close();
+                client.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("ERROR TCP: " + ex.Message);
+            }
+        }
+
+        public static void EnviarMensajeTCP(string mensaje)
+        {
+            try
+            {
+                byte[] sendingBuffer;
+
+                //Abrimos el cliente
+                TcpClient client = new TcpClient(IP_MOVIL, PUERTO_ENVIAR_MENSAJE);
+                NetworkStream netStream = client.GetStream();
+
+                //Enviamos el mensaje
+                sendingBuffer = Encoding.ASCII.GetBytes(mensaje);
+                netStream.Write(sendingBuffer, 0, sendingBuffer.Length);
+
                 netStream.Close();
                 client.Close();
             }
