@@ -75,7 +75,7 @@ namespace Pokemon.TFG
                 NetworkStream netStream = client.GetStream();
 
                 //Enviamos el mensaje
-                sendingBuffer = Encoding.ASCII.GetBytes(mensaje);
+                sendingBuffer = Encoding.UTF8.GetBytes(mensaje);
                 netStream.Write(sendingBuffer, 0, sendingBuffer.Length);
 
                 netStream.Close();
@@ -111,10 +111,10 @@ namespace Pokemon.TFG
                     //Recibir datos
                     while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
                     {
-                        data = Encoding.ASCII.GetString(bytes, 0, i);
+                        data = Encoding.UTF8.GetString(bytes, 0, i);
                         data = data.ToUpper();
 
-                        byte[] msg = Encoding.ASCII.GetBytes(data);
+                        byte[] msg = Encoding.UTF8.GetBytes(data);
 
                         //Respuesta.
                         stream.Write(msg, 0, msg.Length);

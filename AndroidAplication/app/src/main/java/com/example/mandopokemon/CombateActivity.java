@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.content.res.AppCompatResources;
 
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,12 +27,17 @@ import org.xml.sax.SAXException;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.DataInputStream;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.charset.Charset;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -67,7 +73,8 @@ public class CombateActivity extends AppCompatActivity {
         layoutCombate.setVisibility(View.GONE);
 
         //Abrimos servidor
-        startServerSocket();
+        iniciarServidor();
+        iniciarServidorMensajes();
     }
 
     /**
@@ -127,9 +134,67 @@ public class CombateActivity extends AppCompatActivity {
     }
 
     /**
+     * Inicia el servidor de los mensajes
+     */
+    private void iniciarServidorMensajes() {
+        hiloServidorMensajes = new Thread(new Runnable() {
+            ServerSocket servidor;
+            Socket connection;
+            DataInputStream in;
+            byte[] messageByte;
+            StringBuilder stringBuilder;
+
+            @Override
+            public void run() {
+                try {
+                    servidor = new ServerSocket(Configuracion.PUERTO_SERVIDOR_MENSAJES);
+
+                    while (true) {
+                        //Espero a que el cliente se conecte
+                        connection = servidor.accept();
+                        in = new DataInputStream(connection.getInputStream());
+
+                        //Leo el mensaje que me envia
+                        stringBuilder = new StringBuilder();
+                        messageByte = new byte[1024];
+                        try {
+                            while (in.available() > 0)
+                                stringBuilder.append(new String(messageByte, 0, in.read(messageByte), Charset.forName("UTF-8")));
+                        } catch (Exception e) {
+                        }
+
+                        final String mensajeFinal = stringBuilder.toString();
+
+                        //Necesario para cambiar la vista
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                //Trato el contenido
+                                if (mensajeFinal.contains("END")) {
+                                    linearBotonesMovimientos.setVisibility(View.VISIBLE);
+                                } else {
+                                    linearBotonesMovimientos.setVisibility(View.GONE);
+                                    Toast.makeText(getApplicationContext(), mensajeFinal, Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+
+                        //Cierro el socket
+                        connection.close();
+                    }
+                } catch (IOException ex) {
+                    System.out.println("ErrorServidor: " + ex.getMessage());
+                    ex.printStackTrace();
+                }
+            }
+        });
+        hiloServidorMensajes.start();
+    }
+
+    /**
      * Inicia el servidor.
      */
-    private void startServerSocket() {
+    private void iniciarServidor() {
         System.out.println("Servidor Iniciado.");
 
         //Hilo del servidor de archivos
@@ -166,7 +231,6 @@ public class CombateActivity extends AppCompatActivity {
 
                         bufferedOutputStream.close();
                         dataInputStream.close();
-                        System.out.println("Fichero recibido.");
 
                         //Se realiza tras recibir el fichero:
                         pokemonsLuchando = leerPokemonsDeXML();
@@ -191,52 +255,6 @@ public class CombateActivity extends AppCompatActivity {
             }
         });
         hiloServidorArchivos.start();
-
-        //Hilo del servidor de mensajes
-        hiloServidorMensajes = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                ServerSocket servidor;
-                Socket sc;
-                DataInputStream in;
-
-                try {
-                    servidor = new ServerSocket(Configuracion.PUERTO_SERVIDOR_MENSAJES);
-
-                    while (true) {
-                        //Espero a que un cliente se conecte
-                        sc = servidor.accept();
-                        in = new DataInputStream(sc.getInputStream());
-
-                        //Leo el mensaje que me envia
-                        final String mensaje = in.readUTF();
-
-                        System.out.println("Mensaje recibido : " + mensaje);
-
-                        //Necesario para cambiar la vista
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                //Trato el contenido
-                                if (mensaje.contains("END")) {
-                                    linearBotonesMovimientos.setVisibility(View.VISIBLE);
-                                } else {
-                                    linearBotonesMovimientos.setVisibility(View.GONE);
-                                    Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
-
-                        //Cierro el socket
-                        sc.close();
-                    }
-                } catch (IOException ex) {
-                    System.out.println("ErrorServidor: " + ex.getMessage());
-                    ex.printStackTrace();
-                }
-            }
-        });
-        hiloServidorMensajes.start();
     }
 
     /**

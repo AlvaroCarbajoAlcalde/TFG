@@ -186,20 +186,19 @@ namespace Pokemon
                     break;
 
                 default:
+
+                    //Si es multiplayer marcamos el final del turno
+                    if(combate.multiplayer)
+                        TCP.EnviarMensajeTCP("END");
+
                     timer.Enabled = false;
                     combate.TerminarTurno();
                     break;
             }
 
             //Enviamos el mensaje de lo sucedido durante el turno si es multiplayer
-            if (combate.multiplayer)
-            {
-                if (ticks >= 4)
-                    TCP.EnviarMensajeTCP("END");
-
-                if (!string.IsNullOrEmpty(msgMostrar))
-                    TCP.EnviarMensajeTCP(msgMostrar);
-            }
+            if (combate.multiplayer && !string.IsNullOrEmpty(msgMostrar))
+                TCP.EnviarMensajeTCP(msgMostrar);
 
             ticks++;
         }
