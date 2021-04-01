@@ -5,58 +5,58 @@
 
 	<Pokemon>
 
-			<IdPok>672</IdPok>
-			<NumPokedex>48</NumPokedex>
-			<Nombre>Venonat</Nombre>
-			<VidaMax>143</VidaMax>
-			<VidaAct>0</VidaAct>
+			<IdPok>784</IdPok>
+			<NumPokedex>248</NumPokedex>
+			<Nombre>Tyranitar</Nombre>
+			<VidaMax>183</VidaMax>
+			<VidaAct>183</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>313</MovId>
-				<MovNombre>Estoicismo</MovNombre>
-				<MovTipo>3</MovTipo>
+				<MovId>148</MovId>
+				<MovNombre>Terremoto</MovNombre>
+				<MovTipo>16</MovTipo>
 				<PP>9</PP>
 				<PPmax>10</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>253</MovId>
-				<MovNombre>Auxilio</MovNombre>
-				<MovTipo>3</MovTipo>
-				<PP>15</PP>
-				<PPmax>15</PPmax>
+				<MovId>306</MovId>
+				<MovNombre>Filo del Abismo</MovNombre>
+				<MovTipo>16</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>252</MovId>
-				<MovNombre>A Defender</MovNombre>
-				<MovTipo>3</MovTipo>
-				<PP>30</PP>
-				<PPmax>30</PPmax>
+				<MovId>202</MovId>
+				<MovNombre>Triturar</MovNombre>
+				<MovTipo>15</MovTipo>
+				<PP>14</PP>
+				<PPmax>15</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>156</MovId>
-				<MovNombre>Tóxico</MovNombre>
-				<MovTipo>17</MovTipo>
-				<PP>9</PP>
+				<MovId>172</MovId>
+				<MovNombre>Enfado</MovNombre>
+				<MovTipo>4</MovTipo>
+				<PP>10</PP>
 				<PPmax>10</PPmax>
 			</Mov4>
 
-			<Tipo1>3</Tipo1>
-			<Tipo2>17</Tipo2>
+			<Tipo1>14</Tipo1>
+			<Tipo2>15</Tipo2>
 
 	</Pokemon>
 
 	<Pokemon>
 
-			<IdPok>763</IdPok>
-			<NumPokedex>180</NumPokedex>
-			<Nombre>Flaaffy</Nombre>
-			<VidaMax>153</VidaMax>
-			<VidaAct>153</VidaAct>
+			<IdPok>835</IdPok>
+			<NumPokedex>171</NumPokedex>
+			<Nombre>Lanturn</Nombre>
+			<VidaMax>208</VidaMax>
+			<VidaAct>208</VidaAct>
 
 			<Estado>0</Estado>
 
@@ -69,31 +69,31 @@
 			</Mov1>
 
 			<Mov2>
-				<MovId>15</MovId>
-				<MovNombre>Impactrueno</MovNombre>
-				<MovTipo>5</MovTipo>
-				<PP>30</PP>
-				<PPmax>30</PPmax>
-			</Mov2>
-
-			<Mov3>
-				<MovId>16</MovId>
-				<MovNombre>Onda trueno</MovNombre>
+				<MovId>173</MovId>
+				<MovNombre>Chispa</MovNombre>
 				<MovTipo>5</MovTipo>
 				<PP>20</PP>
 				<PPmax>20</PPmax>
+			</Mov2>
+
+			<Mov3>
+				<MovId>7</MovId>
+				<MovNombre>Refugio</MovNombre>
+				<MovTipo>2</MovTipo>
+				<PP>40</PP>
+				<PPmax>40</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>84</MovId>
-				<MovNombre>Gruñido</MovNombre>
-				<MovTipo>11</MovTipo>
-				<PP>40</PP>
-				<PPmax>40</PPmax>
+				<MovId>8</MovId>
+				<MovNombre>Surf</MovNombre>
+				<MovTipo>2</MovTipo>
+				<PP>15</PP>
+				<PPmax>15</PPmax>
 			</Mov4>
 
-			<Tipo1>5</Tipo1>
-			<Tipo2>0</Tipo2>
+			<Tipo1>2</Tipo1>
+			<Tipo2>5</Tipo2>
 
 	</Pokemon>
 
