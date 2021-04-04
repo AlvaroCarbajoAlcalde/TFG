@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="TextView"
+            android:text="Categoria"
             android:textAlignment="center"
             android:textSize="18sp" />
 
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="Peso"
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
@@ -89,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="Altura"
                 android:textAlignment="center"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -100,7 +100,7 @@
             android:layout_height="300dp"
             android:layout_marginTop="15dp"
             android:padding="10dp"
-            android:text="TextView"
+            android:text="Descripcion del pokemon"
             android:textAlignment="center"
             android:textSize="18sp" />
     </LinearLayout>
