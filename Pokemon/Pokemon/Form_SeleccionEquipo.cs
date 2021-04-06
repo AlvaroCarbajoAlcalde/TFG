@@ -92,9 +92,9 @@ namespace Pokemon
             con.Open();
             string query = "UPDATE entrenador SET nombre=@nombre, imagen=@imagen WHERE id = @id";
             OleDbCommand update = new OleDbCommand(query, con);
-            update.Parameters.Add("@nombre", textBoxNombreEntrenador.Text);
-            update.Parameters.Add("@imagen", arrayImages[imgActual]);
-            update.Parameters.Add("@id", entrenador.numEntrenador);
+            update.Parameters.AddWithValue("@nombre", textBoxNombreEntrenador.Text);
+            update.Parameters.AddWithValue("@imagen", arrayImages[imgActual]);
+            update.Parameters.AddWithValue("@id", entrenador.numEntrenador);
             update.ExecuteNonQuery();
             con.Close();
             entrenador.nombre = textBoxNombreEntrenador.Text;

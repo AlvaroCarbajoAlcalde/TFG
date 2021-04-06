@@ -72,8 +72,8 @@ namespace Pokemon
 
             string sql = "UPDATE entrenador SET partidas=@par WHERE id=@ide";
             OleDbCommand update = new OleDbCommand(sql, con);
-            update.Parameters.Add("@par", ++entrenadorTu.numPartidas);
-            update.Parameters.Add("@ide", entrenadorTu.numEntrenador);
+            update.Parameters.AddWithValue("@par", ++entrenadorTu.numPartidas);
+            update.Parameters.AddWithValue("@ide", entrenadorTu.numEntrenador);
             update.ExecuteNonQuery();
 
             sql = "insert into log_combate (id, estado, entrenador_1, entrenador_2, img_entrenador1, img_entrenador2, " +
@@ -82,24 +82,24 @@ namespace Pokemon
                 " values (@id, @est, @en1, @en2, @imen1, @imen2, @imtupok1, @imtupok2, @imtupok3, @imtupok4, @imtupok5, @imtupok6" +
                 ", @imrivalpok1, @imrivalpok2, @imrivalpok3, @imrivalpok4, @imrivalpok5, @imrivalpok6)";
             OleDbCommand insert = new OleDbCommand(sql, con);
-            insert.Parameters.Add("@id", idLogCombate);
-            insert.Parameters.Add("@est", "En Curso");
-            insert.Parameters.Add("@en1", entrenadorTu.nombre);
-            insert.Parameters.Add("@en2", entrenadorRival.nombre);
-            insert.Parameters.Add("@imen1", entrenadorTu.rutaImagenFront);
-            insert.Parameters.Add("@imen2", entrenadorRival.rutaImagenFront);
-            insert.Parameters.Add("@imtupok1", entrenadorTu.equipo[0].fkPokedex);
-            insert.Parameters.Add("@imtupok2", entrenadorTu.equipo[1].fkPokedex);
-            insert.Parameters.Add("@imtupok3", entrenadorTu.equipo[2].fkPokedex);
-            insert.Parameters.Add("@imtupok4", entrenadorTu.equipo[3].fkPokedex);
-            insert.Parameters.Add("@imtupok5", entrenadorTu.equipo[4].fkPokedex);
-            insert.Parameters.Add("@imtupok6", entrenadorTu.equipo[5].fkPokedex);
-            insert.Parameters.Add("@imrivalpok1", entrenadorRival.equipo[0].fkPokedex);
-            insert.Parameters.Add("@imrivalpok2", entrenadorRival.equipo[1].fkPokedex);
-            insert.Parameters.Add("@imrivalpok3", entrenadorRival.equipo[2].fkPokedex);
-            insert.Parameters.Add("@imrivalpok4", entrenadorRival.equipo[3].fkPokedex);
-            insert.Parameters.Add("@imrivalpok5", entrenadorRival.equipo[4].fkPokedex);
-            insert.Parameters.Add("@imrivalpok6", entrenadorRival.equipo[5].fkPokedex);
+            insert.Parameters.AddWithValue("@id", idLogCombate);
+            insert.Parameters.AddWithValue("@est", "En Curso");
+            insert.Parameters.AddWithValue("@en1", entrenadorTu.nombre);
+            insert.Parameters.AddWithValue("@en2", entrenadorRival.nombre);
+            insert.Parameters.AddWithValue("@imen1", entrenadorTu.rutaImagenFront);
+            insert.Parameters.AddWithValue("@imen2", entrenadorRival.rutaImagenFront);
+            insert.Parameters.AddWithValue("@imtupok1", entrenadorTu.equipo[0].fkPokedex);
+            insert.Parameters.AddWithValue("@imtupok2", entrenadorTu.equipo[1].fkPokedex);
+            insert.Parameters.AddWithValue("@imtupok3", entrenadorTu.equipo[2].fkPokedex);
+            insert.Parameters.AddWithValue("@imtupok4", entrenadorTu.equipo[3].fkPokedex);
+            insert.Parameters.AddWithValue("@imtupok5", entrenadorTu.equipo[4].fkPokedex);
+            insert.Parameters.AddWithValue("@imtupok6", entrenadorTu.equipo[5].fkPokedex);
+            insert.Parameters.AddWithValue("@imrivalpok1", entrenadorRival.equipo[0].fkPokedex);
+            insert.Parameters.AddWithValue("@imrivalpok2", entrenadorRival.equipo[1].fkPokedex);
+            insert.Parameters.AddWithValue("@imrivalpok3", entrenadorRival.equipo[2].fkPokedex);
+            insert.Parameters.AddWithValue("@imrivalpok4", entrenadorRival.equipo[3].fkPokedex);
+            insert.Parameters.AddWithValue("@imrivalpok5", entrenadorRival.equipo[4].fkPokedex);
+            insert.Parameters.AddWithValue("@imrivalpok6", entrenadorRival.equipo[5].fkPokedex);
             insert.ExecuteNonQuery();
 
             //Log combate equipo
@@ -109,10 +109,10 @@ namespace Pokemon
                 entrenadorTu.equipo[i].idLog = idBase + i;
                 sql = "insert into log_combate_equipo (id, FK_ID_ALMACENAMIENTO, FK_ID_ENTRENADOR, FK_ID_LOGCOMBATE) values (@id, @idal, @iden, @idlog)";
                 insert = new OleDbCommand(sql, con);
-                insert.Parameters.Add("@id", entrenadorTu.equipo[i].idLog);
-                insert.Parameters.Add("@idal", entrenadorTu.equipo[i].numAlmacenamiento);
-                insert.Parameters.Add("@iden", entrenadorTu.numEntrenador);
-                insert.Parameters.Add("@idlog", idLogCombate);
+                insert.Parameters.AddWithValue("@id", entrenadorTu.equipo[i].idLog);
+                insert.Parameters.AddWithValue("@idal", entrenadorTu.equipo[i].numAlmacenamiento);
+                insert.Parameters.AddWithValue("@iden", entrenadorTu.numEntrenador);
+                insert.Parameters.AddWithValue("@idlog", idLogCombate);
                 insert.ExecuteNonQuery();
             }
             idBase = idLogCombate + "ri";
@@ -122,10 +122,10 @@ namespace Pokemon
                 entrenadorRival.equipo[i].idLog = idBase + i;
                 sql = "insert into log_combate_equipo (id, FK_ID_ALMACENAMIENTO, FK_ID_ENTRENADOR, FK_ID_LOGCOMBATE) values (@id, @idal, @iden, @idlog)";
                 insert = new OleDbCommand(sql, con);
-                insert.Parameters.Add("@id", entrenadorRival.equipo[i].idLog);
-                insert.Parameters.Add("@idal", entrenadorRival.equipo[i].numAlmacenamiento);
-                insert.Parameters.Add("@iden", hola);
-                insert.Parameters.Add("@idlog", idLogCombate);
+                insert.Parameters.AddWithValue("@id", entrenadorRival.equipo[i].idLog);
+                insert.Parameters.AddWithValue("@idal", entrenadorRival.equipo[i].numAlmacenamiento);
+                insert.Parameters.AddWithValue("@iden", hola);
+                insert.Parameters.AddWithValue("@idlog", idLogCombate);
                 insert.ExecuteNonQuery();
             }
             con.Close();
@@ -341,8 +341,8 @@ namespace Pokemon
                         //Insertar datos base datos
                         sql = "UPDATE entrenador SET victorias=@vic WHERE id=@id";
                         update = new OleDbCommand(sql, con);
-                        update.Parameters.Add("@vic", ++entrenadorTu.numVictorias);
-                        update.Parameters.Add("@id", entrenadorTu.numEntrenador);
+                        update.Parameters.AddWithValue("@vic", ++entrenadorTu.numVictorias);
+                        update.Parameters.AddWithValue("@id", entrenadorTu.numEntrenador);
                         update.ExecuteNonQuery();
                     }
                     else
@@ -352,9 +352,9 @@ namespace Pokemon
                     //Insertar datos base datos
                     sql = "UPDATE log_combate SET estado=@est, ganador=@gan WHERE id=@id";
                     update = new OleDbCommand(sql, con);
-                    update.Parameters.Add("@est", "Finalizado");
-                    update.Parameters.Add("@gan", nombreGanador);
-                    update.Parameters.Add("@id", idLogCombate);
+                    update.Parameters.AddWithValue("@est", "Finalizado");
+                    update.Parameters.AddWithValue("@gan", nombreGanador);
+                    update.Parameters.AddWithValue("@id", idLogCombate);
                     update.ExecuteNonQuery();
                     con.Close();
                     break;

@@ -73,7 +73,8 @@ namespace Pokemon
             //No se cambia la vida
             if (vida == vidaActual)
             {
-                combate.recVidaVerdeTu.Size = new Size((int)(vidaActual / (double)vidaMaxima * maximoBarra), vidaVerde.Height);
+                Rectangle recVidaVerdeTu = combate.recVidaVerdeTu;
+                recVidaVerdeTu.Size = new Size((int)(vidaActual / (double)vidaMaxima * maximoBarra), vidaVerde.Height);
                 combate.ResizeControl(vidaVerde, picBoxBarraDeVida);
                 combate.ResizeControl(vidaRoja, picBoxBarraDeVidaRoja);
                 return;

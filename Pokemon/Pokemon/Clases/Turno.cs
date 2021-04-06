@@ -28,10 +28,9 @@ namespace Pokemon
         public Turno(Form_Combate combate)
         {
             ticks = 0;
-            timer = new Timer();
-            timer.Interval = 5300;
-            timer.Tick += new System.EventHandler(this.Timer_Tick);
-            random = new Random((int)System.DateTime.Now.Ticks);
+            timer = new Timer { Interval = 5300 };
+            timer.Tick += new EventHandler(this.Timer_Tick);
+            random = new Random((int)DateTime.Now.Ticks);
             this.combate = combate;
             SeleccionarPrimeroEnAtacar();
 
@@ -43,17 +42,17 @@ namespace Pokemon
 
         #region Log
 
-        public void InsertLogEvento(Pokemon pokemon, int subturno, String descripcion)
+        public void InsertLogEvento(Pokemon pokemon, int subturno, string descripcion)
         {
             //Insertar datos base datos
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
-            String sql = "insert into log_combate_evento (descripcion, FK_ID_LOG_COMBATE_EQUIPO, turno, subturno) values (@des, @log, @tur, @sub)";
+            string sql = "insert into log_combate_evento (descripcion, FK_ID_LOG_COMBATE_EQUIPO, turno, subturno) values (@des, @log, @tur, @sub)";
             OleDbCommand insert = new OleDbCommand(sql, con);
-            insert.Parameters.Add("@des", descripcion);
-            insert.Parameters.Add("@log", pokemon.idLog);
-            insert.Parameters.Add("@tur", combate.numTurnos);
-            insert.Parameters.Add("@sub", subturno);
+            insert.Parameters.AddWithValue("@des", descripcion);
+            insert.Parameters.AddWithValue("@log", pokemon.idLog);
+            insert.Parameters.AddWithValue("@tur", combate.numTurnos);
+            insert.Parameters.AddWithValue("@sub", subturno);
             insert.ExecuteNonQuery();
             con.Close();
         }
@@ -188,7 +187,7 @@ namespace Pokemon
                 default:
 
                     //Si es multiplayer marcamos el final del turno
-                    if(combate.multiplayer)
+                    if (combate.multiplayer)
                         TCP.EnviarMensajeTCP("END");
 
                     timer.Enabled = false;
@@ -1650,8 +1649,9 @@ namespace Pokemon
 
                         Image imgPkmnBack = combate.pokemonFront.imagenBack;
                         combate.picBoxPkmnBack.Image = imgPkmnBack;
-                        combate.recPicBoxPokemonBack.Size = imgPkmnBack.Size;
-                        combate.recPicBoxPokemonBack.Location = new Point(100 - combate.recPicBoxPokemonBack.Width / 2, 243 - combate.recPicBoxPokemonBack.Height);
+                        Rectangle recPicBoxPokemonBack = combate.recPicBoxPokemonBack;
+                        recPicBoxPokemonBack.Size = imgPkmnBack.Size;
+                        recPicBoxPokemonBack.Location = new Point(100 - recPicBoxPokemonBack.Width / 2, 243 - recPicBoxPokemonBack.Height);
                         combate.ResizeControl(combate.recPicBoxPokemonBack, combate.picBoxPkmnBack);
                     }
                     else
@@ -1696,8 +1696,9 @@ namespace Pokemon
 
                         Image imgPkmnFront = combate.pokemonFront.imagenFront;
                         combate.picBoxPkmnFront.Image = imgPkmnFront;
-                        combate.recPicBoxPokemonFront.Size = imgPkmnFront.Size;
-                        combate.recPicBoxPokemonFront.Location = new Point(330 - combate.recPicBoxPokemonFront.Width / 2, 149 - combate.recPicBoxPokemonFront.Height);
+                        Rectangle recPicBoxPokemonFront = combate.recPicBoxPokemonFront;
+                        recPicBoxPokemonFront.Size = imgPkmnFront.Size;
+                        recPicBoxPokemonFront.Location = new Point(330 - recPicBoxPokemonFront.Width / 2, 149 - recPicBoxPokemonFront.Height);
                         combate.ResizeControl(combate.recPicBoxPokemonFront, combate.picBoxPkmnFront);
                     }
                     textoMostrar += origen.nombre + " se transformó.\n";
