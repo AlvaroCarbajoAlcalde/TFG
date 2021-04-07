@@ -7,6 +7,7 @@ namespace Pokemon
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
+        /// Aplicacion realizada por Alvaro Carbajo para Desarrollo de Aplicaciones Multiplataforma
         /// </summary>
         [STAThread]
         static void Main()
