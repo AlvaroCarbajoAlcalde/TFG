@@ -5,95 +5,95 @@
 
 	<Pokemon>
 
-			<IdPok>784</IdPok>
-			<NumPokedex>248</NumPokedex>
-			<Nombre>Tyranitar</Nombre>
-			<VidaMax>183</VidaMax>
-			<VidaAct>183</VidaAct>
+			<IdPok>1101</IdPok>
+			<NumPokedex>282</NumPokedex>
+			<Nombre>Gardevoir</Nombre>
+			<VidaMax>151</VidaMax>
+			<VidaAct>129</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>148</MovId>
-				<MovNombre>Terremoto</MovNombre>
-				<MovTipo>16</MovTipo>
-				<PP>9</PP>
-				<PPmax>10</PPmax>
+				<MovId>131</MovId>
+				<MovNombre>Hipnosis</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>306</MovId>
-				<MovNombre>Filo del Abismo</MovNombre>
-				<MovTipo>16</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
-			</Mov2>
-
-			<Mov3>
-				<MovId>202</MovId>
-				<MovNombre>Triturar</MovNombre>
-				<MovTipo>15</MovTipo>
-				<PP>14</PP>
-				<PPmax>15</PPmax>
-			</Mov3>
-
-			<Mov4>
-				<MovId>172</MovId>
-				<MovNombre>Enfado</MovNombre>
-				<MovTipo>4</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
-			</Mov4>
-
-			<Tipo1>14</Tipo1>
-			<Tipo2>15</Tipo2>
-
-	</Pokemon>
-
-	<Pokemon>
-
-			<IdPok>835</IdPok>
-			<NumPokedex>171</NumPokedex>
-			<Nombre>Lanturn</Nombre>
-			<VidaMax>208</VidaMax>
-			<VidaAct>208</VidaAct>
-
-			<Estado>0</Estado>
-
-			<Mov1>
-				<MovId>264</MovId>
-				<MovNombre>Rayo Carga</MovNombre>
-				<MovTipo>5</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
-			</Mov1>
-
-			<Mov2>
-				<MovId>173</MovId>
-				<MovNombre>Chispa</MovNombre>
-				<MovTipo>5</MovTipo>
+				<MovId>126</MovId>
+				<MovNombre>Amnesia</MovNombre>
+				<MovTipo>13</MovTipo>
 				<PP>20</PP>
 				<PPmax>20</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>7</MovId>
-				<MovNombre>Refugio</MovNombre>
-				<MovTipo>2</MovTipo>
-				<PP>40</PP>
-				<PPmax>40</PPmax>
+				<MovId>137</MovId>
+				<MovNombre>Psiquico</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>9</PP>
+				<PPmax>10</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>8</MovId>
-				<MovNombre>Surf</MovNombre>
-				<MovTipo>2</MovTipo>
+				<MovId>128</MovId>
+				<MovNombre>Comesueños</MovNombre>
+				<MovTipo>13</MovTipo>
 				<PP>15</PP>
 				<PPmax>15</PPmax>
 			</Mov4>
 
-			<Tipo1>2</Tipo1>
-			<Tipo2>5</Tipo2>
+			<Tipo1>13</Tipo1>
+			<Tipo2>0</Tipo2>
+
+	</Pokemon>
+
+	<Pokemon>
+
+			<IdPok>21</IdPok>
+			<NumPokedex>133</NumPokedex>
+			<Nombre>Eevee</Nombre>
+			<VidaMax>140</VidaMax>
+			<VidaAct>48</VidaAct>
+
+			<Estado>0</Estado>
+
+			<Mov1>
+				<MovId>142</MovId>
+				<MovNombre>Mordisco</MovNombre>
+				<MovTipo>11</MovTipo>
+				<PP>25</PP>
+				<PPmax>25</PPmax>
+			</Mov1>
+
+			<Mov2>
+				<MovId>100</MovId>
+				<MovNombre>Rapidez</MovNombre>
+				<MovTipo>11</MovTipo>
+				<PP>19</PP>
+				<PPmax>20</PPmax>
+			</Mov2>
+
+			<Mov3>
+				<MovId>66</MovId>
+				<MovNombre>Derribo</MovNombre>
+				<MovTipo>11</MovTipo>
+				<PP>20</PP>
+				<PPmax>20</PPmax>
+			</Mov3>
+
+			<Mov4>
+				<MovId>110</MovId>
+				<MovNombre>Sustituto</MovNombre>
+				<MovTipo>11</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
+			</Mov4>
+
+			<Tipo1>11</Tipo1>
+			<Tipo2>0</Tipo2>
 
 	</Pokemon>
 

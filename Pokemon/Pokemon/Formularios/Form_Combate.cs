@@ -17,6 +17,7 @@ namespace Pokemon
 
         #region Propiedades
 
+        public string ipMovil;
         private TcpListener server;
         public int ataqueSeleccionadoMultiplayer;
         public bool multiplayer;
@@ -408,7 +409,7 @@ namespace Pokemon
                             if (multiplayer)
                             {
                                 XML.CrearXMLDatosCombate(pokemonBack, pokemonFront);
-                                TCP.EnviarArchivoTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
+                                TCP.EnviarArchivoTCP(XML.RUTA_FICHERO_DATOS_POKEMON, ipMovil);
                                 Thread.Sleep(5000);
                             }
                         }
@@ -637,7 +638,7 @@ namespace Pokemon
         {
             //Creamos los datos para enviar al otro jugador
             XML.CrearXMLDatosCombate(pokemonBack, pokemonFront);
-            TCP.EnviarArchivoTCP(XML.RUTA_FICHERO_DATOS_POKEMON);
+            TCP.EnviarArchivoTCP(XML.RUTA_FICHERO_DATOS_POKEMON, ipMovil);
         }
 
         public void ForzarCambioTu()

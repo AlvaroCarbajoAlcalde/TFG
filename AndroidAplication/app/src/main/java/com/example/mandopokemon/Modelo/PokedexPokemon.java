@@ -1,7 +1,5 @@
 package com.example.mandopokemon.Modelo;
 
-import com.example.mandopokemon.PokedexActivity;
-
 public class PokedexPokemon {
 
     private int id;

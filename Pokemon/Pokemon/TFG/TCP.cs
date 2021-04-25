@@ -14,20 +14,19 @@ namespace Pokemon.TFG
         public static readonly int PUERTO_RECIBIR = 6060;
         private static readonly int PUERTO_ENVIAR = 6061;
         private static readonly int PUERTO_ENVIAR_MENSAJE = 6062;
-        private static readonly string IP_MOVIL = "192.168.1.128";
 
         #endregion
 
         #region Cliente
 
-        public static void EnviarArchivoTCP(string rutaArchivo)
+        public static void EnviarArchivoTCP(string rutaArchivo, string ipMovil)
         {
             try
             {
                 byte[] sendingBuffer;
 
                 //Abrimos el cliente
-                TcpClient client = new TcpClient(IP_MOVIL, PUERTO_ENVIAR);
+                TcpClient client = new TcpClient(ipMovil, PUERTO_ENVIAR);
                 NetworkStream netStream = client.GetStream();
 
                 //Abrimkos el archivo a enviar
@@ -48,7 +47,7 @@ namespace Pokemon.TFG
 
                     sendingBuffer = new byte[tamPaquete];
                     fileStream.Read(sendingBuffer, 0, tamPaquete);
-                    
+
                     //Enviamos datos leidos
                     netStream.Write(sendingBuffer, 0, sendingBuffer.Length);
                 }
@@ -60,18 +59,18 @@ namespace Pokemon.TFG
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERROR TCP: " + ex.Message);
+                Console.WriteLine("ERROR TCP 1: " + ex.Message);
             }
         }
 
-        public static void EnviarMensajeTCP(string mensaje)
+        public static void EnviarMensajeTCP(string mensaje, string ipMovil)
         {
             try
             {
                 byte[] sendingBuffer;
 
                 //Abrimos el cliente
-                TcpClient client = new TcpClient(IP_MOVIL, PUERTO_ENVIAR_MENSAJE);
+                TcpClient client = new TcpClient(ipMovil, PUERTO_ENVIAR_MENSAJE);
                 NetworkStream netStream = client.GetStream();
 
                 //Enviamos el mensaje
@@ -83,7 +82,7 @@ namespace Pokemon.TFG
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERROR TCP: " + ex.Message);
+                Console.WriteLine("ERROR TCP 2: " + ex.Message);
             }
         }
 
@@ -122,6 +121,17 @@ namespace Pokemon.TFG
                         //Seleccionamos el tipo de accion dependiendo del dato recibido
                         form_Combate.multiplayer = true;
                         int ataque = 0;
+
+                        //Al mandar START se guarda la IP
+                        if (data.ToUpper().Contains("START"))
+                        {
+                            //Para quitar la basura que envia detras del dato que me interesa obtener.
+                            char[] values = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+                            string ipMovil = data.ToUpper().Substring("START".Length);
+                            ipMovil = ipMovil.Substring(0, ipMovil.LastIndexOfAny(values) + 1);
+                            form_Combate.ipMovil = ipMovil;
+                            Console.WriteLine("IP DEL MOVIL CONECTADO::::   " + form_Combate.ipMovil);
+                        }
 
                         //Ataque
                         if (int.TryParse(data.Substring(0, 1), out ataque))

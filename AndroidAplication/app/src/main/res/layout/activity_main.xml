@@ -8,25 +8,53 @@
     android:background="@android:color/background_light"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnCombate"
-        android:layout_width="173dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="184dp"
-        android:text="Combate"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="64dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btnPokedex"
-        android:layout_width="171dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="92dp"
-        android:text="Pokedex"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCombate" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="111dp"
+                android:layout_height="39dp"
+                android:text="IP Destino:" />
+
+            <EditText
+                android:id="@+id/editTextIP"
+                android:layout_width="178dp"
+                android:layout_height="45dp"
+                android:ems="10"
+                android:hint="192.168.1.135"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCombate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="Combate" />
+
+        <Button
+            android:id="@+id/btnPokedex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokedex" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,29 +21,14 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.DataInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
 import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_ALTURA;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_CATEGORIA;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_DESCRIPCION;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_ID;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_NOMBRE;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_PESO;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_TIPO_1;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.CAMPO_POKEMON_TIPO_2;
-import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.NOMBRE_TABLA_POKEMON;
+import static com.example.mandopokemon.SQL.ConexionSQLiteHelper.*;
 
 public class PokedexListaActivity extends AppCompatActivity {
 
