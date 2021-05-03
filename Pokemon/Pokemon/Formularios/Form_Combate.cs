@@ -50,6 +50,7 @@ namespace Pokemon
             this.inicio = inicio;
             inicio.Visible = false;
             InitializeComponent();
+            Text = $"Combate  IP: {ObtenerIP()}";
 
             //TCP SERVER
             new Thread(() =>
@@ -422,6 +423,19 @@ namespace Pokemon
         #endregion
 
         #region Metodos
+
+        private static string ObtenerIP()
+        {
+            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    return ip.ToString();
+                }
+            }
+            return string.Empty;
+        }
 
         public void CambiarPokemon(Pokemon pokemon, string posicion)
         {
