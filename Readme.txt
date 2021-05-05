@@ -1,5 +1,6 @@
 Este es el trabajo de fin de grado en Desarrollo de Aplicaciones Multiplataforma (DAM).
 Realizado por Álvaro Carbajo Alcalde durante el curso 2020-2021 en el IES Comercio, Logroño, La Rioja.
+Mi correo electrónico: alvarocarbajoalcalde@gmail.com
 
 Para descargar una versión más reciente visita: 
 https://github.com/AlvaroCarbajoAlcalde/TFG
