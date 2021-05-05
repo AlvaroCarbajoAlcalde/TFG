@@ -7,5 +7,5 @@ https://github.com/AlvaroCarbajoAlcalde/TFG
 
 Instrucciones:
 Para el funcionamiento del programa en Windows, es necesario instalar AccessDatabaseEngine, para ver la solución hay que instalar VisualStudio 2019.
-Para poder hacer funcionar la aplicacion movil, es necesario tener un dispositivo físico de Android. Para descargar el proyecto en un móvil hay que activar el modo desarrollador en Android e instalar AndroidStudio en el ordenador para lanzarlo desde allí.
+Para poder hacer funcionar la aplicacion movil, es necesario tener un dispositivo físico de Android. Puedes copiar en él el archivo .apk e instalarlo. Recuerda habilitar la instalación de aplicaciones externas a googlePlay en tu dispositivo.
 Para conectar ambos programas, los dispositivos deben estar conectados a la misma red local LAN.
