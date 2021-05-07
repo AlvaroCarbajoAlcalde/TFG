@@ -66,7 +66,6 @@
             this.picBoxTituloAlvaro = new System.Windows.Forms.PictureBox();
             this.btnVsRojo = new System.Windows.Forms.PictureBox();
             this.labelTxtVsRojo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnMultiplayer = new System.Windows.Forms.PictureBox();
             this.labelTxtMultiplayer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnAnterior)).BeginInit();
@@ -522,16 +521,6 @@
             this.labelTxtVsRojo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelTxtVsRojo.Click += new System.EventHandler(this.ElegirRivalClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(339, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnMultiplayer
             // 
             this.btnMultiplayer.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -565,7 +554,6 @@
             this.ClientSize = new System.Drawing.Size(467, 606);
             this.Controls.Add(this.labelTxtMultiplayer);
             this.Controls.Add(this.btnMultiplayer);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.labelTxtVsRojo);
             this.Controls.Add(this.btnVsRojo);
             this.Controls.Add(this.picBoxTituloAlvaro);
@@ -650,7 +638,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuPokedexMovimiento;
         private System.Windows.Forms.ToolStripMenuItem menuPokedexObjeto;
         private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
-        public System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox btnMultiplayer;
         private System.Windows.Forms.Label labelTxtMultiplayer;
     }

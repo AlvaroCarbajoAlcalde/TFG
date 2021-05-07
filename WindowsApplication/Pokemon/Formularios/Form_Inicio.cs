@@ -21,14 +21,6 @@ namespace Pokemon
 
         #endregion
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new System.Threading.Thread(() =>
-            {
-                XML.CrearXMLPokedex();
-            }).Start();
-        }
-
         #region Constructor
 
         public Form_Inicio()
