@@ -8,8 +8,10 @@ namespace Pokemon
 
         private ConexionAccess()
         {
-            con = new OleDbConnection();
-            con.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PokemonDatabase.accdb";
+            con = new OleDbConnection
+            {
+                ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=PokemonDatabase.accdb"
+            };
         }
 
         public static OleDbConnection GetConexion()
