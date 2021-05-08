@@ -435,7 +435,6 @@ namespace Pokemon
             this.MinimumSize = new System.Drawing.Size(1219, 465);
             this.Name = "Form_RogueLike";
             this.Text = "Rogue Like";
-            this.Resize += new System.EventHandler(this.Form_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo4)).EndInit();
