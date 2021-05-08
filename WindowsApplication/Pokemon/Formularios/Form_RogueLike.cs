@@ -14,9 +14,8 @@ namespace Pokemon
 
         private readonly Entrenador entrenador;
         private Entrenador entrenadorRival;
-        private int numCombate, auxEquipo;
-        private int ticks;
-        private int auxPokElegible1, auxPokElegible2, auxPokElegible3;
+        public int numCombate;
+        private int auxPokElegible1, auxPokElegible2, auxPokElegible3, auxEquipo, ticks;
         private Pokemon pokElegible1, pokElegible2, pokElegible3;
         private Objeto objetoRecibido;
         private readonly Random random;
@@ -29,16 +28,22 @@ namespace Pokemon
         private readonly int[] listaRivalesNvl1, listaRivalesNvl2, listaRivalesNvl3, listaRivalesNvl4, listaRivalesLegendarios;
 
         private readonly Form_Inicio inicio;
+        private static readonly Size originalSize = new Size(1219, 465);
+
+        public Rectangle recLblCombate, recIconoJugador, recBtnCombate;
 
         #endregion
 
         #region Constructor
 
-        public Form_RogueLike(Form_Inicio inicio)
+        public Form_RogueLike(Form_Inicio inicio, int entrenadorId)
         {
             this.inicio = inicio;
             InitializeComponent();
             iconoJugador.Location = new Point(39, 210);
+            recBtnCombate = btnCombate.Bounds;
+            recLblCombate = labelCombate.Bounds;
+            recIconoJugador = iconoJugador.Bounds;
             numCombate = 1;
             auxEquipo = 0;
             auxPokElegible1 = auxPokElegible2 = auxPokElegible3 = 0;
@@ -65,7 +70,7 @@ namespace Pokemon
 
             #endregion
 
-            entrenador = new Entrenador(6);
+            entrenador = new Entrenador(entrenadorId);
             iconoJugador.BackgroundImage = entrenador.imageMini;
             entrenador.GenerarEquipo();
             AlmacenarDatosListas();
@@ -139,7 +144,6 @@ namespace Pokemon
 
         private void RerrollPremios()
         {
-            btnCombate.Visible = labelCombate.Visible = false;
             int mediaJugador = CalcularMediaJugador();
 
             //Combate vs BOSS
@@ -203,7 +207,7 @@ namespace Pokemon
 
         private void TimerAnimacion_Tick(object sender, EventArgs e)
         {
-            if (ticks++ >= 10)
+            if (ticks++ >= 8)
             {
                 timerAnimacion.Enabled = false;
                 IniciarCombate();
@@ -250,6 +254,14 @@ namespace Pokemon
             btnCombate.Visible = labelCombate.Visible = true;
         }
 
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            entrenador.objetos.Add(objetoRecibido);
+
+            panelPremios.Visible = false;
+            btnCombate.Visible = labelCombate.Visible = true;
+        }
+
         private void SeleccionarEquipoRival(int nivel)
         {
             Pokemon[] equipo = new Pokemon[6];
@@ -282,6 +294,7 @@ namespace Pokemon
 
         private void BtnCombate_Click(object sender, MouseEventArgs e)
         {
+            btnCombate.Visible = labelCombate.Visible = false;
             ticks = 0;
             new Animacion_RogueLike(iconoJugador, numCombate);
             timerAnimacion.Enabled = true;
@@ -333,23 +346,50 @@ namespace Pokemon
             entrenador.GenerarEquipo();
             Form_Combate combate = new Form_Combate(inicio, entrenador, entrenadorRival, this);
             combate.Show();
-            Hide();
             combate.Text = $"Combate {numCombate}";
             numCombate++;
         }
 
         public void CombateFinalizado(bool ganas)
         {
-            Show();
             if (ganas)
             {
                 RerrollPremios();
+                btnCombate.Visible = labelCombate.Visible = true;
                 panelPremios.Visible = true;
             }
             else
             {
+                inicio.Show();
                 Close();
             }
+        }
+
+        #endregion
+
+        #region MustafaResize
+
+        private void Form_Resize(object sender, EventArgs e)
+        {
+            ResizeControl(recIconoJugador, iconoJugador);
+            ResizeControl(recLblCombate, labelCombate);
+            ResizeControl(recBtnCombate, btnCombate);
+        }
+
+        public void ResizeControl(Rectangle originalControl, Control control)
+        {
+            float xRatio = Width / (float)originalSize.Width;
+            float yRatio = Height / (float)originalSize.Height;
+
+            int newX = (int)(originalControl.Location.X * xRatio);
+            int newY = (int)(originalControl.Location.Y * yRatio);
+            int newWidth = (int)(originalControl.Size.Width * xRatio);
+            int newHeight = (int)(originalControl.Size.Height * yRatio);
+
+            control.Size = new Size(newWidth, newHeight);
+            control.Location = new Point(newX, newY);
+
+            control.Font = new Font(control.Font.FontFamily, 12 * yRatio, control.Font.Style);
         }
 
         #endregion

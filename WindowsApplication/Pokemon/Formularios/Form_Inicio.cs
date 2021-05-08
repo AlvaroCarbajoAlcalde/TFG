@@ -149,7 +149,8 @@ namespace Pokemon
 
         private void RogueLike_Click(object sender, EventArgs e)
         {
-            new Form_RogueLike(this).Show();
+            Hide();
+            new Form_RogueLike(this, idActual).Show();
         }
 
         private void MenuLogCombate_Click(object sender, EventArgs e)

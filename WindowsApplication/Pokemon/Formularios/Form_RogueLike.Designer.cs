@@ -56,6 +56,7 @@ namespace Pokemon
             this.selectArrow1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panelPremios = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.iconoJugador = new System.Windows.Forms.Panel();
             this.timerAnimacion = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo6)).BeginInit();
@@ -85,6 +86,7 @@ namespace Pokemon
             this.btnCombate.BackColor = System.Drawing.Color.Transparent;
             this.btnCombate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCombate.BackgroundImage")));
             this.btnCombate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCombate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCombate.Location = new System.Drawing.Point(1128, 351);
             this.btnCombate.Name = "btnCombate";
             this.btnCombate.Size = new System.Drawing.Size(63, 63);
@@ -349,10 +351,10 @@ namespace Pokemon
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LimeGreen;
-            this.button1.Location = new System.Drawing.Point(545, 182);
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(597, 205);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 57);
+            this.button1.Size = new System.Drawing.Size(66, 34);
             this.button1.TabIndex = 38;
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = false;
@@ -360,7 +362,8 @@ namespace Pokemon
             // 
             // panelPremios
             // 
-            this.panelPremios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panelPremios.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panelPremios.Controls.Add(this.btnCancelar);
             this.panelPremios.Controls.Add(this.picBoxElegido3);
             this.panelPremios.Controls.Add(this.picBoxElegido1);
             this.panelPremios.Controls.Add(this.label2);
@@ -387,6 +390,18 @@ namespace Pokemon
             this.panelPremios.Name = "panelPremios";
             this.panelPremios.Size = new System.Drawing.Size(707, 270);
             this.panelPremios.TabIndex = 40;
+            this.panelPremios.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCancelar.Location = new System.Drawing.Point(525, 205);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(66, 34);
+            this.btnCancelar.TabIndex = 39;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // iconoJugador
             // 
@@ -417,10 +432,10 @@ namespace Pokemon
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1219, 465);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1219, 465);
             this.Name = "Form_RogueLike";
             this.Text = "Rogue Like";
+            this.Resize += new System.EventHandler(this.Form_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo4)).EndInit();
@@ -472,7 +487,8 @@ namespace Pokemon
         public System.Windows.Forms.PictureBox selectArrow2;
         public System.Windows.Forms.PictureBox selectArrow1;
         public System.Windows.Forms.Panel panelPremios;
-        private System.Windows.Forms.Panel iconoJugador;
         private System.Windows.Forms.Timer timerAnimacion;
+        private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Panel iconoJugador;
     }
 }
