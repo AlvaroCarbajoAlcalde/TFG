@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pokemon.Animaciones;
+using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Drawing;
@@ -195,6 +196,12 @@ namespace Pokemon
             return suma / 6;
         }
 
+        //TODO BORRAR
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new Animacion_RogueLike(iconoJugador, numCombate++);
+        }
+
         private void AceptaCambio_Click(object sender, EventArgs e)
         {
             Pokemon elegido;
@@ -232,6 +239,8 @@ namespace Pokemon
             }
 
             panelPremios.Visible = false;
+
+            //new Animacion_RogueLike(iconoJugador, numCombate);
         }
 
         private void SeleccionarEquipoRival(int nivel)

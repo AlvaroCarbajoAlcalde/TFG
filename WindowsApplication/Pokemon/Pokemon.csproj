@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animaciones\Animacion_RogueLike.cs" />
     <Compile Include="Clases\Accion.cs" />
     <Compile Include="Animaciones\Animacion_Ataque.cs" />
     <Compile Include="Animaciones\Animacion_Entrada.cs" />
