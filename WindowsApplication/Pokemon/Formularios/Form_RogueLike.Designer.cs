@@ -55,6 +55,7 @@ namespace Pokemon
             this.selectArrow1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panelPremios = new System.Windows.Forms.Panel();
+            this.iconoJugador = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo4)).BeginInit();
@@ -79,9 +80,10 @@ namespace Pokemon
             // 
             // btnCombate
             // 
+            this.btnCombate.BackColor = System.Drawing.Color.Transparent;
             this.btnCombate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCombate.BackgroundImage")));
             this.btnCombate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCombate.Location = new System.Drawing.Point(283, 329);
+            this.btnCombate.Location = new System.Drawing.Point(1128, 351);
             this.btnCombate.Name = "btnCombate";
             this.btnCombate.Size = new System.Drawing.Size(63, 63);
             this.btnCombate.TabIndex = 0;
@@ -89,9 +91,12 @@ namespace Pokemon
             // 
             // labelCombate
             // 
-            this.labelCombate.Location = new System.Drawing.Point(283, 395);
+            this.labelCombate.BackColor = System.Drawing.Color.Transparent;
+            this.labelCombate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelCombate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.labelCombate.Location = new System.Drawing.Point(1031, 362);
             this.labelCombate.Name = "labelCombate";
-            this.labelCombate.Size = new System.Drawing.Size(63, 31);
+            this.labelCombate.Size = new System.Drawing.Size(99, 41);
             this.labelCombate.TabIndex = 1;
             this.labelCombate.Text = "Siguiente \r\nCombate\r\n";
             this.labelCombate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,7 +105,7 @@ namespace Pokemon
             // 
             this.selectArrowEquipo6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrowEquipo6.BackgroundImage")));
             this.selectArrowEquipo6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrowEquipo6.Location = new System.Drawing.Point(372, 138);
+            this.selectArrowEquipo6.Location = new System.Drawing.Point(412, 163);
             this.selectArrowEquipo6.Name = "selectArrowEquipo6";
             this.selectArrowEquipo6.Size = new System.Drawing.Size(66, 18);
             this.selectArrowEquipo6.TabIndex = 28;
@@ -111,7 +116,7 @@ namespace Pokemon
             // 
             this.selectArrowEquipo5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrowEquipo5.BackgroundImage")));
             this.selectArrowEquipo5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrowEquipo5.Location = new System.Drawing.Point(300, 138);
+            this.selectArrowEquipo5.Location = new System.Drawing.Point(340, 163);
             this.selectArrowEquipo5.Name = "selectArrowEquipo5";
             this.selectArrowEquipo5.Size = new System.Drawing.Size(66, 18);
             this.selectArrowEquipo5.TabIndex = 27;
@@ -122,7 +127,7 @@ namespace Pokemon
             // 
             this.selectArrowEquipo4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrowEquipo4.BackgroundImage")));
             this.selectArrowEquipo4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrowEquipo4.Location = new System.Drawing.Point(228, 138);
+            this.selectArrowEquipo4.Location = new System.Drawing.Point(268, 163);
             this.selectArrowEquipo4.Name = "selectArrowEquipo4";
             this.selectArrowEquipo4.Size = new System.Drawing.Size(66, 18);
             this.selectArrowEquipo4.TabIndex = 26;
@@ -133,7 +138,7 @@ namespace Pokemon
             // 
             this.selectArrowEquipo3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrowEquipo3.BackgroundImage")));
             this.selectArrowEquipo3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrowEquipo3.Location = new System.Drawing.Point(156, 138);
+            this.selectArrowEquipo3.Location = new System.Drawing.Point(196, 163);
             this.selectArrowEquipo3.Name = "selectArrowEquipo3";
             this.selectArrowEquipo3.Size = new System.Drawing.Size(66, 18);
             this.selectArrowEquipo3.TabIndex = 25;
@@ -144,7 +149,7 @@ namespace Pokemon
             // 
             this.selectArrowEquipo2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrowEquipo2.BackgroundImage")));
             this.selectArrowEquipo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrowEquipo2.Location = new System.Drawing.Point(84, 138);
+            this.selectArrowEquipo2.Location = new System.Drawing.Point(124, 163);
             this.selectArrowEquipo2.Name = "selectArrowEquipo2";
             this.selectArrowEquipo2.Size = new System.Drawing.Size(66, 18);
             this.selectArrowEquipo2.TabIndex = 24;
@@ -155,7 +160,7 @@ namespace Pokemon
             // 
             this.selectArrowEquipo1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrowEquipo1.BackgroundImage")));
             this.selectArrowEquipo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrowEquipo1.Location = new System.Drawing.Point(12, 138);
+            this.selectArrowEquipo1.Location = new System.Drawing.Point(52, 163);
             this.selectArrowEquipo1.Name = "selectArrowEquipo1";
             this.selectArrowEquipo1.Size = new System.Drawing.Size(66, 18);
             this.selectArrowEquipo1.TabIndex = 23;
@@ -167,7 +172,7 @@ namespace Pokemon
             this.picBoxPkmn6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxPkmn6.BackgroundImage")));
             this.picBoxPkmn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxPkmn6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxPkmn6.Location = new System.Drawing.Point(372, 157);
+            this.picBoxPkmn6.Location = new System.Drawing.Point(412, 182);
             this.picBoxPkmn6.Name = "picBoxPkmn6";
             this.picBoxPkmn6.Size = new System.Drawing.Size(66, 57);
             this.picBoxPkmn6.TabIndex = 22;
@@ -180,7 +185,7 @@ namespace Pokemon
             this.picBoxPkmn5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxPkmn5.BackgroundImage")));
             this.picBoxPkmn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxPkmn5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxPkmn5.Location = new System.Drawing.Point(300, 157);
+            this.picBoxPkmn5.Location = new System.Drawing.Point(340, 182);
             this.picBoxPkmn5.Name = "picBoxPkmn5";
             this.picBoxPkmn5.Size = new System.Drawing.Size(66, 57);
             this.picBoxPkmn5.TabIndex = 21;
@@ -193,7 +198,7 @@ namespace Pokemon
             this.picBoxPkmn4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxPkmn4.BackgroundImage")));
             this.picBoxPkmn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxPkmn4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxPkmn4.Location = new System.Drawing.Point(228, 157);
+            this.picBoxPkmn4.Location = new System.Drawing.Point(268, 182);
             this.picBoxPkmn4.Name = "picBoxPkmn4";
             this.picBoxPkmn4.Size = new System.Drawing.Size(66, 57);
             this.picBoxPkmn4.TabIndex = 20;
@@ -206,7 +211,7 @@ namespace Pokemon
             this.picBoxPkmn3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxPkmn3.BackgroundImage")));
             this.picBoxPkmn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxPkmn3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxPkmn3.Location = new System.Drawing.Point(156, 157);
+            this.picBoxPkmn3.Location = new System.Drawing.Point(196, 182);
             this.picBoxPkmn3.Name = "picBoxPkmn3";
             this.picBoxPkmn3.Size = new System.Drawing.Size(66, 57);
             this.picBoxPkmn3.TabIndex = 19;
@@ -219,7 +224,7 @@ namespace Pokemon
             this.picBoxPkmn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxPkmn2.BackgroundImage")));
             this.picBoxPkmn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxPkmn2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxPkmn2.Location = new System.Drawing.Point(84, 157);
+            this.picBoxPkmn2.Location = new System.Drawing.Point(124, 182);
             this.picBoxPkmn2.Name = "picBoxPkmn2";
             this.picBoxPkmn2.Size = new System.Drawing.Size(66, 57);
             this.picBoxPkmn2.TabIndex = 18;
@@ -232,7 +237,7 @@ namespace Pokemon
             this.picBoxPkmn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxPkmn1.BackgroundImage")));
             this.picBoxPkmn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxPkmn1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxPkmn1.Location = new System.Drawing.Point(12, 157);
+            this.picBoxPkmn1.Location = new System.Drawing.Point(52, 182);
             this.picBoxPkmn1.Name = "picBoxPkmn1";
             this.picBoxPkmn1.Size = new System.Drawing.Size(66, 57);
             this.picBoxPkmn1.TabIndex = 17;
@@ -245,7 +250,7 @@ namespace Pokemon
             this.picBoxElegido1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxElegido1.BackgroundImage")));
             this.picBoxElegido1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxElegido1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxElegido1.Location = new System.Drawing.Point(127, 33);
+            this.picBoxElegido1.Location = new System.Drawing.Point(167, 58);
             this.picBoxElegido1.Name = "picBoxElegido1";
             this.picBoxElegido1.Size = new System.Drawing.Size(66, 57);
             this.picBoxElegido1.TabIndex = 29;
@@ -258,7 +263,7 @@ namespace Pokemon
             this.picBoxElegido2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxElegido2.BackgroundImage")));
             this.picBoxElegido2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxElegido2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxElegido2.Location = new System.Drawing.Point(199, 33);
+            this.picBoxElegido2.Location = new System.Drawing.Point(239, 58);
             this.picBoxElegido2.Name = "picBoxElegido2";
             this.picBoxElegido2.Size = new System.Drawing.Size(66, 57);
             this.picBoxElegido2.TabIndex = 30;
@@ -271,7 +276,7 @@ namespace Pokemon
             this.picBoxElegido3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxElegido3.BackgroundImage")));
             this.picBoxElegido3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picBoxElegido3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxElegido3.Location = new System.Drawing.Point(271, 33);
+            this.picBoxElegido3.Location = new System.Drawing.Point(311, 58);
             this.picBoxElegido3.Name = "picBoxElegido3";
             this.picBoxElegido3.Size = new System.Drawing.Size(66, 57);
             this.picBoxElegido3.TabIndex = 31;
@@ -284,7 +289,7 @@ namespace Pokemon
             this.picBoxObjetoObtenido.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxObjetoObtenido.BackgroundImage")));
             this.picBoxObjetoObtenido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxObjetoObtenido.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxObjetoObtenido.Location = new System.Drawing.Point(557, 33);
+            this.picBoxObjetoObtenido.Location = new System.Drawing.Point(597, 58);
             this.picBoxObjetoObtenido.Name = "picBoxObjetoObtenido";
             this.picBoxObjetoObtenido.Size = new System.Drawing.Size(66, 57);
             this.picBoxObjetoObtenido.TabIndex = 32;
@@ -292,7 +297,7 @@ namespace Pokemon
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(441, 33);
+            this.label2.Location = new System.Drawing.Point(481, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 57);
             this.label2.TabIndex = 33;
@@ -301,7 +306,7 @@ namespace Pokemon
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(12, 33);
+            this.label3.Location = new System.Drawing.Point(52, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(108, 57);
             this.label3.TabIndex = 34;
@@ -312,7 +317,7 @@ namespace Pokemon
             // 
             this.selectArrow3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrow3.BackgroundImage")));
             this.selectArrow3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrow3.Location = new System.Drawing.Point(271, 9);
+            this.selectArrow3.Location = new System.Drawing.Point(311, 34);
             this.selectArrow3.Name = "selectArrow3";
             this.selectArrow3.Size = new System.Drawing.Size(66, 18);
             this.selectArrow3.TabIndex = 37;
@@ -323,7 +328,7 @@ namespace Pokemon
             // 
             this.selectArrow2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrow2.BackgroundImage")));
             this.selectArrow2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrow2.Location = new System.Drawing.Point(199, 9);
+            this.selectArrow2.Location = new System.Drawing.Point(239, 34);
             this.selectArrow2.Name = "selectArrow2";
             this.selectArrow2.Size = new System.Drawing.Size(66, 18);
             this.selectArrow2.TabIndex = 36;
@@ -334,7 +339,7 @@ namespace Pokemon
             // 
             this.selectArrow1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("selectArrow1.BackgroundImage")));
             this.selectArrow1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.selectArrow1.Location = new System.Drawing.Point(127, 9);
+            this.selectArrow1.Location = new System.Drawing.Point(167, 34);
             this.selectArrow1.Name = "selectArrow1";
             this.selectArrow1.Size = new System.Drawing.Size(66, 18);
             this.selectArrow1.TabIndex = 35;
@@ -342,16 +347,18 @@ namespace Pokemon
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(505, 157);
+            this.button1.BackColor = System.Drawing.Color.LimeGreen;
+            this.button1.Location = new System.Drawing.Point(545, 182);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 57);
             this.button1.TabIndex = 38;
             this.button1.Text = "Aceptar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.AceptaCambio_Click);
             // 
             // panelPremios
             // 
+            this.panelPremios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panelPremios.Controls.Add(this.picBoxElegido3);
             this.panelPremios.Controls.Add(this.picBoxElegido1);
             this.panelPremios.Controls.Add(this.label2);
@@ -374,20 +381,37 @@ namespace Pokemon
             this.panelPremios.Controls.Add(this.picBoxPkmn6);
             this.panelPremios.Controls.Add(this.picBoxPkmn4);
             this.panelPremios.Controls.Add(this.picBoxPkmn5);
-            this.panelPremios.Location = new System.Drawing.Point(12, 12);
+            this.panelPremios.Location = new System.Drawing.Point(276, 53);
             this.panelPremios.Name = "panelPremios";
-            this.panelPremios.Size = new System.Drawing.Size(633, 224);
+            this.panelPremios.Size = new System.Drawing.Size(707, 270);
             this.panelPremios.TabIndex = 40;
+            // 
+            // iconoJugador
+            // 
+            this.iconoJugador.BackColor = System.Drawing.Color.Transparent;
+            this.iconoJugador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconoJugador.BackgroundImage")));
+            this.iconoJugador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconoJugador.Location = new System.Drawing.Point(35, 196);
+            this.iconoJugador.Name = "iconoJugador";
+            this.iconoJugador.Size = new System.Drawing.Size(36, 32);
+            this.iconoJugador.TabIndex = 41;
             // 
             // Form_RogueLike
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 461);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1203, 426);
+            this.Controls.Add(this.iconoJugador);
             this.Controls.Add(this.panelPremios);
             this.Controls.Add(this.labelCombate);
             this.Controls.Add(this.btnCombate);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1219, 465);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1219, 465);
             this.Name = "Form_RogueLike";
             this.Text = "Rogue Like";
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo6)).EndInit();
@@ -441,5 +465,6 @@ namespace Pokemon
         public System.Windows.Forms.PictureBox selectArrow2;
         public System.Windows.Forms.PictureBox selectArrow1;
         public System.Windows.Forms.Panel panelPremios;
+        private System.Windows.Forms.Panel iconoJugador;
     }
 }

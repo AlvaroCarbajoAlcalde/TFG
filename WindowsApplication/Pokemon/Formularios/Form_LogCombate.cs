@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.OleDb;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace Pokemon
@@ -14,6 +15,8 @@ namespace Pokemon
         private static readonly string deleteLogCombate = "DELETE FROM LOG_COMBATE";
 
         private static readonly string selectLogCombate = "SELECT * FROM LOG_COMBATE ORDER BY ID";
+
+        private static readonly Label labelVacio = new Label { Text = "No hay partidas." };
 
         #endregion
 
@@ -44,7 +47,7 @@ namespace Pokemon
             con.Close();
 
             if (panelPartidas.Controls.Count == 0)
-                panelPartidas.Controls.Add(new Label{Text = "No hay partidas."});
+                panelPartidas.Controls.Add(labelVacio);
         }
 
         #endregion
@@ -53,6 +56,13 @@ namespace Pokemon
 
         private void BorrarTodo_Click(object sender, EventArgs e)
         {
+            //Condiciones para no borrar
+            if (panelPartidas.Controls.Count == 0 || panelPartidas.Controls.Contains(labelVacio))
+                return;
+
+            if (System.Windows.MessageBox.Show("Borrar todos los datos.", "Borrar datos.", MessageBoxButton.YesNo) == MessageBoxResult.No)
+                return;
+
             panelPartidas.Controls.Clear();
 
             OleDbConnection con = ConexionAccess.GetConexion();

@@ -10,21 +10,24 @@ namespace Pokemon
     {
 
         #region Propiedades
-        private Entrenador entrenador, entrenadorRival;
+
+        private readonly Entrenador entrenador;
+        private Entrenador entrenadorRival;
         private int numCombate, auxEquipo;
         private int auxPokElegible1, auxPokElegible2, auxPokElegible3;
         private Pokemon pokElegible1, pokElegible2, pokElegible3;
         private Objeto objetoRecibido;
-        private Random random;
+        private readonly Random random;
 
         private static readonly int NIVEL1 = 479;
         private static readonly int NIVEL2 = 559;
         private static readonly int NIVEL3 = 643;
 
-        private List<int> listaNivel1, listaNivel2, listaNivel3, listaNivel4, listaTodos;
-        private int[] listaRivalesNvl1, listaRivalesNvl2, listaRivalesNvl3, listaRivalesNvl4, listaRivalesLegendarios;
+        private readonly List<int> listaNivel1, listaNivel2, listaNivel3, listaNivel4, listaTodos;
+        private readonly int[] listaRivalesNvl1, listaRivalesNvl2, listaRivalesNvl3, listaRivalesNvl4, listaRivalesLegendarios;
 
-        private Form_Inicio inicio;
+        private readonly Form_Inicio inicio;
+
         #endregion
 
         #region Constructor
@@ -38,6 +41,9 @@ namespace Pokemon
             auxPokElegible1 = auxPokElegible2 = auxPokElegible3 = 0;
             objetoRecibido = new Objeto(1);
             random = new Random((int)DateTime.Now.Ticks);
+
+            #region Listas Rivales
+
             listaNivel1 = new List<int>();
             listaNivel2 = new List<int>();
             listaNivel3 = new List<int>();
@@ -53,16 +59,24 @@ namespace Pokemon
             listaRivalesNvl3 = aux3;
             listaRivalesNvl4 = aux4;
             listaRivalesLegendarios = aux5;
+
+            #endregion
+
             entrenador = new Entrenador(6);
             entrenador.GenerarEquipo();
             AlmacenarDatosListas();
             ActualizarPicBox();
-            entrenador.objetos = new List<Objeto>();
-            entrenador.objetos.Add(new Objeto(1));
-            entrenador.objetos.Add(new Objeto(7));
-            entrenador.objetos.Add(new Objeto(10));
-            entrenador.objetos.Add(new Objeto(14));
-            entrenador.objetos.Add(new Objeto(24));
+
+            //Agnadir objetos
+            entrenador.objetos = new List<Objeto>
+            {
+                new Objeto(1),
+                new Objeto(7),
+                new Objeto(10),
+                new Objeto(14),
+                new Objeto(24)
+            };
+
             RerrollPremios();
         }
 
@@ -93,9 +107,13 @@ namespace Pokemon
             int suma;
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select id, VIDA, ATAQUE, DEFENSA, ESPECIAL, VELOCIDAD from ALMACENAMIENTO";
+
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = "SELECT ID, VIDA, ATAQUE, DEFENSA, ESPECIAL, VELOCIDAD FROM ALMACENAMIENTO"
+            };
+
             OleDbDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -168,13 +186,12 @@ namespace Pokemon
         {
             int suma = 0;
             for (int i = 0; i < 6; i++)
-                suma += (
+                suma +=
                     entrenador.equipo[i].vidaMax +
                     entrenador.equipo[i].ataque +
                     entrenador.equipo[i].defensa +
                     entrenador.equipo[i].especial +
-                    entrenador.equipo[i].velocidad
-                    );
+                    entrenador.equipo[i].velocidad;
             return suma / 6;
         }
 
@@ -184,6 +201,7 @@ namespace Pokemon
 
             entrenador.objetos.Add(objetoRecibido);
 
+            //Pokemon del cambio
             if (selectArrow1.Visible)
                 elegido = pokElegible1;
             else if (selectArrow2.Visible)
@@ -296,7 +314,7 @@ namespace Pokemon
             numCombate++;
         }
 
-        public void CombateFinalizado(Boolean ganas)
+        public void CombateFinalizado(bool ganas)
         {
             Show();
             if (ganas)
@@ -306,7 +324,7 @@ namespace Pokemon
             }
             else
             {
-                this.Close();
+                Close();
             }
         }
 
