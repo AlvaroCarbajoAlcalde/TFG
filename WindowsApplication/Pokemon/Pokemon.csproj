@@ -61,6 +61,7 @@
     <Compile Include="Clases\Entrenador.cs" />
     <Compile Include="Clases\Enums.cs" />
     <Compile Include="Clases\EstadisticasActuales.cs" />
+    <Compile Include="Clases\IPUtil.cs" />
     <Compile Include="Formularios\Form_LogCombateDetalles.cs">
       <SubType>Form</SubType>
     </Compile>

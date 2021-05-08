@@ -1,4 +1,5 @@
-﻿using Pokemon.TFG;
+﻿using Pokemon.Clases;
+using Pokemon.TFG;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
@@ -50,7 +51,7 @@ namespace Pokemon
             this.inicio = inicio;
             inicio.Visible = false;
             InitializeComponent();
-            Text = $"Combate  IP: {ObtenerIP()}";
+            Text = $"Combate  IP: {IPUtil.ObtenerIP()}";
 
             //TCP SERVER
             new Thread(() =>
@@ -370,8 +371,8 @@ namespace Pokemon
                     server.Server.Close();
                     endEnvio = true;
                     inicio.Visible = true;
-                    this.Close();
-                    this.Dispose();
+                    Close();
+                    Dispose();
                     break;
             }
             ticks++;
@@ -423,19 +424,6 @@ namespace Pokemon
         #endregion
 
         #region Metodos
-
-        private static string ObtenerIP()
-        {
-            IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (IPAddress ip in host.AddressList)
-            {
-                if (ip.AddressFamily.ToString() == "InterNetwork")
-                {
-                    return ip.ToString();
-                }
-            }
-            return string.Empty;
-        }
 
         public void CambiarPokemon(Pokemon pokemon, string posicion)
         {

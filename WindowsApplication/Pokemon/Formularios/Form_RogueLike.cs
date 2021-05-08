@@ -1,4 +1,5 @@
 ﻿using Pokemon.Animaciones;
+using Pokemon.Clases;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
@@ -340,7 +341,7 @@ namespace Pokemon
             entrenador.GenerarEquipo();
             Form_Combate combate = new Form_Combate(inicio, entrenador, entrenadorRival, this);
             combate.Show();
-            combate.Text = $"Combate {numCombate}";
+            combate.Text = $"Combate {numCombate},  IP: {IPUtil.ObtenerIP()}";
             numCombate++;
         }
 
