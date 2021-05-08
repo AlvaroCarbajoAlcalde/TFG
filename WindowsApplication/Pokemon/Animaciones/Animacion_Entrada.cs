@@ -1,27 +1,28 @@
 ﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
 using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pokemon
 {
     class AnimacionEntrada
     {
-        private Timer timerAnimacion, timerPokeball;
-        private string posicion;
-        private PictureBox picBoxPokemon;
-        private Image imagenPokemon;
+
+        #region Propiedades
+
+        private readonly Timer timerAnimacion, timerPokeball;
+        private readonly string posicion;
+        private readonly PictureBox picBoxPokemon;
+        private readonly Image imagenPokemon;
         private Size sizeFinal;
         private Point posicionFinal;
-        private int ticksAnimacionTotales, ticks;
+        private readonly int ticksAnimacionTotales;
+        private int ticks;
         private Rectangle recPicBoxPokemon;
-        private Form_Combate combate;
+        private readonly Form_Combate combate;
+
+        #endregion
+
+        #region Constructor
 
         public AnimacionEntrada(PictureBox picBoxPokemon, Rectangle recPicBoxPokemon, string posicion, Form_Combate combate)
         {
@@ -38,11 +39,11 @@ namespace Pokemon
             //Timers
             timerAnimacion = new Timer();
             timerAnimacion.Interval = 55;
-            timerAnimacion.Tick += new System.EventHandler(this.TimerAnimacion_Tick);
+            timerAnimacion.Tick += new EventHandler(this.TimerAnimacion_Tick);
 
             timerPokeball = new Timer();
             timerPokeball.Interval = 85;
-            timerPokeball.Tick += new System.EventHandler(this.TimerPokeball_Tick);
+            timerPokeball.Tick += new EventHandler(this.TimerPokeball_Tick);
 
             //Imagen pokemon
             Image imgPokeball = GenerarPokebalRandom();
@@ -54,6 +55,10 @@ namespace Pokemon
 
             timerPokeball.Enabled = true;
         }
+
+        #endregion
+
+        #region Metodos
 
         private void TimerAnimacion_Tick(object sender, EventArgs e)
         {
@@ -96,7 +101,7 @@ namespace Pokemon
                     combate.pokemonFront.PlayRugido();
                 else
                     combate.pokemonBack.PlayRugido();
-                
+
                 //Cambiamos de animacion a la del pokemon
                 timerAnimacion.Enabled = true;
                 timerPokeball.Enabled = false;
@@ -107,11 +112,14 @@ namespace Pokemon
         private Image GenerarPokebalRandom()
         {
             //Generamos una imagen de pokeball
-            Random random = new Random((int)System.DateTime.Now.Ticks);
+            Random random = new Random((int)DateTime.Now.Ticks);
             string[] pokeballs = { "Acopio", "Buceo", "Honor", "Lujo", "Malla", "Master", "Nido", "Ocaso",
-                                 "Poke", "Safari", "Sana", "Super", "Turno", "Ultra", "Veloz",};
-            string salida = "Img/Pokeballs/" + pokeballs[random.Next(0, pokeballs.Length)] + "Ball.png";
+                                 "Poke", "Safari", "Sana", "Super", "Turno", "Ultra", "Veloz"};
+            string salida = $"Img/Pokeballs/{pokeballs[random.Next(0, pokeballs.Length)]}Ball.png";
             return Image.FromFile(@salida);
         }
+
+        #endregion
+
     }
 }

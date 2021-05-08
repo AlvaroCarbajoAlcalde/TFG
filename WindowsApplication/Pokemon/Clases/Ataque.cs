@@ -24,9 +24,11 @@ namespace Pokemon
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select nombre, fk_tipo, potencia, precision, categoria, pp, estado, probabilidad_estado, descripcion from MOVIMIENTO where ID=" + idMovimiento;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select nombre, fk_tipo, potencia, precision, categoria, pp, estado, probabilidad_estado, descripcion from MOVIMIENTO where ID = {idMovimiento}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             if (reader.Read())

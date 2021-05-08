@@ -1,29 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pokemon
 {
     public partial class Visualizador_Objeto : UserControl
     {
+
+        #region Propiedades
+
         public Objeto objeto;
-        private Form_Combate combate;
+        private readonly Form_Combate combate;
         public Pokedex_Objeto pokedexObjeto;
+
+        #endregion
+
+        #region Constructor
 
         public Visualizador_Objeto(Objeto objeto, Form_Combate combate)
         {
             InitializeComponent();
             this.combate = combate;
             this.objeto = objeto;
-            picBoxObjeto.BackgroundImage = Image.FromFile(@"Img\Bolsa\" + objeto.id + ".png");
+            picBoxObjeto.BackgroundImage = Image.FromFile($@"Img\Bolsa\{objeto.id}.png");
             labelNombre.Text = objeto.nombre;
         }
+
+        #endregion
+
+        #region Metodos
 
         private void On_Click(object sender, EventArgs e)
         {
@@ -57,5 +62,8 @@ namespace Pokemon
         {
             this.pokedexObjeto = pokedexObjeto;
         }
+
+        #endregion
+
     }
 }

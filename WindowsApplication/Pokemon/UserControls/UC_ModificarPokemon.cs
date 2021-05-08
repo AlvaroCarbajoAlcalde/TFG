@@ -7,10 +7,63 @@ namespace Pokemon
 {
     public partial class UC_ModificarPokemon : UserControl
     {
+
+        #region Propiedades
+
         public Entrenador entrenador;
         public int numPokemonEquipo, numPokemon, numMov1, numMov2, numMov3, numMov4, tipo1, tipo2;
-        public String nombrePokedex;
+        public string nombrePokedex;
         public Form_SeleccionEquipo seleccionEquipo;
+
+        #endregion
+
+        #region Constructor
+
+        public UC_ModificarPokemon(int numPokemonEquipo, Entrenador entrenador, Form_SeleccionEquipo seleccionEquipo)
+        {
+            InitializeComponent();
+            this.numPokemonEquipo = numPokemonEquipo;
+            this.entrenador = entrenador;
+            this.seleccionEquipo = seleccionEquipo;
+
+            //Pokemons
+            int contador = 0;
+            OleDbConnection con = ConexionAccess.GetConexion();
+            con.Open();
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = "select nombre, FK_TIPO1, FK_TIPO2, HP, ATAQUE, DEFENSA, ESPECIAL, VELOCIDAD from Pokemon order by id"
+            };
+            OleDbDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                contador++;
+                panelPokemons.Controls.Add(new Visualizador_Pokemon(contador, reader[0].ToString(), (int)reader[1], (int)reader[2], this, (int)reader[3], (int)reader[4], (int)reader[5], (int)reader[6], (int)reader[7]));
+            }
+            reader.Close();
+
+            comboBoxMovimiento.SelectedIndex = 0;
+
+            //Ataques
+            OleDbCommand command2 = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = "select nombre, FK_TIPO, precision, potencia, descripcion, categoria, id, pp from movimiento where id<>0 order by fk_tipo, categoria, potencia, nombre"
+            };
+            OleDbDataReader reader2 = command2.ExecuteReader();
+
+            while (reader2.Read())
+                panelDeSeleccionDeAtaque.Controls.Add(new Visualizador_Ataque((int)reader2[6], reader2[0].ToString(), (int)reader2[1], reader2[5].ToString(), reader2[4].ToString(), (int)reader2[3], (int)reader2[2], (int)reader2[7], this));
+
+            reader2.Close();
+            con.Close();
+        }
+
+        #endregion
+
+        #region Metodos
 
         public void CargarPokemon(Pokemon pokemonACargar, int numPokemon)
         {
@@ -30,29 +83,29 @@ namespace Pokemon
             {
                 numMov1 = pokemonACargar.mov1.idMovimiento;
                 labelAtaque1.Text = pokemonACargar.mov1.nombre;
-                picBoxCategoria1.BackgroundImage = Image.FromFile(@"Img\Categoria\" + pokemonACargar.mov1.categoria + ".gif");
-                picBoxTipo1.BackgroundImage = Image.FromFile(@"Img\Tipes\" + (int)pokemonACargar.mov1.tipo + ".gif");
+                picBoxCategoria1.BackgroundImage = Image.FromFile($@"Img\Categoria\{pokemonACargar.mov1.categoria}.gif");
+                picBoxTipo1.BackgroundImage = Image.FromFile($@"Img\Tipes\{(int)pokemonACargar.mov1.tipo}.gif");
             }
             if (pokemonACargar.mov2 != null)
             {
                 numMov2 = pokemonACargar.mov2.idMovimiento;
                 labelAtaque2.Text = pokemonACargar.mov2.nombre;
-                picBoxCategoria2.BackgroundImage = Image.FromFile(@"Img\Categoria\" + pokemonACargar.mov2.categoria + ".gif");
-                picBoxTipo2.BackgroundImage = Image.FromFile(@"Img\Tipes\" + (int)pokemonACargar.mov2.tipo + ".gif");
+                picBoxCategoria2.BackgroundImage = Image.FromFile($@"Img\Categoria\{pokemonACargar.mov2.categoria}.gif");
+                picBoxTipo2.BackgroundImage = Image.FromFile($@"Img\Tipes\{(int)pokemonACargar.mov2.tipo}.gif");
             }
             if (pokemonACargar.mov3 != null)
             {
                 numMov3 = pokemonACargar.mov3.idMovimiento;
                 labelAtaque3.Text = pokemonACargar.mov3.nombre;
-                picBoxCategoria3.BackgroundImage = Image.FromFile(@"Img\Categoria\" + pokemonACargar.mov3.categoria + ".gif");
-                picBoxTipo3.BackgroundImage = Image.FromFile(@"Img\Tipes\" + (int)pokemonACargar.mov3.tipo + ".gif");
+                picBoxCategoria3.BackgroundImage = Image.FromFile($@"Img\Categoria\{pokemonACargar.mov3.categoria}.gif");
+                picBoxTipo3.BackgroundImage = Image.FromFile($@"Img\Tipes\{(int)pokemonACargar.mov3.tipo}.gif");
             }
             if (pokemonACargar.mov4 != null)
             {
                 numMov4 = pokemonACargar.mov4.idMovimiento;
                 labelAtaque4.Text = pokemonACargar.mov4.nombre;
-                picBoxCategoria4.BackgroundImage = Image.FromFile(@"Img\Categoria\" + pokemonACargar.mov4.categoria + ".gif");
-                picBoxTipo4.BackgroundImage = Image.FromFile(@"Img\Tipes\" + (int)pokemonACargar.mov4.tipo + ".gif");
+                picBoxCategoria4.BackgroundImage = Image.FromFile($@"Img\Categoria\{pokemonACargar.mov4.categoria}.gif");
+                picBoxTipo4.BackgroundImage = Image.FromFile($@"Img\Tipes\{(int)pokemonACargar.mov4.tipo}.gif");
             }
             if (pokemonACargar.esShiny)
                 checkBoxShiny.Checked = true;
@@ -60,60 +113,22 @@ namespace Pokemon
                 checkBoxShiny.Checked = false;
         }
 
-        public UC_ModificarPokemon(int numPokemonEquipo, Entrenador entrenador, Form_SeleccionEquipo seleccionEquipo)
-        {
-            InitializeComponent();
-            this.numPokemonEquipo = numPokemonEquipo;
-            this.entrenador = entrenador;
-            this.seleccionEquipo = seleccionEquipo;
-
-            //Pokemons
-            int contador = 0;
-            OleDbConnection con = ConexionAccess.GetConexion();
-            con.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select nombre, FK_TIPO1, FK_TIPO2, HP, ATAQUE, DEFENSA, ESPECIAL, VELOCIDAD from Pokemon order by id";
-            OleDbDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                contador++;
-                panelPokemons.Controls.Add(new Visualizador_Pokemon(contador, reader[0].ToString(), (int)reader[1], (int)reader[2], this, (int)reader[3], (int)reader[4], (int)reader[5], (int)reader[6], (int)reader[7]));
-            }
-            reader.Close();
-
-            comboBoxMovimiento.SelectedIndex = 0;
-
-            //Ataques
-            OleDbCommand command2 = new OleDbCommand();
-            command2.Connection = con;
-            command2.CommandText = "select nombre, FK_TIPO, precision, potencia, descripcion, categoria, id, pp from movimiento where id<>0 order by fk_tipo, categoria, potencia, nombre";
-            OleDbDataReader reader2 = command2.ExecuteReader();
-
-            while (reader2.Read())
-                panelDeSeleccionDeAtaque.Controls.Add(new Visualizador_Ataque((int)reader2[6], reader2[0].ToString(), (int)reader2[1], reader2[5].ToString(), reader2[4].ToString(), (int)reader2[3], (int)reader2[2], (int)reader2[7], this));
-
-            reader2.Close();
-            con.Close();
-        }
-
         private void CheckBoxShiny_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxShiny.Checked)
-                pictBoxPokemon.Image = Image.FromFile(@"Img\Sprites\Shiny\Front\" + nombrePokedex + ".gif");
+                pictBoxPokemon.Image = Image.FromFile($@"Img\Sprites\Shiny\Front\{nombrePokedex}.gif");
             else
-                pictBoxPokemon.Image = Image.FromFile(@"Img\Sprites\Front\" + nombrePokedex + ".gif");
+                pictBoxPokemon.Image = Image.FromFile($@"Img\Sprites\Front\{nombrePokedex}.gif");
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
-            int hp, atq, def, esp, vel, id;
-            if (int.TryParse(textBoxHp.Text, out hp) &&
-                int.TryParse(textBoxAtq.Text, out atq) &&
-                int.TryParse(textBoxEsp.Text, out esp) &&
-                int.TryParse(textBoxDef.Text, out def) &&
-                int.TryParse(textBoxVel.Text, out vel))
+            int id;
+            if (int.TryParse(textBoxHp.Text, out int hp) &&
+                int.TryParse(textBoxAtq.Text, out int atq) &&
+                int.TryParse(textBoxEsp.Text, out int esp) &&
+                int.TryParse(textBoxDef.Text, out int def) &&
+                int.TryParse(textBoxVel.Text, out int vel))
             {
                 switch (numPokemonEquipo)
                 {
@@ -196,12 +211,15 @@ namespace Pokemon
                 MessageBox.Show("Los datos introducidos para el pokemon son incorrectos.");
         }
 
-        public void SetPokemon(int numPokedex, String nombre)
+        public void SetPokemon(int numPokedex, string nombre)
         {
             nombrePokedex = nombre;
             numPokemon = numPokedex;
-            pictBoxPokemon.Image = Image.FromFile(@"Img\Sprites\Front\" + nombre + ".gif");
+            pictBoxPokemon.Image = Image.FromFile($@"Img\Sprites\Front\{nombre}.gif");
             labelNombrePokemon.Text = nombre;
         }
+
+        #endregion
+
     }
 }

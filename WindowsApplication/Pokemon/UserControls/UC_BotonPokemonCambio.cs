@@ -1,19 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pokemon
 {
     public partial class UC_BotonPokemonCambio : UserControl
     {
+
+        #region Propiedades 
+
         public Pokemon pokemon;
         public Form_Combate combate;
+
+        #endregion
+
+        #region Constructor
 
         public UC_BotonPokemonCambio(Pokemon pokemon, Form_Combate combate)
         {
@@ -21,9 +22,9 @@ namespace Pokemon
             this.pokemon = pokemon;
             this.combate = combate;
             labelNombre.Text = pokemon.nombre;
-            labelVida.Text = pokemon.vidaActual + "/" + pokemon.vidaMax;
+            labelVida.Text = $"{pokemon.vidaActual}/{pokemon.vidaMax}";
             picBoxIcono.BackgroundImage = pokemon.icono;
-            barraDeVida.Size = new Size((int)(((double)pokemon.vidaActual / (double)pokemon.vidaMax) * 62), 5);
+            barraDeVida.Size = new Size((int)((double)pokemon.vidaActual / pokemon.vidaMax * 62), 5);
 
             if (pokemon.vidaActual < 0.3 * pokemon.vidaMax) barraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaAmarilla.png");
             else barraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaVerde.png");
@@ -31,8 +32,12 @@ namespace Pokemon
             if (pokemon.vidaActual <= 0)
                 BackgroundImage = Image.FromFile(@"Img\Recursos\PokemonChangeRIP.png");
 
-            picBoxEstado.BackgroundImage = Image.FromFile(@"Img\Estado\" + (int)pokemon.estadisticasActuales.estadoActual + ".png");
+            picBoxEstado.BackgroundImage = Image.FromFile($@"Img\Estado\{(int)pokemon.estadisticasActuales.estadoActual}.png");
         }
+
+        #endregion
+
+        #region Metodos
 
         private void SelectorCambio_MouseEnter(object sender, EventArgs e)
         {
@@ -65,5 +70,8 @@ namespace Pokemon
                 }
             }
         }
+
+        #endregion
+
     }
 }

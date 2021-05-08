@@ -8,8 +8,8 @@ namespace Pokemon
 
         #region Propiedades
 
-        private Label labelTexto;
-        private Timer timerAnimacion;
+        private readonly Label labelTexto;
+        private readonly Timer timerAnimacion;
         public string texto;
         private int ticks;
 
@@ -22,7 +22,7 @@ namespace Pokemon
             this.labelTexto = labelTexto;
             timerAnimacion = new Timer();
             timerAnimacion.Interval = 55;
-            timerAnimacion.Tick += new EventHandler(this.TimerAnimacion_Tick);
+            timerAnimacion.Tick += new EventHandler(TimerAnimacion_Tick);
         }
 
         #endregion

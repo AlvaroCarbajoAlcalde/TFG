@@ -76,8 +76,7 @@ namespace Pokemon
                                 msgMostrar = Ataque(combate.pokemonBack, combate.accionRealizadaPorBack.ataqueUsado, combate.pokemonFront);
                                 break;
                             case Accion.TipoAccion.CAMBIOPOKEMON:
-                                msgMostrar = "¡" + combate.pokemonBack.nombre + ", cambio!\n" + "¡Adelante, " +
-                                    combate.accionRealizadaPorBack.pokemonACambiar.nombre + "!";
+                                msgMostrar = $"¡{combate.pokemonBack.nombre}, cambio!\n¡Adelante, {combate.accionRealizadaPorBack.pokemonACambiar.nombre}!";
                                 combate.CambiarPokemon(combate.accionRealizadaPorBack.pokemonACambiar, "Back");
                                 break;
                             case Accion.TipoAccion.OBJETO:
@@ -141,8 +140,7 @@ namespace Pokemon
                                 msgMostrar = Ataque(combate.pokemonBack, combate.accionRealizadaPorBack.ataqueUsado, combate.pokemonFront);
                                 break;
                             case Accion.TipoAccion.CAMBIOPOKEMON:
-                                msgMostrar = "¡" + combate.pokemonBack.nombre + ", cambio!\n" + "¡Adelante, " +
-                                    combate.accionRealizadaPorBack.pokemonACambiar.nombre + "!";
+                                msgMostrar = $"¡{combate.pokemonBack.nombre}, cambio!\n¡Adelante, {combate.accionRealizadaPorBack.pokemonACambiar.nombre}!";
                                 combate.CambiarPokemon(combate.accionRealizadaPorBack.pokemonACambiar, "Back");
                                 break;
                             case Accion.TipoAccion.OBJETO:
@@ -212,7 +210,7 @@ namespace Pokemon
             if (pokemon.estadisticasActuales.debilitado)
                 return "";
 
-            string textoSalida = entrenador.nombre + " ha usado " + objetoUsado.nombre + ".\n";
+            string textoSalida = $"{entrenador.nombre} ha usado {objetoUsado.nombre}.\n";
 
             switch (objetoUsado.idObjeto)
             {
@@ -371,115 +369,115 @@ namespace Pokemon
                     if (pokemon.mov4 != null)
                         pokemon.mov4.ppActuales = pokemon.mov4.ppMax;
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     break;
 
                 case Objeto.ObjetcID.AtaqueX:
                     if (pokemon.estadisticasActuales.modificadorAtaque < 6)
                     {
-                        textoSalida += "El ataque de " + pokemon.nombre + " subió enormemente.\n";
+                        textoSalida += $"El ataque de {pokemon.nombre} subió enormemente.\n";
                         pokemon.estadisticasActuales.modificadorAtaque += 2;
                         if (pokemon.estadisticasActuales.modificadorAtaque > 6)
                             pokemon.estadisticasActuales.modificadorAtaque = 6;
                         pokemon.CambiarEstadistica(Estadistica.ATAQUE);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "El ataque de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"El ataque de {pokemon.nombre} no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.DefensaX:
                     if (pokemon.estadisticasActuales.modificadorDefensa < 6)
                     {
-                        textoSalida += "La defensa de " + pokemon.nombre + " subió enormemente.\n";
+                        textoSalida += $"La defensa de {pokemon.nombre} subió enormemente.\n";
                         pokemon.estadisticasActuales.modificadorDefensa += 2;
                         if (pokemon.estadisticasActuales.modificadorDefensa > 6)
                             pokemon.estadisticasActuales.modificadorDefensa = 6;
                         pokemon.CambiarEstadistica(Estadistica.DEFENSA);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "La defensa de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"La defensa de {pokemon.nombre} no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.VelocidadX:
                     if (pokemon.estadisticasActuales.modificadorVelocidad < 6)
                     {
-                        textoSalida += "La velocidad de " + pokemon.nombre + " subió enormemente.\n";
+                        textoSalida += $"La velocidad de {pokemon.nombre} subió enormemente.\n";
                         pokemon.estadisticasActuales.modificadorVelocidad += 2;
                         if (pokemon.estadisticasActuales.modificadorVelocidad > 6)
                             pokemon.estadisticasActuales.modificadorVelocidad = 6;
                         pokemon.CambiarEstadistica(Estadistica.VELOCIDAD);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "La velocidad de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"La velocidad de {pokemon.nombre} no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.EspecialX:
                     if (pokemon.estadisticasActuales.modificadorEspecial < 6)
                     {
-                        textoSalida += "El especial de " + pokemon.nombre + " subió enormemente.\n";
+                        textoSalida += $"El especial de {pokemon.nombre} subió enormemente.\n";
                         pokemon.estadisticasActuales.modificadorEspecial += 2;
                         if (pokemon.estadisticasActuales.modificadorEspecial > 6)
                             pokemon.estadisticasActuales.modificadorEspecial = 6;
                         pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "El especial de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"El especial de {pokemon.nombre} no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.PrecisionX:
                     if (pokemon.estadisticasActuales.modificadorPrecision < 6)
                     {
-                        textoSalida += "La precision de " + pokemon.nombre + " subió enormemente.\n";
+                        textoSalida += $"La precision de {pokemon.nombre} subió enormemente.\n";
                         pokemon.estadisticasActuales.modificadorPrecision += 2;
                         if (pokemon.estadisticasActuales.modificadorPrecision > 6)
                             pokemon.estadisticasActuales.modificadorPrecision = 6;
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "La precision de " + pokemon.nombre + " no puede subir más. \n";
+                        textoSalida += $"La precision de {pokemon.nombre} no puede subir más. \n";
                     break;
 
                 case Objeto.ObjetcID.EvasionX:
                     if (pokemon.estadisticasActuales.modificadorEvasion < 6)
                     {
-                        textoSalida += "La evasion de " + pokemon.nombre + " subió enormemente. \n";
+                        textoSalida += $"La evasion de {pokemon.nombre} subió enormemente. \n";
                         pokemon.estadisticasActuales.modificadorEvasion += 2;
                         if (pokemon.estadisticasActuales.modificadorEvasion > 6)
                             pokemon.estadisticasActuales.modificadorEvasion = 6;
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "La evasion de " + pokemon.nombre + " no puede subir más. \n";
+                        textoSalida += $"La evasion de {pokemon.nombre} no puede subir más. \n";
                     break;
 
                 case Objeto.ObjetcID.CriticoX:
                     if (pokemon.estadisticasActuales.modificadorCritico < 4)
                     {
-                        textoSalida += "El critico de " + pokemon.nombre + " subió enormemente. \n";
+                        textoSalida += $"El critico de {pokemon.nombre} subió enormemente. \n";
                         pokemon.estadisticasActuales.modificadorCritico += 2;
                         if (pokemon.estadisticasActuales.modificadorCritico > 4)
                             pokemon.estadisticasActuales.modificadorCritico = 4;
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "El critico de " + pokemon.nombre + " no puede subir más. \n";
+                        textoSalida += $"El critico de {pokemon.nombre} no puede subir más. \n";
                     break;
 
                 case Objeto.ObjetcID.CaracteristicasX:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
-                    textoSalida += "Todas las estadísticas de " + pokemon.nombre + " subieron. \n";
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                    textoSalida += $"Todas las estadísticas de {pokemon.nombre} subieron. \n";
                     if (pokemon.estadisticasActuales.modificadorCritico < 4)
                         pokemon.estadisticasActuales.modificadorCritico++;
                     if (pokemon.estadisticasActuales.modificadorAtaque < 6)
@@ -502,7 +500,7 @@ namespace Pokemon
 
                 case Objeto.ObjetcID.CarameloRaro:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     pokemon.vidaMax += 25;
                     pokemon.vidaActual += 25;
                     pokemon.ataque += 15;
@@ -514,48 +512,48 @@ namespace Pokemon
                     pokemon.CambiarEstadistica(Estadistica.DEFENSA);
                     pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
                     pokemon.CambiarEstadistica(Estadistica.VELOCIDAD);
-                    textoSalida += pokemon.nombre + " ha subido de nivel. \n";
+                    textoSalida += $"{pokemon.nombre} ha subido de nivel. \n";
                     combate.vidaTu = new BarraDeVida("Back", pokemon, combate);
                     break;
 
                 case Objeto.ObjetcID.Proteina:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     pokemon.ataque += 15;
                     pokemon.CambiarEstadistica(Estadistica.ATAQUE);
-                    textoSalida += "El ataque de " + pokemon.nombre + " ha aumentado.\n";
+                    textoSalida += $"El ataque de {pokemon.nombre} ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.Hierro:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     pokemon.defensa += 15;
                     pokemon.CambiarEstadistica(Estadistica.DEFENSA);
-                    textoSalida += "La defensa de " + pokemon.nombre + " ha aumentado.\n";
+                    textoSalida += $"La defensa de {pokemon.nombre} ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.Calcio:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     pokemon.especial += 15;
                     pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
-                    textoSalida += "El especial de " + pokemon.nombre + " ha aumentado.\n";
+                    textoSalida += $"El especial de {pokemon.nombre} ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.Carburante:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     pokemon.velocidad += 15;
                     pokemon.CambiarEstadistica(Estadistica.VELOCIDAD);
-                    textoSalida += "La velocidad de " + pokemon.nombre + " ha aumentado.\n";
+                    textoSalida += $"La velocidad de {pokemon.nombre} ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.MasPS:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     pokemon.vidaMax += 30;
                     pokemon.vidaActual += 30;
-                    textoSalida += "Los PV máximos de " + pokemon.nombre + " han aumentado.\n";
+                    textoSalida += $"Los PV máximos de {pokemon.nombre} han aumentado.\n";
                     combate.vidaTu = new BarraDeVida("Back", pokemon, combate);
                     break;
 
@@ -600,7 +598,7 @@ namespace Pokemon
                     if (pokemon.estadisticasActuales.confuso > 0)
                     {
                         pokemon.estadisticasActuales.confuso = 0;
-                        textoSalida += pokemon.nombre + " ya no está confuso. \n";
+                        textoSalida += $"{pokemon.nombre} ya no está confuso. \n";
                     }
                     break;
 
@@ -615,23 +613,23 @@ namespace Pokemon
                 case Objeto.ObjetcID.HierbaMental:
                     if (pokemon.estadisticasActuales.modificadorEspecial < 6)
                     {
-                        textoSalida += "El especial de " + pokemon.nombre + " subió.\n";
+                        textoSalida += $"El especial de {pokemon.nombre} subió.\n";
                         pokemon.estadisticasActuales.modificadorEspecial++;
                         pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "El especial de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"El especial de {pokemon.nombre} no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.FlautaAmarilla:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     if (pokemon.estadisticasActuales.confuso > 0)
                     {
                         pokemon.estadisticasActuales.confuso = 0;
-                        textoSalida += pokemon.nombre + " ya no está confuso. \n";
+                        textoSalida += $"{pokemon.nombre} ya no está confuso. \n";
                     }
                     break;
 
@@ -641,11 +639,11 @@ namespace Pokemon
 
                 case Objeto.ObjetcID.FlautaRoja:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
                     if (pokemon.estadisticasActuales.drenadoras)
                     {
                         pokemon.estadisticasActuales.drenadoras = false;
-                        textoSalida += pokemon.nombre + " ya no está infectado. \n";
+                        textoSalida += $"{pokemon.nombre} ya no está infectado. \n";
                     }
                     break;
 
@@ -655,8 +653,8 @@ namespace Pokemon
 
                 case Objeto.ObjetcID.CenizaSagrada:
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
-                    textoSalida += "Todas las estadísticas de " + pokemon.nombre + " se restablecieron. \n";
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
+                    textoSalida += $"Todas las estadísticas de {pokemon.nombre} se restablecieron. \n";
                     pokemon.estadisticasActuales.modificadorCritico = 0;
                     pokemon.estadisticasActuales.modificadorAtaque = 0;
                     pokemon.estadisticasActuales.modificadorDefensa = 0;
@@ -673,27 +671,27 @@ namespace Pokemon
                 case Objeto.ObjetcID.HierbaAguante:
                     if (pokemon.estadisticasActuales.modificadorDefensa < 6)
                     {
-                        textoSalida += "La defensa de " + pokemon.nombre + " subió.\n";
+                        textoSalida += $"La defensa de {pokemon.nombre} subió.\n";
                         pokemon.estadisticasActuales.modificadorDefensa++;
                         pokemon.CambiarEstadistica(Estadistica.DEFENSA);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "La defensa de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"La defensa de {pokemon.nombre} no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.HierbaLucha:
                     if (pokemon.estadisticasActuales.modificadorAtaque < 6)
                     {
-                        textoSalida += "El ataque de " + pokemon.nombre + " subió.\n";
+                        textoSalida += $"El ataque de {pokemon.nombre} subió.\n";
                         pokemon.estadisticasActuales.modificadorAtaque++;
                         pokemon.CambiarEstadistica(Estadistica.ATAQUE);
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
-                        textoSalida += "El ataque de " + pokemon.nombre + " no puede subir más.\n";
+                        textoSalida += $"El ataque de {pokemon.nombre} no puede subir más.\n";
                     break;
             }
 
@@ -709,7 +707,7 @@ namespace Pokemon
 
             if (cantidadCura > 0)
             {
-                textoSalida += pokemon.nombre + " ha recuperado salud. \n";
+                textoSalida += $"{pokemon.nombre} ha recuperado salud. \n";
                 pokemon.vidaActual += cantidadCura;
                 if (pokemon.vidaActual > pokemon.vidaMax)
                     pokemon.vidaActual = pokemon.vidaMax;
@@ -718,13 +716,13 @@ namespace Pokemon
             if (estadoQueCura != Estado.NINGUNO && (pokemon.estadisticasActuales.estadoActual == estadoQueCura || estadoQueCura == Estado.TODOS ||
                 (pokemon.estadisticasActuales.estadoActual == Estado.GRAVEMENTEENVENENADO && estadoQueCura == Estado.ENVENENADO)))
             {
-                textoSalida += pokemon.nombre + " se ha recuperado del problema de estado. \n";
+                textoSalida += $"{ pokemon.nombre} se ha recuperado del problema de estado. \n";
                 pokemon.estadisticasActuales.estadoActual = Estado.NINGUNO;
             }
 
             //Sonido
             if (!combate.mute)
-                new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\objectused.wav").PlaySync(); }).Start();
 
             return textoSalida;
         }
@@ -735,8 +733,8 @@ namespace Pokemon
 
         public void ActualizarParteGrafica()
         {
-            combate.picBoxEstadoTu.BackgroundImage = Image.FromFile(@"Img\Estado\" + (int)combate.pokemonBack.estadisticasActuales.estadoActual + ".png");
-            combate.picBoxEstadoRival.BackgroundImage = Image.FromFile(@"Img\Estado\" + (int)combate.pokemonFront.estadisticasActuales.estadoActual + ".png");
+            combate.picBoxEstadoTu.BackgroundImage = Image.FromFile($@"Img\Estado\{(int)combate.pokemonBack.estadisticasActuales.estadoActual}.png");
+            combate.picBoxEstadoRival.BackgroundImage = Image.FromFile($@"Img\Estado\{(int)combate.pokemonFront.estadisticasActuales.estadoActual}.png");
 
             if (combate.pokemonBack.vidaActual <= 0)
             {
@@ -752,8 +750,8 @@ namespace Pokemon
             combate.vidaRival.SetVida(combate.pokemonFront.vidaActual);
             combate.vidaTu.SetVida(combate.pokemonBack.vidaActual);
 
-            combate.labelNivelTu.Text = "Nv" + combate.pokemonBack.nivel;
-            combate.labelNivelRival.Text = "Nv" + combate.pokemonFront.nivel;
+            combate.labelNivelTu.Text = $"Nv{combate.pokemonBack.nivel}";
+            combate.labelNivelRival.Text = $"Nv{combate.pokemonFront.nivel}";
         }
 
         #endregion
@@ -868,29 +866,29 @@ namespace Pokemon
             {
                 //El pokemon esta envenenado.
                 case Estado.ENVENENADO:
-                    textoSalida += "El veneno resta ps a " + pokemonAfectado.nombre + "\n";
+                    textoSalida += $"El veneno resta ps a {pokemonAfectado.nombre}\n";
                     pokemonAfectado.vidaActual -= pokemonAfectado.vidaMax / 16;
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Poisoned.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Poisoned.wav").PlaySync(); }).Start();
                     break;
 
                 //El pokemon esta gravemente envenenado.
                 case Estado.GRAVEMENTEENVENENADO:
-                    textoSalida += "El veneno resta ps a " + pokemonAfectado.nombre + "\n";
+                    textoSalida += $"El veneno resta ps a {pokemonAfectado.nombre}\n";
                     double dagnoSufrido = pokemonAfectado.estadisticasActuales.turnosGravementeEnvenenado / (double)16;
                     pokemonAfectado.vidaActual -= (int)(pokemonAfectado.vidaMax * dagnoSufrido);
                     //Aumentamos los turnos de gravemente envenenado.
                     pokemonAfectado.estadisticasActuales.turnosGravementeEnvenenado++;
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Poisoned.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Poisoned.wav").PlaySync(); }).Start();
                     break;
 
                 //El pokemon esta quemado
                 case Estado.QUEMADO:
-                    textoSalida += pokemonAfectado.nombre + " se resiente de sus quemaduras.\n";
+                    textoSalida += $"{pokemonAfectado.nombre} se resiente de sus quemaduras.\n";
                     pokemonAfectado.vidaActual -= pokemonAfectado.vidaMax / 16;
                     if (!combate.mute)
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Burned.wav").PlaySync(); }).Start();
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Burned.wav").PlaySync(); }).Start();
                     break;
             }
 
@@ -903,13 +901,13 @@ namespace Pokemon
                 switch (pokemonAfectado.estadisticasActuales.estadoActual)
                 {
                     case Estado.ENVENENADO:
-                        textoSalida += pokemonAfectado.nombre + " no fue capaz de resistir el veneno.\n";
+                        textoSalida += $"{pokemonAfectado.nombre} no fue capaz de resistir el veneno.\n";
                         break;
                     case Estado.GRAVEMENTEENVENENADO:
-                        textoSalida += pokemonAfectado.nombre + " no fue capaz de resistir el veneno.\n";
+                        textoSalida += $"{pokemonAfectado.nombre} no fue capaz de resistir el veneno.\n";
                         break;
                     case Estado.QUEMADO:
-                        textoSalida += pokemonAfectado.nombre + " no fue capaz de resistir las quemaduras.\n";
+                        textoSalida += $"{pokemonAfectado.nombre} no fue capaz de resistir las quemaduras.\n";
                         break;
                 }
                 return textoSalida;
@@ -924,13 +922,13 @@ namespace Pokemon
                     int vidaRobada = pokemonAfectado.vidaMax / 16;
                     pokemonAfectado.vidaActual -= vidaRobada;
 
-                    textoSalida += "Drenadoras afecta a " + pokemonAfectado.nombre + ".\n";
+                    textoSalida += $"Drenadoras afecta a {pokemonAfectado.nombre}.\n";
 
                     if (!pokemonRival.estadisticasActuales.debilitado)
                     {
-                        textoSalida += pokemonRival.nombre + " ha recuperado algunos Ps.\n";
+                        textoSalida += $"{pokemonRival.nombre} ha recuperado algunos Ps.\n";
                         if (!combate.mute)
-                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\healing.wav").PlaySync(); }).Start();
+                            new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\healing.wav").PlaySync(); }).Start();
                         pokemonRival.vidaActual += vidaRobada;
 
                         //Si el pokemon rival excede sus ps maximos.
@@ -939,13 +937,13 @@ namespace Pokemon
                     }
                 }
                 else
-                    textoSalida += "Drenadoras no a afecta a " + pokemonAfectado.nombre + ".\n";
+                    textoSalida += $"Drenadoras no a afecta a {pokemonAfectado.nombre}.\n";
             }
 
             //Si el pokemon se debilita tras las drenadoras.
             if (pokemonAfectado.vidaActual <= 0)
             {
-                textoSalida += "Drenadoras acabó con " + pokemonAfectado.nombre + "\n";
+                textoSalida += $"Drenadoras acabó con {pokemonAfectado.nombre}\n";
                 pokemonAfectado.vidaActual = 0;
                 pokemonAfectado.estadisticasActuales.debilitado = true;
             }

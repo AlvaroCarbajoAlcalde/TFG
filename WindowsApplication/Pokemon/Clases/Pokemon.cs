@@ -30,9 +30,11 @@ namespace Pokemon
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select * from ALMACENAMIENTO where ID=" + numAlmacenamiento;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select * from ALMACENAMIENTO where ID={numAlmacenamiento}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             //Establecer datos
@@ -60,9 +62,11 @@ namespace Pokemon
             }
             reader.Close();
 
-            OleDbCommand command2 = new OleDbCommand();
-            command2.Connection = con;
-            command2.CommandText = "select NOMBRE, FK_TIPO1, FK_TIPO2 from POKEMON where ID=" + fkPokedex;
+            OleDbCommand command2 = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select NOMBRE, FK_TIPO1, FK_TIPO2 from POKEMON where ID={fkPokedex}"
+            };
             OleDbDataReader reader2 = command2.ExecuteReader();
             //Tipos
             if (reader2.Read())
@@ -88,59 +92,16 @@ namespace Pokemon
             {
                 esShiny = true;
                 //Establecer Imagenes
-                icono = Image.FromFile(@"Img\\PkmIcons\\" + fkPokedex + ".png");
-                imagenFront = Image.FromFile(@"Img\Sprites\Shiny\Front\" + nombrePokedex + ".gif");
-                imagenBack = Image.FromFile(@"Img\Sprites\Shiny\Back\" + nombrePokedex + ".gif");
+                icono = Image.FromFile($@"Img\PkmIcons\{fkPokedex}.png");
+                imagenFront = Image.FromFile($@"Img\Sprites\Shiny\Front\{nombrePokedex}.gif");
+                imagenBack = Image.FromFile($@"Img\Sprites\Shiny\Back\{nombrePokedex}.gif");
             }
             else
             {
                 //Establecer Imagenes
-                icono = Image.FromFile(@"Img\\PkmIcons\\" + fkPokedex + ".png");
-                imagenFront = Image.FromFile(@"Img\Sprites\Front\" + nombrePokedex + ".gif");
-                imagenBack = Image.FromFile(@"Img\Sprites\Back\" + nombrePokedex + ".gif");
-            }
-
-            //Estadisticas actuales
-            estadisticasActuales = new EstadisticasActuales(this);
-        }
-
-        public Pokemon(int idPokedex, Ataque mov1, Ataque mov2, Ataque mov3, Ataque mov4, int hp, int ataque,
-            int defensa, int especial, int velocidad, Boolean esShiny, String apodo, String nombrePokedex, int tipo1, int tipo2)
-        {
-            numAlmacenamiento = idPokedex;
-            nombre = apodo;
-            nivel = 50;
-            vidaMax = vidaActual = hp;
-            this.ataque = ataque;
-            this.defensa = defensa;
-            this.especial = especial;
-            this.velocidad = velocidad;
-            fkPokedex = idPokedex;
-            this.nombrePokedex = nombrePokedex;
-            this.tipo1 = (Tipo)Enum.ToObject(typeof(Tipo), tipo1);
-            this.tipo2 = (Tipo)Enum.ToObject(typeof(Tipo), tipo2);
-            random = new Random((int)System.DateTime.Now.Ticks / fkPokedex);
-
-            //Movimientos aux
-            this.mov1 = mov1;
-            this.mov2 = mov2;
-            this.mov3 = mov3;
-            this.mov4 = mov4;
-
-            if (esShiny) //Random para hacerlo shiny
-            {
-                this.esShiny = true;
-                //Establecer Imagenes
-                icono = Image.FromFile(@"Img\PkmIcons\" + fkPokedex + ".png");
-                imagenFront = Image.FromFile(@"Img\Sprites\Shiny\Front\" + nombrePokedex + ".gif");
-                imagenBack = Image.FromFile(@"Img\Sprites\Shiny\Back\" + nombrePokedex + ".gif");
-            }
-            else
-            {
-                //Establecer Imagenes
-                icono = Image.FromFile(@"Img\PkmIcons\" + fkPokedex + ".png");
-                imagenFront = Image.FromFile(@"Img\Sprites\Front\" + nombrePokedex + ".gif");
-                imagenBack = Image.FromFile(@"Img\Sprites\Back\" + nombrePokedex + ".gif");
+                icono = Image.FromFile($@"Img\PkmIcons\{fkPokedex}.png");
+                imagenFront = Image.FromFile($@"Img\Sprites\Front\{nombrePokedex}.gif");
+                imagenBack = Image.FromFile($@"Img\Sprites\Back\{nombrePokedex}.gif");
             }
 
             //Estadisticas actuales
@@ -171,9 +132,9 @@ namespace Pokemon
                 int auxPP = 10 - estadisticasActuales.vecesTransformado;
 
                 //Establecer Imagenes
-                icono = Image.FromFile(@"Img\\PkmIcons\\" + fkPokedex + ".png");
-                imagenFront = Image.FromFile(@"Img\Pokemon\" + nombrePokedex + "Front.gif");
-                imagenBack = Image.FromFile(@"Img\Pokemon\" + nombrePokedex + "Back.gif");
+                icono = Image.FromFile($@"Img\PkmIcons\{fkPokedex}.png");
+                imagenFront = Image.FromFile($@"Img\Pokemon\{nombrePokedex}Front.gif");
+                imagenBack = Image.FromFile($@"Img\Pokemon\{nombrePokedex}Back.gif");
 
                 //Establecer Movimientos
                 mov1 = mov2 = mov3 = mov4 = null;
@@ -297,29 +258,29 @@ namespace Pokemon
 
         public void MostrarDatos()
         {
-            Console.WriteLine("----------  " + nombre + "  ----------");
+            Console.WriteLine($"----------  {nombre}  ----------");
             if (estadisticasActuales.debilitado)
                 Console.WriteLine("-Debilitado");
-            Console.WriteLine("-Vida Actual: " + vidaActual + "/" + vidaMax);
-            Console.WriteLine("-Ataque: " + estadisticasActuales.ataqueActual + ", mod: " + estadisticasActuales.modificadorAtaque + ", base: " + ataque);
-            Console.WriteLine("-Defensa: " + estadisticasActuales.defensaActual + ", mod: " + estadisticasActuales.modificadorDefensa + ", base: " + defensa);
-            Console.WriteLine("-Especial: " + estadisticasActuales.especialActual + ", mod: " + estadisticasActuales.modificadorEspecial + ", base: " + especial);
-            Console.WriteLine("-Velocidad: " + estadisticasActuales.velocidadActual + ", mod: " + estadisticasActuales.modificadorVelocidad + ", base: " + velocidad);
-            Console.WriteLine("-Precision: " + estadisticasActuales.modificadorPrecision);
-            Console.WriteLine("-Evasion: " + estadisticasActuales.modificadorEvasion);
-            Console.WriteLine("-Critico: " + estadisticasActuales.modificadorCritico);
+            Console.WriteLine($"-Vida Actual: {vidaActual}/{vidaMax}");
+            Console.WriteLine($"-Ataque: {estadisticasActuales.ataqueActual}, mod: {estadisticasActuales.modificadorAtaque}, base: {ataque}");
+            Console.WriteLine($"-Defensa: {estadisticasActuales.defensaActual}, mod: {estadisticasActuales.modificadorDefensa }, base: {defensa}");
+            Console.WriteLine($"-Especial: {estadisticasActuales.especialActual}, mod: {estadisticasActuales.modificadorEspecial }, base: {especial}");
+            Console.WriteLine($"-Velocidad: {estadisticasActuales.velocidadActual}, mod: {estadisticasActuales.modificadorVelocidad}, base: {velocidad}");
+            Console.WriteLine($"-Precision: {estadisticasActuales.modificadorPrecision}");
+            Console.WriteLine($"-Evasion: {estadisticasActuales.modificadorEvasion}");
+            Console.WriteLine($"-Critico: {estadisticasActuales.modificadorCritico}");
             if (estadisticasActuales.turnosDormido > 0)
-                Console.WriteLine("-Turnos Dormido: " + estadisticasActuales.turnosDormido);
+                Console.WriteLine($"-Turnos Dormido: {estadisticasActuales.turnosDormido}");
             if (estadisticasActuales.confuso > 0)
-                Console.WriteLine("-Turnos Confuso: " + estadisticasActuales.confuso);
+                Console.WriteLine($"-Turnos Confuso: {estadisticasActuales.confuso}");
             if (estadisticasActuales.turnosInmovilizado > 0)
-                Console.WriteLine("-Turnos Inmovil: " + estadisticasActuales.turnosInmovilizado);
+                Console.WriteLine($"-Turnos Inmovil: {estadisticasActuales.turnosInmovilizado}");
             if (estadisticasActuales.estadoActual == Estado.GRAVEMENTEENVENENADO)
-                Console.WriteLine("-Turnos G.Envenenado: " + estadisticasActuales.turnosGravementeEnvenenado);
+                Console.WriteLine($"-Turnos G.Envenenado: {estadisticasActuales.turnosGravementeEnvenenado}");
             if (estadisticasActuales.ultimoAtaqueRecibido != null)
-                Console.WriteLine("-Ult. Ataque Recibido: " + estadisticasActuales.ultimoAtaqueRecibido.nombre);
+                Console.WriteLine($"-Ult. Ataque Recibido: {estadisticasActuales.ultimoAtaqueRecibido.nombre}");
             if (estadisticasActuales.dagnoUltimoGolpeRecibido > 0)
-                Console.WriteLine("-Ult daño recibido: " + estadisticasActuales.dagnoUltimoGolpeRecibido);
+                Console.WriteLine($"-Ult daño recibido: {estadisticasActuales.dagnoUltimoGolpeRecibido}");
             if (estadisticasActuales.usandoFuria)
                 Console.WriteLine("-Usando furia");
             if (estadisticasActuales.volando)
@@ -337,13 +298,13 @@ namespace Pokemon
             if (estadisticasActuales.reflejo)
                 Console.WriteLine("-Bajo efectos de Reflejo");
             if (estadisticasActuales.movLanzadoTrasEspera != null)
-                Console.WriteLine("-Mov. tras espera: " + estadisticasActuales.movLanzadoTrasEspera.nombre);
+                Console.WriteLine($"-Mov. tras espera: {estadisticasActuales.movLanzadoTrasEspera.nombre}");
             if (estadisticasActuales.turnosEspera > 0)
-                Console.WriteLine("-Turnos espera: " + estadisticasActuales.turnosEspera);
+                Console.WriteLine($"-Turnos espera: {estadisticasActuales.turnosEspera}");
             if (estadisticasActuales.movQueContinua != null)
-                Console.WriteLine("-Mov. tras espera: " + estadisticasActuales.movQueContinua.nombre);
+                Console.WriteLine($"-Mov. tras espera: {estadisticasActuales.movQueContinua.nombre}");
             if (estadisticasActuales.turnosContinuarMovimiento > 0)
-                Console.WriteLine("-Turnos espera: " + estadisticasActuales.turnosContinuarMovimiento);
+                Console.WriteLine($"-Turnos espera: {estadisticasActuales.turnosContinuarMovimiento}");
         }
 
         #endregion

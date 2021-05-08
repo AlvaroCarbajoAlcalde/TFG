@@ -1,19 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pokemon
 {
     class AnimacionAtaque
     {
-        private PictureBox pokemonAfectado;
-        private Timer timerAnimacion;
-        private PictureBox imagenAtaque;
+
+        #region Propiedades
+
+        private readonly PictureBox pokemonAfectado;
+        private readonly Timer timerAnimacion;
+        private readonly PictureBox imagenAtaque;
         private int ticks;
-        private Boolean parpadeo, acabaDesaparecido;
+        private readonly bool parpadeo, acabaDesaparecido;
+
+        #endregion
+
+        #region Constructores
 
         public AnimacionAtaque(PictureBox pokemonAfectado, PictureBox imagenAtaque)
         {
@@ -24,11 +27,11 @@ namespace Pokemon
             ticks = 0;
             timerAnimacion.Tick += TimerAnimacionTick;
             parpadeo = true;
-            this.acabaDesaparecido = false;
+            acabaDesaparecido = false;
             timerAnimacion.Enabled = true;
         }
 
-        public AnimacionAtaque(PictureBox pokemonAfectado, PictureBox imagenAtaque, Boolean parpadeo)
+        public AnimacionAtaque(PictureBox pokemonAfectado, PictureBox imagenAtaque, bool parpadeo)
         {
             timerAnimacion = new Timer();
             this.pokemonAfectado = pokemonAfectado;
@@ -41,7 +44,7 @@ namespace Pokemon
             timerAnimacion.Enabled = true;
         }
 
-        public AnimacionAtaque(PictureBox pokemonAfectado, PictureBox imagenAtaque, Boolean parpadeo, Boolean acabaDesaparecido)
+        public AnimacionAtaque(PictureBox pokemonAfectado, PictureBox imagenAtaque, bool parpadeo, bool acabaDesaparecido)
         {
             timerAnimacion = new Timer();
             this.pokemonAfectado = pokemonAfectado;
@@ -53,6 +56,10 @@ namespace Pokemon
             this.acabaDesaparecido = acabaDesaparecido;
             timerAnimacion.Enabled = true;
         }
+
+        #endregion
+
+        #region Metodos
 
         private void TimerAnimacionTick(object sender, EventArgs e)
         {
@@ -89,5 +96,8 @@ namespace Pokemon
             }
             ticks++;
         }
+
+        #endregion
+
     }
 }

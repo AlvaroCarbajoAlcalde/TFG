@@ -119,7 +119,7 @@ namespace Pokemon.TFG
             }
             catch (Exception e)
             {
-                Console.WriteLine("ERROR al crear XML de pokedex: " + e.Message);
+                Console.WriteLine($"ERROR al crear XML de pokedex: {e.Message}");
             }
         }
 

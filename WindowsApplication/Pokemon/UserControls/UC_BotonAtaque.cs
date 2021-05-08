@@ -26,16 +26,16 @@ namespace Pokemon
                 if (ataque.ppActuales < 0)
                     ataque.ppActuales = 0;
 
-                panelMov.BackgroundImage = Image.FromFile(@"Img\\PanelesMovimiento\\" + (int)ataque.tipo + ".png");
-                labelPP.Text = "PP " + ataque.ppActuales + "/" + ataque.ppMax;
+                panelMov.BackgroundImage = Image.FromFile($@"Img\PanelesMovimiento\{(int)ataque.tipo}.png");
+                labelPP.Text = $"PP {ataque.ppActuales}/{ataque.ppMax}";
                 labelNombreAtaque.Text = ataque.nombre;
 
                 if (ataque.turnosAnulado > 0)
-                    panelMov.BackgroundImage = Image.FromFile(@"Img\\PanelesMovimiento\\Bloqueado.png");
+                    panelMov.BackgroundImage = Image.FromFile(@"Img\PanelesMovimiento\Bloqueado.png");
             }
             else
             {
-                panelMov.BackgroundImage = Image.FromFile(@"Img\\PanelesMovimiento\\0.png");
+                panelMov.BackgroundImage = Image.FromFile(@"Img\PanelesMovimiento\0.png");
                 labelPP.Text = "";
                 labelNombreAtaque.Text = "";
             }
@@ -55,13 +55,13 @@ namespace Pokemon
         private void OnMouseUp(object sender, MouseEventArgs e)
         {
             if (ataque != null && ataque.turnosAnulado <= 0 && ataque.ppActuales > 0)
-                panelMov.BackgroundImage = Image.FromFile(@"Img\\PanelesMovimiento\\" + (int)ataque.tipo + ".png");
+                panelMov.BackgroundImage = Image.FromFile($@"Img\PanelesMovimiento\{(int)ataque.tipo}.png");
         }
 
         private void OnMouseDown(object sender, MouseEventArgs e)
         {
             if (ataque != null && ataque.turnosAnulado <= 0 && ataque.ppActuales > 0)
-                panelMov.BackgroundImage = Image.FromFile(@"Img\\PanelesMovimientoHover\\" + (int)ataque.tipo + ".png");
+                panelMov.BackgroundImage = Image.FromFile($@"Img\PanelesMovimientoHover\{(int)ataque.tipo}.png");
         }
 
         private void OnHover(object sender, EventArgs e)

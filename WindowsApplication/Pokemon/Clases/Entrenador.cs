@@ -10,7 +10,7 @@ namespace Pokemon
 
         #region Propiedades
 
-        private Random random;
+        private readonly Random random;
         public int auxPok1 = 0, auxPok2 = 0, auxPok3 = 0, auxPok4 = 0, auxPok5 = 0, auxPok6 = 0;
         public int numEntrenador, numPartidas, numVictorias;
         public Image imageFront, imageBack, imageMini, iconP1, iconP2, iconP3, iconP4, iconP5, iconP6;
@@ -21,16 +21,19 @@ namespace Pokemon
         #endregion
 
         #region Constructores
+
         public Entrenador(int numEntrenador)
         {
-            random = new Random((int)System.DateTime.Now.Ticks);
+            random = new Random((int)DateTime.Now.Ticks);
 
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select * from ENTRENADOR where ID=" + numEntrenador;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select * from ENTRENADOR where ID= {numEntrenador}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -116,6 +119,7 @@ namespace Pokemon
 
         public Entrenador(int numEntrenador, string cadena)
         {
+            _ = cadena;
             random = new Random((int)DateTime.Now.Ticks);
 
             OleDbConnection con = ConexionAccess.GetConexion();

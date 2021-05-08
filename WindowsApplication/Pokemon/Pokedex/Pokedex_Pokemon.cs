@@ -14,7 +14,8 @@ namespace Pokemon
         private bool front;
         private Image img;
         private string nombrePokemon;
-        private int idActual, numDatos;
+        private int idActual;
+        private readonly int numDatos;
         private Size originalSize;
         private Rectangle recBtnAnt, recBtnSig, recBtnBuscar, recCuadroBusqueda, recLabelId, recImgPokemon, recLabelNombre, recTxtPeso, recLabelPeso,
             recTxtAltura, recLabelAltura, recTipo1, recTipo2, recDescripcion, recHuella, recBtnGrito, recLabelCategoria, recFloatLayout,
@@ -28,7 +29,7 @@ namespace Pokemon
         public Pokedex_Pokemon()
         {
             InitializeComponent();
-            originalSize = this.Size;
+            originalSize = Size;
             recBtnAnt = btnAnterior.Bounds;
             recBtnSig = btnSiguiente.Bounds;
             recBtnBuscar = btnBuscar.Bounds;
@@ -65,13 +66,13 @@ namespace Pokemon
             {
                 flowPanel.Visible = fondoLista.Visible = false;
                 imagenPkmn.Visible = true;
-                btnAbrirLista.BackgroundImage = Image.FromFile(@"Img\\Botones\\FlechaDcha.png");
+                btnAbrirLista.BackgroundImage = Image.FromFile(@"Img\Botones\FlechaDcha.png");
             }
             else
             {
                 imagenPkmn.Visible = false;
                 flowPanel.Visible = fondoLista.Visible = true;
-                btnAbrirLista.BackgroundImage = Image.FromFile(@"Img\\Botones\\FlechaAbajo.png");
+                btnAbrirLista.BackgroundImage = Image.FromFile(@"Img\Botones\FlechaAbajo.png");
             }
         }
 
@@ -79,12 +80,12 @@ namespace Pokemon
         {
             if (front)
             {
-                img = Image.FromFile(@"Img\Sprites\Front\" + nombrePokemon + ".gif");
+                img = Image.FromFile($@"Img\Sprites\Front\{nombrePokemon}.gif");
                 front = false;
             }
             else
             {
-                img = Image.FromFile(@"Img\Sprites\Back\" + nombrePokemon + ".gif");
+                img = Image.FromFile($@"Img\Sprites\Back\{nombrePokemon}.gif");
                 front = true;
             }
 
@@ -100,9 +101,11 @@ namespace Pokemon
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select id, nombre, categoria, descripcion, peso, altura, FK_TIPO1, FK_TIPO2 from Pokemon where Id=" + pokemonId;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select id, nombre, categoria, descripcion, peso, altura, FK_TIPO1, FK_TIPO2 from Pokemon where Id={pokemonId}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
             try
             {
@@ -116,7 +119,7 @@ namespace Pokemon
                     if (idActual < 100) labelId.Text += "0";
                     labelId.Text += idActual;
                     labelNombrePokemon.Text = reader[1].ToString();
-                    labelCategoria.Text = "Pokémon " + reader[2].ToString();
+                    labelCategoria.Text = $"Pokémon {reader[2]}";
                     labelDescripcion.Text = reader[3].ToString();
                     labelPeso.Text = reader[4].ToString();
                     labelAltura.Text = reader[5].ToString();
@@ -128,7 +131,7 @@ namespace Pokemon
                     ImagenPkmn_Click(this, null);
 
                     //Establecer huella
-                    Image img = Image.FromFile(@"Img\\Huellas\\" + idActual + ".png");
+                    Image img = Image.FromFile($@"Img\Huellas\{idActual}.png");
                     imagenHuella.BackgroundImage = img;
                     recHuella.Size = img.Size;
                     recHuella.Location = new Point(238 - img.Width / 2, 166 - img.Height / 2);
@@ -138,12 +141,12 @@ namespace Pokemon
                     tipo1.Visible = false;
                     tipo2.Visible = false;
 
-                    tipo1.BackgroundImage = Image.FromFile(@"Img\\Tipes\\" + tipo_1 + ".gif");
+                    tipo1.BackgroundImage = Image.FromFile($@"Img\Tipes\{tipo_1}.gif");
                     tipo1.Visible = true;
                     //Si tiene dos tipos
                     if (tipo_2 != "0")
                     {
-                        tipo2.BackgroundImage = Image.FromFile(@"Img\\Tipes\\" + tipo_2 + ".gif");
+                        tipo2.BackgroundImage = Image.FromFile($@"Img\Tipes\{tipo_2}.gif");
                         tipo2.Visible = true;
                     }
                 }
@@ -151,7 +154,7 @@ namespace Pokemon
             }
             catch (Exception e)
             {
-                MessageBox.Show("Error: " + e.Message);
+                MessageBox.Show($"Error: {e.Message}");
             }
             con.Close();
         }
@@ -162,9 +165,11 @@ namespace Pokemon
             int contador = 0;
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select nombre from Pokemon order by id";
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = "select nombre from Pokemon order by id"
+            };
             OleDbDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
@@ -179,9 +184,8 @@ namespace Pokemon
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
             string entrada = cuadroBusqueda.Text;
-            int newid;
             //Si buscamos por id
-            if (int.TryParse(entrada, out newid))
+            if (int.TryParse(entrada, out int newid))
             {
                 if (newid > 0 && newid <= numDatos)
                 {
@@ -195,9 +199,11 @@ namespace Pokemon
             {
                 OleDbConnection con = ConexionAccess.GetConexion();
                 con.Open();
-                OleDbCommand command = new OleDbCommand();
-                command.Connection = con;
-                command.CommandText = "select Id from Pokemon where Nombre='" + entrada + "'";
+                OleDbCommand command = new OleDbCommand
+                {
+                    Connection = con,
+                    CommandText = $"select Id from Pokemon where Nombre='{entrada}'"
+                };
                 OleDbDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
@@ -265,8 +271,8 @@ namespace Pokemon
 
         private void ResizeControl(Rectangle originalControl, Control control, bool sinFont)
         {
-            float xRatio = (float)(this.Width) / (float)(originalSize.Width);
-            float yRatio = (float)(this.Height) / (float)(originalSize.Height);
+            float xRatio = (float)Width / originalSize.Width;
+            float yRatio = (float)Height / originalSize.Height;
 
             int newX = (int)(originalControl.Location.X * xRatio);
             int newY = (int)(originalControl.Location.Y * yRatio);

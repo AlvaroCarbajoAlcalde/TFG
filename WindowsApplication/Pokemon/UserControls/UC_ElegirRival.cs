@@ -1,25 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Pokemon
 {
     public partial class UC_ElegirRival : UserControl
     {
-        public int id;
-        private Form_MenuCombate menuCombate;
-        private int aux1, aux2, aux3, aux4, aux5, aux6;
-        private string nombre, rutaImagen;
 
-        private Image imagenEntrenador;
-        private Panel[] listaPaneles;
+        #region Propiedades 
+
+        public int id;
+        private readonly Form_MenuCombate menuCombate;
+        private readonly int aux1, aux2, aux3, aux4, aux5, aux6;
+        private readonly string nombre, rutaImagen;
+
+        private readonly Image imagenEntrenador;
+        private readonly Panel[] listaPaneles;
+
+        #endregion
+
+        #region Constructor
 
         public UC_ElegirRival(int id, Form_MenuCombate menuCombate)
         {
@@ -38,15 +39,17 @@ namespace Pokemon
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select * from RIVAL where id=" + id;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select * from RIVAL where id={id}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
             {
                 nombre = labelNombreEntrenador.Text = reader[1].ToString();
-                rutaImagen = @"Img\Entrenadores\Rivales\" + reader[8].ToString();
+                rutaImagen = $@"Img\Entrenadores\Rivales\{reader[8]}";
                 imagenEntrenador = picBoxEntrenador.Image = Image.FromFile(rutaImagen);
                 aux1 = (int)reader[2];
                 aux2 = (int)reader[3];
@@ -61,6 +64,10 @@ namespace Pokemon
             GetIcons(aux1, aux2, aux3, aux4, aux5, aux6);
         }
 
+        #endregion
+
+        #region Metodos
+
         private void OnClick(object sender, EventArgs e)
         {
             menuCombate.rival = new Entrenador(nombre, aux1, aux2, aux3, aux4, aux5, aux6, rutaImagen);
@@ -74,16 +81,17 @@ namespace Pokemon
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select fk_pokedex from ALMACENAMIENTO where id=" + auxPok1 + " or id=" + auxPok2
-                + " or id=" + auxPok3 + " or id=" + auxPok4 + " or id=" + auxPok5 + " or id=" + auxPok6;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select fk_pokedex from ALMACENAMIENTO where id={auxPok1} or id={auxPok2} or id={auxPok3} or id={auxPok4} or id={auxPok5} or id={auxPok6}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             int contador = 0;
             while (reader.Read())
             {
-                listaPaneles[contador].BackgroundImage = Image.FromFile(@"Img\\PkmIcons\\" + reader[0] + ".png");
+                listaPaneles[contador].BackgroundImage = Image.FromFile($@"Img\PkmIcons\{reader[0]}.png");
                 contador++;
             }
 
@@ -91,5 +99,8 @@ namespace Pokemon
             con.Close();
             return toReturn;
         }
+
+        #endregion
+
     }
 }

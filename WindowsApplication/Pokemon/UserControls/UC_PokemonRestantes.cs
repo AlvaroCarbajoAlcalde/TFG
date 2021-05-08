@@ -7,21 +7,34 @@ namespace Pokemon
 {
     public partial class UC_PokemonRestantes : UserControl
     {
-        private Entrenador entrenador;
-        private List<PictureBox> listaPokeballs;
+
+        #region Propiedades
+
+        private readonly Entrenador entrenador;
+        private readonly List<PictureBox> listaPokeballs;
+
+        #endregion
+
+        #region Constructor
 
         public UC_PokemonRestantes(Entrenador entrenador)
         {
             InitializeComponent();
             this.entrenador = entrenador;
-            listaPokeballs = new List<PictureBox>();
-            listaPokeballs.Add(pokeball1);
-            listaPokeballs.Add(pokeball2);
-            listaPokeballs.Add(pokeball3);
-            listaPokeballs.Add(pokeball4);
-            listaPokeballs.Add(pokeball5);
-            listaPokeballs.Add(pokeball6);
+            listaPokeballs = new List<PictureBox>
+            {
+                pokeball1,
+                pokeball2,
+                pokeball3,
+                pokeball4,
+                pokeball5,
+                pokeball6
+            };
         }
+
+        #endregion
+
+        #region Metodos
 
         public void ActualizarIndicador()
         {
@@ -36,32 +49,41 @@ namespace Pokemon
 
         private void Pokeball1_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pokeball1, entrenador.equipo[0].nombre);
+            if (entrenador.equipo[0].estadisticasActuales.debilitado)
+                toolTip.SetToolTip(pokeball1, entrenador.equipo[0].nombre);
         }
 
         private void Pokeball2_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pokeball2, entrenador.equipo[1].nombre);
+            if (entrenador.equipo[1].estadisticasActuales.debilitado)
+                toolTip.SetToolTip(pokeball2, entrenador.equipo[1].nombre);
         }
 
         private void Pokeball3_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pokeball3, entrenador.equipo[2].nombre);
+            if (entrenador.equipo[2].estadisticasActuales.debilitado)
+                toolTip.SetToolTip(pokeball3, entrenador.equipo[2].nombre);
         }
 
         private void Pokeball4_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pokeball4, entrenador.equipo[3].nombre);
+            if (entrenador.equipo[3].estadisticasActuales.debilitado)
+                toolTip.SetToolTip(pokeball4, entrenador.equipo[3].nombre);
         }
 
         private void Pokeball5_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pokeball5, entrenador.equipo[4].nombre);
+            if (entrenador.equipo[4].estadisticasActuales.debilitado)
+                toolTip.SetToolTip(pokeball5, entrenador.equipo[4].nombre);
         }
 
         private void Pokeball6_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pokeball6, entrenador.equipo[5].nombre);
+            if (entrenador.equipo[5].estadisticasActuales.debilitado)
+                toolTip.SetToolTip(pokeball6, entrenador.equipo[5].nombre);
         }
+
+        #endregion
+
     }
 }

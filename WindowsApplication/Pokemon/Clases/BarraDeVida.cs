@@ -11,11 +11,11 @@ namespace Pokemon
 
         private int vidaActual, vidaMaxima, ticksAnimacion, ticksTotales = 15, maximoBarra, vidaCambio, vidaAux;
         private Rectangle vidaVerde, vidaRoja;
-        private PictureBox picBoxBarraDeVida, picBoxBarraDeVidaRoja;
-        private Label labelVida;
-        private Timer timerAumentarVida, timerReducirVida;
-        private Form_Combate combate;
-        private string posicion;
+        private readonly PictureBox picBoxBarraDeVida, picBoxBarraDeVidaRoja;
+        private readonly Label labelVida;
+        private readonly Timer timerAumentarVida, timerReducirVida;
+        private readonly Form_Combate combate;
+        private readonly string posicion;
 
         #endregion
 
@@ -41,22 +41,22 @@ namespace Pokemon
                 vidaVerde = combate.recVidaVerdeTu;
                 vidaRoja = combate.recVidaRojaTu;
             }
-            this.vidaMaxima = pokemon.vidaMax;
-            this.vidaActual = pokemon.vidaActual;
+            vidaMaxima = pokemon.vidaMax;
+            vidaActual = pokemon.vidaActual;
 
             //Timers
             timerAumentarVida = new Timer();
             timerAumentarVida.Interval = 84;
-            timerAumentarVida.Tick += new System.EventHandler(this.TimerAumentarVida_Tick);
+            timerAumentarVida.Tick += new EventHandler(TimerAumentarVida_Tick);
             timerReducirVida = new Timer();
             timerReducirVida.Interval = 84;
-            timerReducirVida.Tick += new System.EventHandler(this.TimerReducirVida_Tick);
+            timerReducirVida.Tick += new EventHandler(TimerReducirVida_Tick);
 
             maximoBarra = 86;
 
             vidaVerde.Size = vidaRoja.Size = new Size(maximoBarra * vidaActual / vidaMaxima, vidaVerde.Height);
             if (labelVida != null)
-                labelVida.Text = "PV " + vidaActual + "/" + vidaMaxima;
+                labelVida.Text = $"PV {vidaActual}/{vidaMaxima}";
             if (vidaActual < 0.3 * vidaMaxima) picBoxBarraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaAmarilla.png");
             else picBoxBarraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaVerde.png");
 
@@ -109,7 +109,7 @@ namespace Pokemon
             {
                 vidaVerde.Size = vidaRoja.Size = new Size(maximoBarra * vidaActual / vidaMaxima, vidaVerde.Height);
                 if (labelVida != null)
-                    labelVida.Text = "PV " + vidaActual + "/" + vidaMaxima;
+                    labelVida.Text = $"PV {vidaActual}/{vidaMaxima}";
                 if (vidaActual < 0.3 * vidaMaxima) picBoxBarraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaAmarilla.png");
                 else picBoxBarraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaVerde.png");
                 timerReducirVida.Enabled = false;
@@ -118,7 +118,7 @@ namespace Pokemon
             else if (ticksAnimacion < 17)
             {
                 if (labelVida != null)
-                    labelVida.Text = "PV " + (vidaAux - ticksAnimacion * vidaCambio / 16) + "/" + vidaMaxima;
+                    labelVida.Text = $"PV {vidaAux - ticksAnimacion * vidaCambio / 16}/{vidaMaxima}";
                 vidaVerde.Size = new Size(vidaVerde.Width - maximoBarra * (vidaCambio / 15) / vidaMaxima, vidaVerde.Height);
             }
             //Animacion parte roja
@@ -149,7 +149,7 @@ namespace Pokemon
             {
                 vidaVerde.Size = vidaRoja.Size = new Size(maximoBarra * vidaActual / vidaMaxima, vidaVerde.Height);
                 if (labelVida != null)
-                    labelVida.Text = "PV " + vidaActual + "/" + vidaMaxima;
+                    labelVida.Text = $"PV {vidaActual}/{vidaMaxima}";
                 if (vidaActual < 0.3 * vidaMaxima) picBoxBarraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaAmarilla.png");
                 else picBoxBarraDeVida.BackgroundImage = Image.FromFile(@"Img\Recursos\VidaVerde.png");
                 timerAumentarVida.Enabled = false;
@@ -158,7 +158,7 @@ namespace Pokemon
             else
             {
                 if (labelVida != null)
-                    labelVida.Text = "PV " + (vidaAux + ticksAnimacion * vidaCambio / ticksTotales) + "/" + vidaMaxima;
+                    labelVida.Text = $"PV {vidaAux + ticksAnimacion * vidaCambio / ticksTotales}/{vidaMaxima}";
                 vidaVerde.Size = new Size(vidaVerde.Width + maximoBarra * (vidaCambio / ticksTotales) / vidaMaxima, vidaVerde.Height);
             }
             combate.ResizeControl(vidaVerde, picBoxBarraDeVida);

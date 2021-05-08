@@ -1,9 +1,10 @@
-﻿using System;
-
-namespace Pokemon
+﻿namespace Pokemon
 {
     public class Accion
     {
+
+        #region Propiedades
+
         public enum TipoAccion
         {
             ATAQUE = 0,
@@ -15,6 +16,10 @@ namespace Pokemon
         public Pokemon pokemonACambiar;
         public Ataque ataqueUsado;
         public Objeto objetoUsado;
+
+        #endregion
+
+        #region Constructores
 
         public Accion(Pokemon pokemonACambiar)
         {
@@ -34,18 +39,25 @@ namespace Pokemon
             this.ataqueUsado = ataqueUsado;
         }
 
+        #endregion
+
+        #region Metodos
+
         public string Mostrar()
         {
             switch (tipoAccion)
             {
                 case TipoAccion.ATAQUE:
-                    return "Ataque " + ataqueUsado.nombre;
+                    return $"Ataque {ataqueUsado.nombre}";
                 case TipoAccion.CAMBIOPOKEMON:
-                    return "Cambio " + pokemonACambiar.nombre;
+                    return $"Cambio {pokemonACambiar.nombre}";
                 case TipoAccion.OBJETO:
-                    return "Objeto " + objetoUsado.nombre;
+                    return $"Objeto {objetoUsado.nombre}";
             }
             return "NULL";
         }
+
+        #endregion
+
     }
 }

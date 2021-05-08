@@ -98,8 +98,8 @@ namespace Pokemon
             update.ExecuteNonQuery();
             con.Close();
             entrenador.nombre = textBoxNombreEntrenador.Text;
-            entrenador.imageFront = Image.FromFile(@"Img\Entrenadores\Elegibles\" + arrayImages[imgActual] + "Front.gif");
-            entrenador.imageBack = Image.FromFile(@"Img\Entrenadores\Elegibles\" + arrayImages[imgActual] + "Back.png");
+            entrenador.imageFront = Image.FromFile($@"Img\Entrenadores\Elegibles\{arrayImages[imgActual]}Front.gif");
+            entrenador.imageBack = Image.FromFile($@"Img\Entrenadores\Elegibles\{arrayImages[imgActual]}Back.png");
             inicio.InsertarDatos(entrenador);
             Close();
         }
@@ -109,7 +109,7 @@ namespace Pokemon
             imgActual++;
             if (imgActual >= arrayImages.Length)
                 imgActual = 0;
-            picBoxImgEntrenador.Image = Image.FromFile(@"Img\Entrenadores\Elegibles\" + arrayImages[imgActual] + "Front.gif");
+            picBoxImgEntrenador.Image = Image.FromFile($@"Img\Entrenadores\Elegibles\{arrayImages[imgActual]}Front.gif");
         }
 
         private void LeftImgArrow_Click(object sender, EventArgs e)
@@ -117,7 +117,7 @@ namespace Pokemon
             imgActual--;
             if (imgActual < 0)
                 imgActual = arrayImages.Length - 1;
-            picBoxImgEntrenador.Image = Image.FromFile(@"Img\Entrenadores\Elegibles\" + arrayImages[imgActual] + "Front.gif");
+            picBoxImgEntrenador.Image = Image.FromFile($@"Img\Entrenadores\Elegibles\{arrayImages[imgActual]}Front.gif");
         }
 
         private int GetPositionOf(string value)

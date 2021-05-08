@@ -241,7 +241,7 @@ namespace Pokemon
                 m4 = new UC_BotonAtaque(pokemonBack.mov4, this);
             }
 
-            tm.MostrarTexto("Qué hará " + pokemonBack.nombre + "?");
+            tm.MostrarTexto($"Qué hará {pokemonBack.nombre}?");
 
             panelMov1.Controls.Clear();
             panelMov1.Controls.Add(m1);
@@ -330,7 +330,7 @@ namespace Pokemon
                     panelInfoRival.Visible = panelInfoTu.Visible = false;
                     menuBloqueado = true;
 
-                    tm.MostrarTexto("El combate entre " + entrenadorTu.nombre + " y " + entrenadorRival.nombre + " ha terminado.");
+                    tm.MostrarTexto($"El combate entre {entrenadorTu.nombre} y {entrenadorRival.nombre} ha terminado.");
                     break;
                 case 1:
                     string sql;
@@ -475,7 +475,7 @@ namespace Pokemon
 
         private void Mutear_Click(object sender, EventArgs e)
         {
-            if(mute == false)
+            if (mute == false)
             {
                 mediaPlayer.Ctlcontrols.pause();
                 mutearToolStripMenuItem.Text = "Desmutear";
@@ -498,7 +498,7 @@ namespace Pokemon
                 "Playa3.png", "PradoNoche.png", "Mar2.png", "Cueva.png", "Cueva2.png", "CuevaD.png", "Volcan.png", "Desierto.jpg",
                 "Amapolas.png", "Castillo.png", "Subida.png" };
             string fondoElegido = fondos[random.Next(0, fondos.Length)];
-            string salida = "Img/Fondos/fondo" + fondoElegido;
+            string salida = $"Img/Fondos/fondo{fondoElegido}";
             panelCombate.BackgroundImage = Image.FromFile(@salida);
         }
 
@@ -517,12 +517,12 @@ namespace Pokemon
 
             #region Log Consola
             //Log
-            Console.WriteLine("\n********** Comienzo del turno " + (++numTurnos) + " **********\n");
+            Console.WriteLine($"\n********** Comienzo del turno {++numTurnos} **********\n");
             pokemonBack.MostrarDatos();
-            Console.WriteLine("-Acción usada: " + accionRealizadaPorBack.Mostrar());
+            Console.WriteLine($"-Acción usada: {accionRealizadaPorBack.Mostrar()}");
             Console.WriteLine("----------  FIN  ----------\n");
             pokemonFront.MostrarDatos();
-            Console.WriteLine("-Acción usada: " + accionRealizadaPorFront.Mostrar());
+            Console.WriteLine($"-Acción usada: {accionRealizadaPorFront.Mostrar()}");
             Console.WriteLine("----------  FIN  ----------\n");
             #endregion
 

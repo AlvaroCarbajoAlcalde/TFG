@@ -59,7 +59,7 @@ namespace Pokemon.TFG
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERROR TCP 1: " + ex.Message);
+                Console.WriteLine($"ERROR TCP 1: {ex.Message}");
             }
         }
 
@@ -82,7 +82,7 @@ namespace Pokemon.TFG
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ERROR TCP 2: " + ex.Message);
+                Console.WriteLine($"ERROR TCP 2: {ex.Message}");
             }
         }
 
@@ -120,7 +120,6 @@ namespace Pokemon.TFG
 
                         //Seleccionamos el tipo de accion dependiendo del dato recibido
                         form_Combate.multiplayer = true;
-                        int ataque = 0;
 
                         //Al mandar START se guarda la IP
                         if (data.ToUpper().Contains("START"))
@@ -130,11 +129,11 @@ namespace Pokemon.TFG
                             string ipMovil = data.ToUpper().Substring("START".Length);
                             ipMovil = ipMovil.Substring(0, ipMovil.LastIndexOfAny(values) + 1);
                             form_Combate.ipMovil = ipMovil;
-                            Console.WriteLine("IP DEL MOVIL CONECTADO::::   " + form_Combate.ipMovil);
+                            Console.WriteLine($"IP DEL MOVIL CONECTADO::::   {form_Combate.ipMovil}");
                         }
 
                         //Ataque
-                        if (int.TryParse(data.Substring(0, 1), out ataque))
+                        if (int.TryParse(data.Substring(0, 1), out int ataque))
                             form_Combate.ataqueSeleccionadoMultiplayer = ataque;
 
                         //Salir multijugador
