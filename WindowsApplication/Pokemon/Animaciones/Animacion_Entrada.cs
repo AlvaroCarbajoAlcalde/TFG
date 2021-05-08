@@ -14,7 +14,7 @@ namespace Pokemon
     class AnimacionEntrada
     {
         private Timer timerAnimacion, timerPokeball;
-        private String posicion;
+        private string posicion;
         private PictureBox picBoxPokemon;
         private Image imagenPokemon;
         private Size sizeFinal;
@@ -23,7 +23,7 @@ namespace Pokemon
         private Rectangle recPicBoxPokemon;
         private Form_Combate combate;
 
-        public AnimacionEntrada(PictureBox picBoxPokemon, Rectangle recPicBoxPokemon, String posicion, Form_Combate combate)
+        public AnimacionEntrada(PictureBox picBoxPokemon, Rectangle recPicBoxPokemon, string posicion, Form_Combate combate)
         {
             this.combate = combate;
             this.recPicBoxPokemon = recPicBoxPokemon;
@@ -108,9 +108,9 @@ namespace Pokemon
         {
             //Generamos una imagen de pokeball
             Random random = new Random((int)System.DateTime.Now.Ticks);
-            String[] pokeballs = { "Acopio", "Buceo", "Honor", "Lujo", "Malla", "Master", "Nido", "Ocaso",
+            string[] pokeballs = { "Acopio", "Buceo", "Honor", "Lujo", "Malla", "Master", "Nido", "Ocaso",
                                  "Poke", "Safari", "Sana", "Super", "Turno", "Ultra", "Veloz",};
-            String salida = "Img/Pokeballs/" + pokeballs[random.Next(0, pokeballs.Length)] + "Ball.png";
+            string salida = "Img/Pokeballs/" + pokeballs[random.Next(0, pokeballs.Length)] + "Ball.png";
             return Image.FromFile(@salida);
         }
     }

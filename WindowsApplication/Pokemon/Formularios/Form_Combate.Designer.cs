@@ -79,6 +79,7 @@
             this.CambiarMusicaMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.TablaTiposMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.timerAnimacionFinal = new System.Windows.Forms.Timer(this.components);
+            this.mutearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelAtaques.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mediaPlayer)).BeginInit();
             this.panelBag.SuspendLayout();
@@ -622,7 +623,8 @@
             this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CambiarFondoMenu,
             this.CambiarMusicaMenu,
-            this.TablaTiposMenu});
+            this.TablaTiposMenu,
+            this.mutearToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(454, 24);
@@ -656,6 +658,13 @@
             // 
             this.timerAnimacionFinal.Interval = 3000;
             this.timerAnimacionFinal.Tick += new System.EventHandler(this.TimerAnimacionFinal_Tick);
+            // 
+            // mutearToolStripMenuItem
+            // 
+            this.mutearToolStripMenuItem.Name = "mutearToolStripMenuItem";
+            this.mutearToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.mutearToolStripMenuItem.Text = "Mutear";
+            this.mutearToolStripMenuItem.Click += new System.EventHandler(this.Mutear_Click);
             // 
             // Form_Combate
             // 
@@ -756,6 +765,7 @@
         public System.Windows.Forms.Label labelNivelTu;
         public System.Windows.Forms.Label labelNivelRival;
         public AxWMPLib.AxWindowsMediaPlayer mediaPlayer;
+        private System.Windows.Forms.ToolStripMenuItem mutearToolStripMenuItem;
     }
 }
 

@@ -15,11 +15,11 @@ namespace Pokemon
         #region Propiedades
 
         private SoundPlayer player;
-        private Form_Combate combate;
-        private Random random;
-        private Timer timer;
+        private readonly Form_Combate combate;
+        private readonly Random random;
+        private readonly Timer timer;
         private int ticks;
-        private String primeroEnAtacar;
+        private string primeroEnAtacar;
 
         #endregion
 
@@ -357,7 +357,8 @@ namespace Pokemon
                         if (pokemon.mov4.ppActuales > pokemon.mov4.ppMax)
                             pokemon.mov4.ppActuales = pokemon.mov4.ppMax;
                     }
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     break;
 
                 case Objeto.ObjetcID.ElixirMáximo:
@@ -369,7 +370,8 @@ namespace Pokemon
                         pokemon.mov3.ppActuales = pokemon.mov3.ppMax;
                     if (pokemon.mov4 != null)
                         pokemon.mov4.ppActuales = pokemon.mov4.ppMax;
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     break;
 
                 case Objeto.ObjetcID.AtaqueX:
@@ -380,7 +382,8 @@ namespace Pokemon
                         if (pokemon.estadisticasActuales.modificadorAtaque > 6)
                             pokemon.estadisticasActuales.modificadorAtaque = 6;
                         pokemon.CambiarEstadistica(Estadistica.ATAQUE);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "El ataque de " + pokemon.nombre + " no puede subir más.\n";
@@ -394,7 +397,8 @@ namespace Pokemon
                         if (pokemon.estadisticasActuales.modificadorDefensa > 6)
                             pokemon.estadisticasActuales.modificadorDefensa = 6;
                         pokemon.CambiarEstadistica(Estadistica.DEFENSA);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "La defensa de " + pokemon.nombre + " no puede subir más.\n";
@@ -408,7 +412,8 @@ namespace Pokemon
                         if (pokemon.estadisticasActuales.modificadorVelocidad > 6)
                             pokemon.estadisticasActuales.modificadorVelocidad = 6;
                         pokemon.CambiarEstadistica(Estadistica.VELOCIDAD);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "La velocidad de " + pokemon.nombre + " no puede subir más.\n";
@@ -422,7 +427,8 @@ namespace Pokemon
                         if (pokemon.estadisticasActuales.modificadorEspecial > 6)
                             pokemon.estadisticasActuales.modificadorEspecial = 6;
                         pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "El especial de " + pokemon.nombre + " no puede subir más.\n";
@@ -435,7 +441,8 @@ namespace Pokemon
                         pokemon.estadisticasActuales.modificadorPrecision += 2;
                         if (pokemon.estadisticasActuales.modificadorPrecision > 6)
                             pokemon.estadisticasActuales.modificadorPrecision = 6;
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "La precision de " + pokemon.nombre + " no puede subir más. \n";
@@ -448,7 +455,8 @@ namespace Pokemon
                         pokemon.estadisticasActuales.modificadorEvasion += 2;
                         if (pokemon.estadisticasActuales.modificadorEvasion > 6)
                             pokemon.estadisticasActuales.modificadorEvasion = 6;
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "La evasion de " + pokemon.nombre + " no puede subir más. \n";
@@ -461,14 +469,16 @@ namespace Pokemon
                         pokemon.estadisticasActuales.modificadorCritico += 2;
                         if (pokemon.estadisticasActuales.modificadorCritico > 4)
                             pokemon.estadisticasActuales.modificadorCritico = 4;
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "El critico de " + pokemon.nombre + " no puede subir más. \n";
                     break;
 
                 case Objeto.ObjetcID.CaracteristicasX:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     textoSalida += "Todas las estadísticas de " + pokemon.nombre + " subieron. \n";
                     if (pokemon.estadisticasActuales.modificadorCritico < 4)
                         pokemon.estadisticasActuales.modificadorCritico++;
@@ -491,7 +501,8 @@ namespace Pokemon
                     break;
 
                 case Objeto.ObjetcID.CarameloRaro:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     pokemon.vidaMax += 25;
                     pokemon.vidaActual += 25;
                     pokemon.ataque += 15;
@@ -508,35 +519,40 @@ namespace Pokemon
                     break;
 
                 case Objeto.ObjetcID.Proteina:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     pokemon.ataque += 15;
                     pokemon.CambiarEstadistica(Estadistica.ATAQUE);
                     textoSalida += "El ataque de " + pokemon.nombre + " ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.Hierro:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     pokemon.defensa += 15;
                     pokemon.CambiarEstadistica(Estadistica.DEFENSA);
                     textoSalida += "La defensa de " + pokemon.nombre + " ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.Calcio:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     pokemon.especial += 15;
                     pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
                     textoSalida += "El especial de " + pokemon.nombre + " ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.Carburante:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     pokemon.velocidad += 15;
                     pokemon.CambiarEstadistica(Estadistica.VELOCIDAD);
                     textoSalida += "La velocidad de " + pokemon.nombre + " ha aumentado.\n";
                     break;
 
                 case Objeto.ObjetcID.MasPS:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     pokemon.vidaMax += 30;
                     pokemon.vidaActual += 30;
                     textoSalida += "Los PV máximos de " + pokemon.nombre + " han aumentado.\n";
@@ -602,14 +618,16 @@ namespace Pokemon
                         textoSalida += "El especial de " + pokemon.nombre + " subió.\n";
                         pokemon.estadisticasActuales.modificadorEspecial++;
                         pokemon.CambiarEstadistica(Estadistica.ESPECIAL);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "El especial de " + pokemon.nombre + " no puede subir más.\n";
                     break;
 
                 case Objeto.ObjetcID.FlautaAmarilla:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     if (pokemon.estadisticasActuales.confuso > 0)
                     {
                         pokemon.estadisticasActuales.confuso = 0;
@@ -622,7 +640,8 @@ namespace Pokemon
                     break;
 
                 case Objeto.ObjetcID.FlautaRoja:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
                     if (pokemon.estadisticasActuales.drenadoras)
                     {
                         pokemon.estadisticasActuales.drenadoras = false;
@@ -635,7 +654,8 @@ namespace Pokemon
                     break;
 
                 case Objeto.ObjetcID.CenizaSagrada:
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     textoSalida += "Todas las estadísticas de " + pokemon.nombre + " se restablecieron. \n";
                     pokemon.estadisticasActuales.modificadorCritico = 0;
                     pokemon.estadisticasActuales.modificadorAtaque = 0;
@@ -656,7 +676,8 @@ namespace Pokemon
                         textoSalida += "La defensa de " + pokemon.nombre + " subió.\n";
                         pokemon.estadisticasActuales.modificadorDefensa++;
                         pokemon.CambiarEstadistica(Estadistica.DEFENSA);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "La defensa de " + pokemon.nombre + " no puede subir más.\n";
@@ -668,7 +689,8 @@ namespace Pokemon
                         textoSalida += "El ataque de " + pokemon.nombre + " subió.\n";
                         pokemon.estadisticasActuales.modificadorAtaque++;
                         pokemon.CambiarEstadistica(Estadistica.ATAQUE);
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
                     }
                     else
                         textoSalida += "El ataque de " + pokemon.nombre + " no puede subir más.\n";
@@ -701,7 +723,8 @@ namespace Pokemon
             }
 
             //Sonido
-            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
+            if (!combate.mute)
+                new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\objectused.wav").PlaySync(); }).Start();
 
             return textoSalida;
         }
@@ -821,7 +844,7 @@ namespace Pokemon
 
         #region DOT
 
-        public Boolean SufreDOT(Pokemon pokemon)
+        public bool SufreDOT(Pokemon pokemon)
         {
             if (pokemon.estadisticasActuales.drenadoras == false &&
                 pokemon.estadisticasActuales.estadoActual != Estado.QUEMADO &&
@@ -834,12 +857,12 @@ namespace Pokemon
             return true;
         }
 
-        public String DOT(Pokemon pokemonAfectado, Pokemon pokemonRival)
+        public string DOT(Pokemon pokemonAfectado, Pokemon pokemonRival)
         {
             if (pokemonAfectado.estadisticasActuales.debilitado)
                 return "";
 
-            String textoSalida = "";
+            string textoSalida = "";
             //Switch del estado del pokemon.
             switch (pokemonAfectado.estadisticasActuales.estadoActual)
             {
@@ -847,7 +870,8 @@ namespace Pokemon
                 case Estado.ENVENENADO:
                     textoSalida += "El veneno resta ps a " + pokemonAfectado.nombre + "\n";
                     pokemonAfectado.vidaActual -= pokemonAfectado.vidaMax / 16;
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Poisoned.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Poisoned.wav").PlaySync(); }).Start();
                     break;
 
                 //El pokemon esta gravemente envenenado.
@@ -857,14 +881,16 @@ namespace Pokemon
                     pokemonAfectado.vidaActual -= (int)(pokemonAfectado.vidaMax * dagnoSufrido);
                     //Aumentamos los turnos de gravemente envenenado.
                     pokemonAfectado.estadisticasActuales.turnosGravementeEnvenenado++;
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Poisoned.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Poisoned.wav").PlaySync(); }).Start();
                     break;
 
                 //El pokemon esta quemado
                 case Estado.QUEMADO:
                     textoSalida += pokemonAfectado.nombre + " se resiente de sus quemaduras.\n";
                     pokemonAfectado.vidaActual -= pokemonAfectado.vidaMax / 16;
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Burned.wav").PlaySync(); }).Start();
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Burned.wav").PlaySync(); }).Start();
                     break;
             }
 
@@ -903,7 +929,8 @@ namespace Pokemon
                     if (!pokemonRival.estadisticasActuales.debilitado)
                     {
                         textoSalida += pokemonRival.nombre + " ha recuperado algunos Ps.\n";
-                        new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\healing.wav").PlaySync(); }).Start();
+                        if (!combate.mute)
+                            new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\healing.wav").PlaySync(); }).Start();
                         pokemonRival.vidaActual += vidaRobada;
 
                         //Si el pokemon rival excede sus ps maximos.
@@ -929,9 +956,9 @@ namespace Pokemon
 
         #region Ataque
 
-        public String Ataque(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public string Ataque(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
-            String textoMostrar = "";
+            string textoMostrar = "";
 
             ataqueRealizado.ppActuales--;
 
@@ -941,34 +968,34 @@ namespace Pokemon
 
             //Si tiene el ataque anulado
             if (ataqueRealizado.turnosAnulado > 0)
-                return ataqueRealizado.nombre + " está anulado.\n";
+                return $"{ataqueRealizado.nombre} está anulado.\n";
 
             //Si esta inmovilizado (giro fuego y similares)
             if (ataqueRealizado.ataqueID == AtaqueID.GIRORAPIDO)
                 origen.estadisticasActuales.turnosInmovilizado = 0;
             if (origen.estadisticasActuales.turnosInmovilizado > 0) //Comprobamos si esta inmovilizado
-                return origen.nombre + " está inmovilizado, no se puede mover.\n";
+                return $"{origen.nombre} está inmovilizado, no se puede mover.\n";
 
             //Si tiene que descansar por hiperrayo
             if (origen.estadisticasActuales.movLanzadoTrasEspera != null && origen.estadisticasActuales.movLanzadoTrasEspera.ataqueID == AtaqueID.HIPERRAYO)
             {
                 origen.estadisticasActuales.movLanzadoTrasEspera = null;
                 ataqueRealizado.ppActuales++;
-                return origen.nombre + " está descansando.\n";
+                return $"{origen.nombre} está descansando.\n";
             }
 
             //Si retrocede.
             if (origen.estadisticasActuales.haRetrocedido)
             {
                 ataqueRealizado.ppActuales++;
-                return origen.nombre + " ha retrocedido.\n";
+                return $"{origen.nombre} ha retrocedido.\n";
             }
 
             //Si se acaban los pp
             if (ataqueRealizado.ppActuales < 0)
             {
                 origen.estadisticasActuales.movLanzadoTrasEspera = origen.estadisticasActuales.movQueContinua = null;
-                return origen.nombre + " trató de usar " + ataqueRealizado.nombre + " pero no quedaban pp.";
+                return $"{origen.nombre} trató de usar {ataqueRealizado.nombre} pero no quedaban pp.";
             }
 
             //Si esta dormido
@@ -979,8 +1006,9 @@ namespace Pokemon
                     origen.estadisticasActuales.usandoFuria = false;
                     origen.estadisticasActuales.movLanzadoTrasEspera = null;
                     ataqueRealizado.ppActuales++;
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Sleeping.wav").PlaySync(); }).Start();
-                    return origen.nombre + " está dormido como un tronco.\n";
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Sleeping.wav").PlaySync(); }).Start();
+                    return $"{origen.nombre} está dormido como un tronco.\n";
                 }
                 else
                 {
@@ -994,21 +1022,23 @@ namespace Pokemon
             {
                 ataqueRealizado.ppActuales++;
                 origen.estadisticasActuales.movLanzadoTrasEspera = origen.estadisticasActuales.movQueContinua = null;
-                new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Frozen.wav").PlaySync(); }).Start();
-                return origen.nombre + " está congelado no se puede mover.\n";
+                if (!combate.mute)
+                    new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Frozen.wav").PlaySync(); }).Start();
+                return $"{origen.nombre} está congelado no se puede mover.\n";
             }
 
             //Si esta confuso
             if (origen.estadisticasActuales.confuso > 0)
             {
-                textoMostrar += origen.nombre + " está confuso.\n";
-                new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Confused.wav").PlaySync(); }).Start();
+                textoMostrar += $"{origen.nombre} está confuso.\n";
+                if (!combate.mute)
+                    new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Confused.wav").PlaySync(); }).Start();
                 if (random.Next(1, 100) <= 50)
                 {
                     textoMostrar += "Está tan confuso que se hirió a si mismo.\n";
                     int A = origen.estadisticasActuales.ataqueActual;
                     int D = origen.estadisticasActuales.defensaActual;
-                    double dagno = 0.01 * 92 * (((0.2 * origen.nivel + 1) * A * 40) / (25 * D) + 2);
+                    double dagno = 0.01 * 92 * ((0.2 * origen.nivel + 1) * A * 40 / (25 * D) + 2);
                     origen.vidaActual -= (int)dagno;
 
                     origen.estadisticasActuales.volando = false;
@@ -1031,7 +1061,7 @@ namespace Pokemon
             }
             if (origen.estadisticasActuales.confuso == 0)
             {
-                textoMostrar += origen.nombre + " ya no está confuso.\n";
+                textoMostrar += $"{origen.nombre} ya no está confuso.\n";
                 origen.estadisticasActuales.confuso = -1;
             }
 
@@ -1039,8 +1069,9 @@ namespace Pokemon
             if (origen.estadisticasActuales.estadoActual == Estado.PARALIZADO)
                 if (random.Next(1, 100) <= 25)
                 {
-                    new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Status Paralyzed.wav").PlaySync(); }).Start();
-                    textoMostrar += origen.nombre + " está paralizado, no se puede mover.\n";
+                    if (!combate.mute)
+                        new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Status Paralyzed.wav").PlaySync(); }).Start();
+                    textoMostrar += $"{origen.nombre} está paralizado, no se puede mover.\n";
                     origen.estadisticasActuales.movLanzadoTrasEspera = null;
                     origen.estadisticasActuales.volando = false;
                     origen.estadisticasActuales.escavando = false;
@@ -1053,7 +1084,7 @@ namespace Pokemon
                     return textoMostrar;
                 }
                 else
-                    textoMostrar += origen.nombre + " sufre paralisis, quizá no se pueda mover.\n";
+                    textoMostrar += $"{origen.nombre} sufre paralisis, quizá no se pueda mover.\n";
 
             //Aqui va el ya no tan infierno de switch. :)
             switch (ataqueRealizado.ataqueID)
@@ -1119,7 +1150,7 @@ namespace Pokemon
                     if (AciertaProbabilidad(20) && destino.estadisticasActuales.estadoActual == Estado.NINGUNO)
                     {
                         destino.estadisticasActuales.estadoActual = Estado.ENVENENADO;
-                        textoMostrar += destino.nombre + " ha sido envenenado.\n";
+                        textoMostrar += $"{destino.nombre} ha sido envenenado.\n";
                     }
                     break;
 
@@ -1193,14 +1224,14 @@ namespace Pokemon
 
                 case AtaqueID.NEBLINA:
                     AnimacionEstadoTu(origen, ataqueRealizado);
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     origen.estadisticasActuales.evitarCambiosEstadistica = true;
-                    textoMostrar += origen.nombre + " se ha protegido de cambios de stat.\n";
+                    textoMostrar += $"{origen.nombre} se ha protegido de cambios de stat.\n";
                     break;
 
                 case AtaqueID.NIEBLA:
                     AnimacionEstadoTu(origen, ataqueRealizado);
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     origen.OnNiebla();
                     destino.OnNiebla();
                     textoMostrar += "Los cambios de stat de ambos pokemon se eliminaron.\n";
@@ -1223,7 +1254,7 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.CONTRAATAQUE:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     //Solo funciona si es de tipo lucha o normal y ha recibido ataque.
                     if (origen.estadisticasActuales.ultimoAtaqueRecibido != null && (origen.estadisticasActuales.ultimoAtaqueRecibido.tipo == Tipo.NORMAL || origen.estadisticasActuales.ultimoAtaqueRecibido.tipo == Tipo.LUCHA))
                         textoMostrar += AtaqueConDagnoFijo(origen, ataqueRealizado, destino, origen.estadisticasActuales.dagnoUltimoGolpeRecibido * 2);
@@ -1276,7 +1307,7 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.ANULACION:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     if (AciertaAtaque(origen, ataqueRealizado, destino))
                     {
                         AnimacionEstadoRival(destino, ataqueRealizado);
@@ -1289,7 +1320,7 @@ namespace Pokemon
                             destino.mov3.turnosAnulado = 0;
                         if (destino.mov4 != null)
                             destino.mov4.turnosAnulado = 0;
-                        textoMostrar += origen.nombre + " anuló " + aux.nombre + " del rival.\n";
+                        textoMostrar += $"{origen.nombre} anuló {aux.nombre} del rival.\n";
                         aux.turnosAnulado = random.Next(2, 8);
                     }
                     else
@@ -1343,8 +1374,8 @@ namespace Pokemon
                 case AtaqueID.CABEZAZO:
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " ha cargado energía.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} ha cargado energía.\n";
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
                     }
@@ -1380,10 +1411,10 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.CONVERSION:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     AnimacionEstadoRival(destino, ataqueRealizado);
                     origen.tipo1 = destino.tipo1;
-                    textoMostrar += "Conversión cambia el tipo de " + origen.nombre + ".\n";
+                    textoMostrar += $"Conversión cambia el tipo de {origen.nombre}.\n";
                     break;
 
                 case AtaqueID.CORNADA:
@@ -1471,7 +1502,7 @@ namespace Pokemon
                         {
                             origen.estadisticasActuales.movQueContinua = null;
                             origen.estadisticasActuales.confuso = random.Next(1, 4);
-                            textoMostrar += origen.nombre + " se ha confundido.\n";
+                            textoMostrar += $"{origen.nombre} se ha confundido.\n";
                         }
                     }
                     break;
@@ -1526,10 +1557,10 @@ namespace Pokemon
                     return Ataque(origen, new Ataque(random.Next(1, Enum.GetValues(typeof(AtaqueID)).Length)), destino);
 
                 case AtaqueID.MIMETICO:
-                    textoMostrar += origen.nombre + " usó  " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó  {ataqueRealizado.nombre}.\n";
                     AnimacionEstadoRival(destino, ataqueRealizado);
                     Ataque auxAtaque = new Ataque(GetAtaqueRandom(destino).idMovimiento);
-                    textoMostrar += origen.nombre + " ha copiado " + auxAtaque.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} ha copiado {auxAtaque.nombre}.\n";
                     if (origen.mov1 != null && origen.mov1 == ataqueRealizado)
                         origen.mov1 = auxAtaque;
                     if (origen.mov2 != null && origen.mov2 == ataqueRealizado)
@@ -1577,7 +1608,7 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.REMOLINO:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\nPero falló.";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\nPero falló.";
                     break;
 
                 case AtaqueID.RESTRICCION:
@@ -1589,11 +1620,11 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.RUGIDO:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\nPero falló.";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\nPero falló.";
                     break;
 
                 case AtaqueID.SALPICADURA:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\nNo tuvo ningún efecto.";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\nNo tuvo ningún efecto.";
                     AnimacionEstadoTu(origen, ataqueRealizado);
                     break;
 
@@ -1606,7 +1637,7 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.TRANSFORMACION:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     if (origen == combate.pokemonBack)
                     {
                         combate.pokemonBack.estadisticasActuales = new EstadisticasActuales(combate.pokemonFront);
@@ -1701,7 +1732,7 @@ namespace Pokemon
                         recPicBoxPokemonFront.Location = new Point(330 - recPicBoxPokemonFront.Width / 2, 149 - recPicBoxPokemonFront.Height);
                         combate.ResizeControl(combate.recPicBoxPokemonFront, combate.picBoxPkmnFront);
                     }
-                    textoMostrar += origen.nombre + " se transformó.\n";
+                    textoMostrar += $"{origen.nombre} se transformó.\n";
                     break;
 
                 case AtaqueID.TRIATAQUE:
@@ -1711,8 +1742,8 @@ namespace Pokemon
                 case AtaqueID.VENGANZA:
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " ha cargado energía.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} ha cargado energía.\n";
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
                     }
@@ -1726,8 +1757,8 @@ namespace Pokemon
                 case AtaqueID.VIENTOCORTANTE:
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " ha cargado energía.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} ha cargado energía.\n";
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
                     }
@@ -1753,18 +1784,18 @@ namespace Pokemon
                         {
                             origen.estadisticasActuales.movQueContinua = null;
                             origen.estadisticasActuales.confuso = random.Next(1, 4);
-                            textoMostrar += origen.nombre + " se ha confundido.\n";
+                            textoMostrar += $"{origen.nombre} se ha confundido.\n";
                         }
                     }
                     break;
 
                 case AtaqueID.DRENADORAS:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". ";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. ";
                     if (AciertaAtaque(origen, ataqueRealizado, destino))
                     {
                         AnimacionEstadoRival(destino, ataqueRealizado);
                         destino.estadisticasActuales.drenadoras = true;
-                        textoMostrar += destino.nombre + " fue infectado.\n";
+                        textoMostrar += $"{destino.nombre} fue infectado.\n";
                     }
                     else
                         textoMostrar += "Pero ha fallado.\n";
@@ -1793,8 +1824,8 @@ namespace Pokemon
                 case AtaqueID.RAYOSOLAR:
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " ha cargado energía.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} ha cargado energía.\n";
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
                     }
@@ -1846,10 +1877,10 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.PANTALLADELUZ:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     AnimacionEstadoTu(origen, ataqueRealizado);
                     origen.estadisticasActuales.pantallaLuz = true;
-                    textoMostrar += "Pantalla luz protrege a " + origen.nombre + " de ataques especiales.\n";
+                    textoMostrar += $"Pantalla luz protrege a {origen.nombre} de ataques especiales.\n";
                     break;
 
                 case AtaqueID.PSICOONDA:
@@ -1865,14 +1896,14 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.REFLEJO:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     AnimacionEstadoTu(origen, ataqueRealizado);
                     origen.estadisticasActuales.reflejo = true;
-                    textoMostrar += "Reflejo protrege a " + origen.nombre + " de ataques físicos.\n";
+                    textoMostrar += $"Reflejo protrege a {origen.nombre} de ataques físicos.\n";
                     break;
 
                 case AtaqueID.TELETRANSPORTE:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\nPero falló.";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\nPero falló.";
                     break;
 
                 case AtaqueID.AVALANCHA:
@@ -1895,8 +1926,8 @@ namespace Pokemon
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
                         ataqueRealizado.ppActuales++;
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " se ocultó bajo tierra.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} se ocultó bajo tierra.\n";
                         AnimacionVueloExcavar(origen, ataqueRealizado);
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
@@ -1965,8 +1996,8 @@ namespace Pokemon
                 case AtaqueID.ATAQUEAEREO:
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " ha cargado energía.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} ha cargado energía.\n";
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
                     }
@@ -1982,7 +2013,7 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.ESPEJO:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     if (origen.estadisticasActuales.ultimoAtaqueRecibido != null)
                         textoMostrar += Ataque(origen, origen.estadisticasActuales.ultimoAtaqueRecibido, destino);
                     else
@@ -2005,8 +2036,8 @@ namespace Pokemon
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
                         ataqueRealizado.ppActuales++;
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " alzó el vuelo.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} alzó el vuelo.\n";
                         AnimacionVueloExcavar(origen, ataqueRealizado);
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
@@ -2117,8 +2148,8 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.CAMPANACURA:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
-                    textoMostrar += origen.nombre + " se ha recuperado de cambios de estado.\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
+                    textoMostrar += $"{origen.nombre} se ha recuperado de cambios de estado.\n";
                     origen.estadisticasActuales.estadoActual = Estado.NINGUNO;
                     break;
 
@@ -2138,14 +2169,14 @@ namespace Pokemon
                     if (origen.estadisticasActuales.estadoActual == Estado.DORMIDO)
                         textoMostrar += AtaqueConRetroceso(origen, ataqueRealizado, destino, 30);
                     else
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n" + "Pero falló.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\nPero falló.\n";
                     break;
 
                 case AtaqueID.SONABMULO:
                     if (origen.estadisticasActuales.estadoActual == Estado.DORMIDO)
                         return Ataque(origen, GetAtaqueRandom(origen), destino);
                     else
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n" + "Pero falló.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\nPero falló.\n";
                     break;
 
                 case AtaqueID.VELOCIDADEXTREMA:
@@ -2211,8 +2242,8 @@ namespace Pokemon
                 case AtaqueID.DESEOOCULTO:
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " ha cargado energía.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} ha cargado energía.\n";
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
                     }
@@ -2304,8 +2335,8 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.AROMATERAPIA:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
-                    textoMostrar += origen.nombre + " se ha recuperado de cambios de estado.\n";
+                    textoMostrar += $"{origen.nombre} usó { ataqueRealizado.nombre}.\n";
+                    textoMostrar += $"{origen.nombre} se ha recuperado de cambios de estado.\n";
                     origen.estadisticasActuales.estadoActual = Estado.NINGUNO;
                     break;
 
@@ -2457,8 +2488,8 @@ namespace Pokemon
                     if (origen.estadisticasActuales.movLanzadoTrasEspera == null)
                     {
                         ataqueRealizado.ppActuales++;
-                        textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ". \n";
-                        textoMostrar += origen.nombre + " se ocultó en las sombras.\n";
+                        textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}. \n";
+                        textoMostrar += $"{origen.nombre} se ocultó en las sombras.\n";
                         AnimacionVueloExcavar(origen, ataqueRealizado);
                         origen.estadisticasActuales.turnosEspera = 2;
                         origen.estadisticasActuales.movLanzadoTrasEspera = ataqueRealizado;
@@ -2720,10 +2751,10 @@ namespace Pokemon
                     break;
 
                 case AtaqueID.ESCUDOREAL:
-                    textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+                    textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
                     AnimacionEstadoTu(origen, ataqueRealizado);
                     origen.estadisticasActuales.reflejo = true;
-                    textoMostrar += "Escudo Real protrege a " + origen.nombre + " de ataques físicos.\n";
+                    textoMostrar += $"Escudo Real protrege a {origen.nombre} de ataques físicos.\n";
                     break;
 
                 case AtaqueID.ALAMORTIFERA:
@@ -2731,7 +2762,7 @@ namespace Pokemon
                     break;
 
                 default:
-                    textoMostrar += origen.nombre + " uso " + ataqueRealizado.nombre + ".\nPero no esta programado.";
+                    textoMostrar += $"{origen.nombre} uso {ataqueRealizado.nombre}.\nPero no esta programado.";
                     break;
             }
             //Falta sustituto 
@@ -2745,77 +2776,77 @@ namespace Pokemon
 
         #region Ataques
 
-        public String AtaqueConFulminante(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public string AtaqueConFulminante(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, 0, Estadistica.NINGUNA, 0, false, true, 0, 1);
         }
 
-        public String AtaqueConDagnoSiSeFalla(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public string AtaqueConDagnoSiSeFalla(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, 0, Estadistica.NINGUNA, 0, true, false, 0, 1);
         }
 
-        public String AtaqueConCuracion(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int curacion)
+        public string AtaqueConCuracion(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int curacion)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, curacion, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueConProbCritico(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, double probCritico)
+        public string AtaqueConProbCritico(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, double probCritico)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, probCritico, false, 0, 0, 0, 0, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueConCambioEstadistica(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, Estadistica estadisticaCambiar, double probEstadistica)
+        public string AtaqueConCambioEstadistica(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, Estadistica estadisticaCambiar, double probEstadistica)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, 0, estadisticaCambiar, probEstadistica, false, false, 0, 1);
         }
 
-        public String AtaqueConDagnoUsuario(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int cantDagno)
+        public string AtaqueConDagnoUsuario(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int cantDagno)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, cantDagno, 0, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueBasico(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public string AtaqueBasico(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, 0, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueConMultiHit(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int numGolpes)
+        public string AtaqueConMultiHit(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int numGolpes)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, 0, Estadistica.NINGUNA, 0, false, false, 0, numGolpes);
         }
 
-        public String AtaqueInfalible(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public string AtaqueInfalible(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, true, 0, 0, 0, 0, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueConConfundir(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int probConfundir)
+        public string AtaqueConConfundir(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int probConfundir)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, 0, 0, 0, Estadistica.NINGUNA, 0, false, false, probConfundir, 1);
         }
 
-        public String AtaqueConRetroceso(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, double probretroceso)
+        public string AtaqueConRetroceso(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, double probretroceso)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, 0, probretroceso, 0, 0, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueConDagnoFijo(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int dagnoFijo)
+        public string AtaqueConDagnoFijo(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, int dagnoFijo)
         {
             return AtaqueCompleto(origen, ataqueRealizado, destino, 0, false, dagnoFijo, 0, 0, 0, Estadistica.NINGUNA, 0, false, false, 0, 1);
         }
 
-        public String AtaqueCompleto(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, double probCritico,
-            Boolean infalible, int dagnoFijo, double probRetroceso, int dagnoAlUsuario, int curacionAlUsuario, Estadistica estadisticaQueCambia,
-            double probCambiarEstadistica, Boolean pierdeVidaSiFalla, Boolean fulminante, int probConfusion, int numGolpes)
+        public string AtaqueCompleto(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, double probCritico,
+            bool infalible, int dagnoFijo, double probRetroceso, int dagnoAlUsuario, int curacionAlUsuario, Estadistica estadisticaQueCambia,
+            double probCambiarEstadistica, bool pierdeVidaSiFalla, bool fulminante, int probConfusion, int numGolpes)
         {
-            Boolean haCambiadoStat = false;
-            String textoMostrar = origen.nombre + " usó " + ataqueRealizado.nombre + ". ";
+            bool haCambiadoStat = false;
+            string textoMostrar = $"{origen.nombre} usó {ataqueRealizado.nombre}. ";
             int vidaQuitada = 0;
             double eficacia = CalculoEficacia(ataqueRealizado, destino);
             //Si no afecta al objetivo, dagno fijo siempre afecta.
             if (eficacia == 0 && dagnoFijo == 0)
-                return textoMostrar + "No afecta a " + destino.nombre + ".";
+                return textoMostrar + $"No afecta a {destino.nombre}.";
 
             //Si acierta el ataque o es infalible (rapidez)
             if (AciertaAtaque(origen, ataqueRealizado, destino) || infalible)
@@ -2831,7 +2862,7 @@ namespace Pokemon
                 if (ataqueRealizado.tipo == Tipo.FUEGO && destino.estadisticasActuales.estadoActual == Estado.CONGELADO)
                 {
                     destino.estadisticasActuales.estadoActual = Estado.NINGUNO;
-                    textoMostrar += destino.nombre + " se ha descongelado.\n";
+                    textoMostrar += $"{destino.nombre} se ha descongelado.\n";
                 }
 
                 //Si hace retroceder al objetivo
@@ -2841,7 +2872,7 @@ namespace Pokemon
                 //Si confunde al objetivo
                 if (probConfusion > 0 && AciertaProbabilidad(probConfusion))
                 {
-                    textoMostrar += destino.nombre + " se confundió.\n";
+                    textoMostrar += $"{destino.nombre} se confundió.\n";
                     destino.estadisticasActuales.confuso = random.Next(1, 4);
                 }
 
@@ -2849,7 +2880,7 @@ namespace Pokemon
                 if (dagnoFijo == 0 && !fulminante)
                 {
                     if (numGolpes > 1)
-                        textoMostrar += "Número de golpes: " + numGolpes + "\n";
+                        textoMostrar += $"Número de golpes: {numGolpes}\n";
                     //Bajamos vida del pokemon afectado miramos el num de golpes.
                     for (int i = 0; i < numGolpes; i++)
                     {
@@ -2875,7 +2906,7 @@ namespace Pokemon
                 {
                     vidaQuitada = destino.vidaMax + 1;
                     destino.vidaActual -= vidaQuitada;
-                    textoMostrar += destino.nombre + " sufrió un golpe fulminante.\n";
+                    textoMostrar += $"{destino.nombre} sufrió un golpe fulminante.\n";
                 }
                 else if (fulminante)
                     textoMostrar += "Pero falló.\n";
@@ -2894,8 +2925,8 @@ namespace Pokemon
                 //Si el usuario se dagna tambien
                 if (dagnoAlUsuario != 0)
                 {
-                    textoMostrar += origen.nombre + " también se hace daño.\n";
-                    origen.vidaActual -= (int)(vidaQuitada * (double)dagnoAlUsuario / (double)100);
+                    textoMostrar += $"{origen.nombre} también se hace daño.\n";
+                    origen.vidaActual -= (int)(vidaQuitada * (double)dagnoAlUsuario / 100);
                     if (origen.vidaActual <= 0) //Si se debilita.
                     {
                         origen.vidaActual = 0;
@@ -2906,8 +2937,8 @@ namespace Pokemon
                 //Si se cura parte del dagno
                 if (curacionAlUsuario != 0)
                 {
-                    textoMostrar += origen.nombre + " ha recuperado vida.\n";
-                    origen.vidaActual += (int)(vidaQuitada * (double)curacionAlUsuario / (double)100);
+                    textoMostrar += $"{origen.nombre} ha recuperado vida.\n";
+                    origen.vidaActual += (int)(vidaQuitada * (double)curacionAlUsuario / 100);
                     if (origen.vidaActual > origen.vidaMax)
                         origen.vidaActual = origen.vidaMax;
                 }
@@ -2924,7 +2955,7 @@ namespace Pokemon
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.ENVENENADO;
-                                textoMostrar += destino.nombre + " se ha envenenado.\n";
+                                textoMostrar += $"{destino.nombre} se ha envenenado.\n";
                             }
                             break;
                         case Estado.QUEMADO:
@@ -2932,14 +2963,14 @@ namespace Pokemon
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.QUEMADO;
                                 destino.estadisticasActuales.ataqueActual /= 2;
-                                textoMostrar += destino.nombre + " se ha quemado.\n";
+                                textoMostrar += $"{destino.nombre} se ha quemado.\n";
                             }
                             break;
                         case Estado.CONGELADO:
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO && destino.tipo1 != Tipo.HIELO && destino.tipo2 != Tipo.HIELO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.CONGELADO;
-                                textoMostrar += destino.nombre + " se ha congelado.\n";
+                                textoMostrar += $"{destino.nombre} se ha congelado.\n";
                             }
                             break;
                         case Estado.DORMIDO:
@@ -2947,7 +2978,7 @@ namespace Pokemon
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.DORMIDO;
                                 destino.estadisticasActuales.turnosDormido = random.Next(2, 7);
-                                textoMostrar += destino.nombre + " se ha dormido.\n";
+                                textoMostrar += $"{destino.nombre} se ha dormido.\n";
                             }
                             break;
                         case Estado.GRAVEMENTEENVENENADO:
@@ -2959,7 +2990,7 @@ namespace Pokemon
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.GRAVEMENTEENVENENADO;
                                 destino.estadisticasActuales.turnosGravementeEnvenenado = 1;
-                                textoMostrar += destino.nombre + " fue gravemente envenenado.\n";
+                                textoMostrar += $"{destino.nombre} fue gravemente envenenado.\n";
                             }
                             break;
                         case Estado.PARALIZADO:
@@ -2967,7 +2998,7 @@ namespace Pokemon
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.PARALIZADO;
                                 destino.estadisticasActuales.velocidadActual /= 4;
-                                textoMostrar += destino.nombre + " se ha paralizado.\n";
+                                textoMostrar += $"{destino.nombre} se ha paralizado.\n";
                             }
                             break;
                     }
@@ -2981,7 +3012,7 @@ namespace Pokemon
                         case Estadistica.ATAQUE:
                             if (destino.estadisticasActuales.modificadorAtaque > -6)
                             {
-                                textoMostrar += "El ataque de " + destino.nombre + " bajó.\n";
+                                textoMostrar += $"El ataque de {destino.nombre} bajó.\n";
                                 destino.estadisticasActuales.modificadorAtaque--;
                                 destino.CambiarEstadistica(Estadistica.ATAQUE);
                                 haCambiadoStat = true;
@@ -2990,7 +3021,7 @@ namespace Pokemon
                         case Estadistica.DEFENSA:
                             if (destino.estadisticasActuales.modificadorDefensa > -6)
                             {
-                                textoMostrar += "La defensa de " + destino.nombre + " bajó.\n";
+                                textoMostrar += $"La defensa de {destino.nombre} bajó.\n";
                                 destino.estadisticasActuales.modificadorDefensa--;
                                 destino.CambiarEstadistica(Estadistica.DEFENSA);
                                 haCambiadoStat = true;
@@ -3001,7 +3032,7 @@ namespace Pokemon
                             {
                                 destino.estadisticasActuales.modificadorVelocidad--;
                                 destino.CambiarEstadistica(Estadistica.VELOCIDAD);
-                                textoMostrar += "La velocidad de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"La velocidad de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             break;
@@ -3010,7 +3041,7 @@ namespace Pokemon
                             {
                                 destino.estadisticasActuales.modificadorEspecial--;
                                 destino.CambiarEstadistica(Estadistica.ESPECIAL);
-                                textoMostrar += "El especial de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"El especial de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             break;
@@ -3018,7 +3049,7 @@ namespace Pokemon
                             if (destino.estadisticasActuales.modificadorCritico > 0)
                             {
                                 destino.estadisticasActuales.modificadorCritico--;
-                                textoMostrar += "El crítico de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"El crítico de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             break;
@@ -3026,7 +3057,7 @@ namespace Pokemon
                             if (destino.estadisticasActuales.modificadorEvasion > -6)
                             {
                                 destino.estadisticasActuales.modificadorEvasion--;
-                                textoMostrar += "La evasión de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"La evasión de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             break;
@@ -3034,18 +3065,18 @@ namespace Pokemon
                             if (destino.estadisticasActuales.modificadorPrecision > -6)
                             {
                                 destino.estadisticasActuales.modificadorPrecision--;
-                                textoMostrar += "La precisión de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"La precisión de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             break;
                     }
 
                     //Sonido estadistica
-                    if (haCambiadoStat)
+                    if (haCambiadoStat && !combate.mute)
                     {
                         new System.Threading.Thread(() =>
                         {
-                            SoundPlayer player2 = new SoundPlayer("Sonido\\Hit\\Stat Fall Down.wav");
+                            SoundPlayer player2 = new SoundPlayer(@"Sonido\Hit\Stat Fall Down.wav");
                             player2.PlaySync();
                         }).Start();
                     }
@@ -3056,7 +3087,7 @@ namespace Pokemon
                 textoMostrar += "Pero ha fallado.\n";
                 if (pierdeVidaSiFalla)
                 {
-                    textoMostrar += origen.nombre + " se hace daño.\n";
+                    textoMostrar += $"{origen.nombre} se hace daño.\n";
                     origen.vidaActual -= 1;
                     if (origen.vidaActual <= 0)
                     {
@@ -3074,11 +3105,11 @@ namespace Pokemon
 
         #region Ataque de estado
 
-        public String AtaqueDeEstadoSobreEnemigo(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, Estadistica estadisticaCambiar, int cantidadEstadistica, Boolean confunde)
+        public string AtaqueDeEstadoSobreEnemigo(Pokemon origen, Ataque ataqueRealizado, Pokemon destino, Estadistica estadisticaCambiar, int cantidadEstadistica, bool confunde)
         {
-            Boolean haCambiadoStat = false;
-            String textoMostrar = "";
-            textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+            bool haCambiadoStat = false;
+            string textoMostrar = "";
+            textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
 
             //Ataque
             if (AciertaAtaque(origen, ataqueRealizado, destino))
@@ -3094,70 +3125,70 @@ namespace Pokemon
                             //No afecta a veneno y acero
                             if (destino.tipo1 == Tipo.VENENO || destino.tipo2 == Tipo.VENENO || destino.tipo1 == Tipo.ACERO || destino.tipo2 == Tipo.ACERO)
                             {
-                                textoMostrar += destino.nombre + " es inmune al veneno.\n";
+                                textoMostrar += $"{destino.nombre} es inmune al veneno.\n";
                                 break;
                             }
                             if (destino.estadisticasActuales.estadoActual == Estado.ENVENENADO)
-                                textoMostrar += destino.nombre + " ya está envenenado.\n";
+                                textoMostrar += $"{destino.nombre} ya está envenenado.\n";
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.ENVENENADO;
-                                textoMostrar += destino.nombre + " se ha envenenado.\n";
+                                textoMostrar += $"{destino.nombre} se ha envenenado.\n";
                             }
                             break;
                         case Estado.QUEMADO:
                             if (destino.estadisticasActuales.estadoActual == Estado.QUEMADO)
-                                textoMostrar += destino.nombre + " ya está quemado.\n";
+                                textoMostrar += $"{destino.nombre} ya está quemado.\n";
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO && destino.tipo1 != Tipo.FUEGO && destino.tipo2 != Tipo.FUEGO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.QUEMADO;
                                 destino.estadisticasActuales.ataqueActual /= 2;
-                                textoMostrar += destino.nombre + " se ha quemado.\n";
+                                textoMostrar += $"{destino.nombre} se ha quemado.\n";
                             }
                             break;
                         case Estado.CONGELADO:
                             if (destino.estadisticasActuales.estadoActual == Estado.CONGELADO)
-                                textoMostrar += destino.nombre + " ya está congelado.\n";
+                                textoMostrar += $"{destino.nombre} ya está congelado.\n";
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO && destino.tipo1 != Tipo.HIELO && destino.tipo2 != Tipo.HIELO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.CONGELADO;
-                                textoMostrar += destino.nombre + " se ha congelado.\n";
+                                textoMostrar += $"{destino.nombre} se ha congelado.\n";
                             }
                             break;
                         case Estado.DORMIDO:
                             if (destino.estadisticasActuales.estadoActual == Estado.DORMIDO)
-                                textoMostrar += destino.nombre + " ya está dormido.\n";
+                                textoMostrar += $"{destino.nombre} ya está dormido.\n";
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.DORMIDO;
                                 destino.estadisticasActuales.turnosDormido = random.Next(2, 7);
-                                textoMostrar += destino.nombre + " se ha dormido.\n";
+                                textoMostrar += $"{destino.nombre} se ha dormido.\n";
                             }
                             break;
                         case Estado.GRAVEMENTEENVENENADO:
                             //No afecta a veneno y acero
                             if (destino.tipo1 == Tipo.VENENO || destino.tipo2 == Tipo.VENENO || destino.tipo1 == Tipo.ACERO || destino.tipo2 == Tipo.ACERO)
                             {
-                                textoMostrar += destino.nombre + " es inmune al veneno.\n";
+                                textoMostrar += $"{destino.nombre} es inmune al veneno.\n";
                                 break;
                             }
                             if (destino.estadisticasActuales.estadoActual == Estado.GRAVEMENTEENVENENADO)
-                                textoMostrar += destino.nombre + " ya está gravemente envenenado.\n";
+                                textoMostrar += $"{destino.nombre} ya está gravemente envenenado.\n";
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO || destino.estadisticasActuales.estadoActual == Estado.ENVENENADO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.GRAVEMENTEENVENENADO;
                                 destino.estadisticasActuales.turnosGravementeEnvenenado = 1;
-                                textoMostrar += destino.nombre + " fue gravemente envenenado.\n";
+                                textoMostrar += $"{destino.nombre} fue gravemente envenenado.\n";
                             }
                             break;
                         case Estado.PARALIZADO:
                             if (destino.estadisticasActuales.estadoActual == Estado.PARALIZADO)
-                                textoMostrar += destino.nombre + " ya está paralizado.\n";
+                                textoMostrar += $"{destino.nombre} ya está paralizado.\n";
                             if (destino.estadisticasActuales.estadoActual == Estado.NINGUNO)
                             {
                                 destino.estadisticasActuales.estadoActual = Estado.PARALIZADO;
                                 destino.estadisticasActuales.velocidadActual /= 4;
-                                textoMostrar += destino.nombre + " se ha paralizado.\n";
+                                textoMostrar += $"{destino.nombre} se ha paralizado.\n";
                             }
                             break;
                     }
@@ -3170,9 +3201,9 @@ namespace Pokemon
                             if (destino.estadisticasActuales.modificadorAtaque > -6)
                             {
                                 if (cantidadEstadistica > 1)
-                                    textoMostrar += "El ataque de " + destino.nombre + " bajó enormemente.\n";
+                                    textoMostrar += $"El ataque de {destino.nombre} bajó enormemente.\n";
                                 else
-                                    textoMostrar += "El ataque de " + destino.nombre + " bajó.\n";
+                                    textoMostrar += $"El ataque de {destino.nombre} bajó.\n";
                                 destino.estadisticasActuales.modificadorAtaque -= cantidadEstadistica;
                                 if (destino.estadisticasActuales.modificadorAtaque < -6)
                                     destino.estadisticasActuales.modificadorAtaque = -6;
@@ -3180,15 +3211,15 @@ namespace Pokemon
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "El ataque de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"El ataque de {destino.nombre} no puede bajar más.\n";
                             break;
                         case Estadistica.DEFENSA:
                             if (destino.estadisticasActuales.modificadorDefensa > -6)
                             {
                                 if (cantidadEstadistica > 1)
-                                    textoMostrar += "La defensa de " + destino.nombre + " bajó enormemente.\n";
+                                    textoMostrar += $"La defensa de {destino.nombre} bajó enormemente.\n";
                                 else
-                                    textoMostrar += "La defensa de " + destino.nombre + " bajó.\n";
+                                    textoMostrar += $"La defensa de {destino.nombre} bajó.\n";
                                 destino.estadisticasActuales.modificadorDefensa -= cantidadEstadistica;
                                 if (destino.estadisticasActuales.modificadorDefensa < -6)
                                     destino.estadisticasActuales.modificadorDefensa = -6;
@@ -3196,15 +3227,15 @@ namespace Pokemon
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "La defensa de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"La defensa de {destino.nombre} no puede bajar más.\n";
                             break;
                         case Estadistica.VELOCIDAD:
                             if (destino.estadisticasActuales.modificadorVelocidad > -6)
                             {
                                 if (cantidadEstadistica > 1)
-                                    textoMostrar += "La velocidad de " + destino.nombre + " bajó enormemente.\n";
+                                    textoMostrar += $"La velocidad de {destino.nombre} bajó enormemente.\n";
                                 else
-                                    textoMostrar += "La velocidad de " + destino.nombre + " bajó.\n";
+                                    textoMostrar += $"La velocidad de {destino.nombre} bajó.\n";
                                 destino.estadisticasActuales.modificadorVelocidad -= cantidadEstadistica;
                                 if (destino.estadisticasActuales.modificadorVelocidad < -6)
                                     destino.estadisticasActuales.modificadorVelocidad = -6;
@@ -3212,15 +3243,15 @@ namespace Pokemon
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "La velocidad de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"La velocidad de {destino.nombre} no puede bajar más.\n";
                             break;
                         case Estadistica.ESPECIAL:
                             if (destino.estadisticasActuales.modificadorEspecial > -6)
                             {
                                 if (cantidadEstadistica > 1)
-                                    textoMostrar += "El especial de " + destino.nombre + " bajó enormemente.\n";
+                                    textoMostrar += $"El especial de {destino.nombre} bajó enormemente.\n";
                                 else
-                                    textoMostrar += "El especial de " + destino.nombre + " bajó.\n";
+                                    textoMostrar += $"El especial de {destino.nombre} bajó.\n";
                                 destino.estadisticasActuales.modificadorEspecial -= cantidadEstadistica;
                                 if (destino.estadisticasActuales.modificadorEspecial < -6)
                                     destino.estadisticasActuales.modificadorEspecial = -6;
@@ -3228,46 +3259,46 @@ namespace Pokemon
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "El especial de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"El especial de {destino.nombre} no puede bajar más.\n";
                             break;
                         case Estadistica.CRITICO:
                             if (destino.estadisticasActuales.modificadorCritico > 0)
                             {
                                 destino.estadisticasActuales.modificadorCritico -= cantidadEstadistica;
-                                textoMostrar += "El crítico de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"El crítico de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "El crítico de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"El crítico de {destino.nombre} no puede bajar más.\n";
                             break;
                         case Estadistica.EVASION:
                             if (destino.estadisticasActuales.modificadorEvasion > -6)
                             {
                                 destino.estadisticasActuales.modificadorEvasion -= cantidadEstadistica;
-                                textoMostrar += "La evasión de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"La evasión de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "La evasión de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"La evasión de {destino.nombre} no puede bajar más.\n";
                             break;
                         case Estadistica.PRECISION:
                             if (destino.estadisticasActuales.modificadorPrecision > -6)
                             {
                                 destino.estadisticasActuales.modificadorPrecision -= cantidadEstadistica;
-                                textoMostrar += "La precisión de " + destino.nombre + " ha disminuido.\n";
+                                textoMostrar += $"La precisión de {destino.nombre} ha disminuido.\n";
                                 haCambiadoStat = true;
                             }
                             else
-                                textoMostrar += "La precisión de " + destino.nombre + " no puede bajar más.\n";
+                                textoMostrar += $"La precisión de {destino.nombre} no puede bajar más.\n";
                             break;
                     }
 
                 //Sonido estadistica
-                if (haCambiadoStat)
+                if (haCambiadoStat && !combate.mute)
                 {
                     new System.Threading.Thread(() =>
                     {
-                        player = new SoundPlayer("Sonido\\Hit\\Stat Fall Down.wav");
+                        player = new SoundPlayer(@"Sonido\Hit\Stat Fall Down.wav");
                         player.PlaySync();
                     }).Start();
                 }
@@ -3277,21 +3308,21 @@ namespace Pokemon
                     if (destino.estadisticasActuales.confuso <= -1)
                     {
                         destino.estadisticasActuales.confuso = random.Next(1, 4);
-                        textoMostrar += destino.nombre + " se ha confundido.\n";
+                        textoMostrar += $"{destino.nombre} se ha confundido.\n";
                     }
                     else
-                        textoMostrar += destino.nombre + " ya está confuso.\n";
+                        textoMostrar += $"{destino.nombre} ya está confuso.\n";
             }
             else
                 textoMostrar += "Pero falló.\n";
             return textoMostrar;
         }
 
-        public String AtaqueDeEstadoSobreTi(Pokemon origen, Ataque ataqueRealizado, Estadistica estadisticaCambiar, int cantidadEstadistica, int curacion)
+        public string AtaqueDeEstadoSobreTi(Pokemon origen, Ataque ataqueRealizado, Estadistica estadisticaCambiar, int cantidadEstadistica, int curacion)
         {
-            Boolean haCambiadoStat = false;
-            String textoMostrar = "";
-            textoMostrar += origen.nombre + " usó " + ataqueRealizado.nombre + ".\n";
+            bool haCambiadoStat = false;
+            string textoMostrar = "";
+            textoMostrar += $"{origen.nombre} usó {ataqueRealizado.nombre}.\n";
 
             //Animacion de combate
             AnimacionEstadoTu(origen, ataqueRealizado);
@@ -3301,7 +3332,7 @@ namespace Pokemon
             {
                 origen.estadisticasActuales.estadoActual = Estado.DORMIDO;
                 origen.estadisticasActuales.turnosDormido = 5;
-                textoMostrar += origen.nombre + " se fue a dormir.\n";
+                textoMostrar += $"{origen.nombre} se fue a dormir.\n";
             }
 
             //Si cambia estadisticas
@@ -3311,9 +3342,9 @@ namespace Pokemon
                     if (origen.estadisticasActuales.modificadorAtaque < 6)
                     {
                         if (cantidadEstadistica > 1)
-                            textoMostrar += "El ataque de " + origen.nombre + " subió enormemente.\n";
+                            textoMostrar += $"El ataque de {origen.nombre} subió enormemente.\n";
                         else
-                            textoMostrar += "El ataque de " + origen.nombre + " subió.\n";
+                            textoMostrar += $"El ataque de {origen.nombre} subió.\n";
                         origen.estadisticasActuales.modificadorAtaque += cantidadEstadistica;
                         if (origen.estadisticasActuales.modificadorAtaque > 6)
                             origen.estadisticasActuales.modificadorAtaque = 6;
@@ -3321,15 +3352,15 @@ namespace Pokemon
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "El ataque de " + origen.nombre + " no puede subir más.\n";
+                        textoMostrar += $"El ataque de {origen.nombre} no puede subir más.\n";
                     break;
                 case Estadistica.DEFENSA:
                     if (origen.estadisticasActuales.modificadorDefensa < 6)
                     {
                         if (cantidadEstadistica > 1)
-                            textoMostrar += "La defensa de " + origen.nombre + " subió enormemente.\n";
+                            textoMostrar += $"La defensa de {origen.nombre} subió enormemente.\n";
                         else
-                            textoMostrar += "La defensa de " + origen.nombre + " subió.\n";
+                            textoMostrar += $"La defensa de {origen.nombre} subió.\n";
                         origen.estadisticasActuales.modificadorDefensa += cantidadEstadistica;
                         if (origen.estadisticasActuales.modificadorDefensa > 6)
                             origen.estadisticasActuales.modificadorDefensa = 6;
@@ -3337,15 +3368,15 @@ namespace Pokemon
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "La defensa de " + origen.nombre + " no puede subir más.\n";
+                        textoMostrar += $"La defensa de {origen.nombre} no puede subir más.\n";
                     break;
                 case Estadistica.VELOCIDAD:
                     if (origen.estadisticasActuales.modificadorVelocidad < 6)
                     {
                         if (cantidadEstadistica > 1)
-                            textoMostrar += "La velocidad de " + origen.nombre + " subió enormemente.\n";
+                            textoMostrar += $"La velocidad de {origen.nombre} subió enormemente.\n";
                         else
-                            textoMostrar += "La velocidad de " + origen.nombre + " subió.\n";
+                            textoMostrar += $"La velocidad de {origen.nombre} subió.\n";
                         origen.estadisticasActuales.modificadorVelocidad += cantidadEstadistica;
                         if (origen.estadisticasActuales.modificadorVelocidad > 6)
                             origen.estadisticasActuales.modificadorVelocidad = 6;
@@ -3353,15 +3384,15 @@ namespace Pokemon
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "La velocidad de " + origen.nombre + " no puede subir más.\n";
+                        textoMostrar += $"La velocidad de {origen.nombre} no puede subir más.\n";
                     break;
                 case Estadistica.ESPECIAL:
                     if (origen.estadisticasActuales.modificadorEspecial < 6)
                     {
                         if (cantidadEstadistica > 1)
-                            textoMostrar += "El especial de " + origen.nombre + " subió enormemente.\n";
+                            textoMostrar += $"El especial de {origen.nombre} subió enormemente.\n";
                         else
-                            textoMostrar += "El especial de " + origen.nombre + " subió.\n";
+                            textoMostrar += $"El especial de {origen.nombre} subió.\n";
                         origen.estadisticasActuales.modificadorEspecial += cantidadEstadistica;
                         if (origen.estadisticasActuales.modificadorEspecial > 6)
                             origen.estadisticasActuales.modificadorEspecial = 6;
@@ -3369,52 +3400,54 @@ namespace Pokemon
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "El especial de " + origen.nombre + " no puede subir más.\n";
+                        textoMostrar += $"El especial de {origen.nombre} no puede subir más.\n";
                     break;
                 case Estadistica.CRITICO:
                     if (origen.estadisticasActuales.modificadorCritico < 4)
                     {
                         origen.estadisticasActuales.modificadorCritico += cantidadEstadistica;
-                        textoMostrar += "El crítico de " + origen.nombre + " ha aumentado.\n";
+                        textoMostrar += $"El crítico de {origen.nombre} ha aumentado.\n";
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "El crítico de " + origen.nombre + " no puede aumentar más.\n";
+                        textoMostrar += $"El crítico de {origen.nombre} no puede aumentar más.\n";
                     break;
                 case Estadistica.EVASION:
                     if (origen.estadisticasActuales.modificadorEvasion < 6)
                     {
                         origen.estadisticasActuales.modificadorEvasion += cantidadEstadistica;
-                        textoMostrar += "La evasión de " + origen.nombre + " ha aumentado.\n";
+                        textoMostrar += $"La evasión de {origen.nombre} ha aumentado.\n";
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "La evasión de " + origen.nombre + " no puede aumentar más.\n";
+                        textoMostrar += $"La evasión de {origen.nombre} no puede aumentar más.\n";
                     break;
                 case Estadistica.PRECISION:
                     if (origen.estadisticasActuales.modificadorPrecision < 6)
                     {
                         origen.estadisticasActuales.modificadorPrecision += cantidadEstadistica;
-                        textoMostrar += "La precisión de " + origen.nombre + " ha aumentado.\n";
+                        textoMostrar += $"La precisión de {origen.nombre} ha aumentado.\n";
                         haCambiadoStat = true;
                     }
                     else
-                        textoMostrar += "La precisión de " + origen.nombre + " no puede aumentar más.\n";
+                        textoMostrar += $"La precisión de {origen.nombre} no puede aumentar más.\n";
                     break;
             }
 
             //Sonido estadistica
-            if (haCambiadoStat)
+            if (haCambiadoStat && !combate.mute)
             {
-                new System.Threading.Thread(() => { new SoundPlayer("Sonido\\Hit\\Stat Rise Up.wav").PlaySync(); }).Start();
+                new System.Threading.Thread(() => { new SoundPlayer(@"Sonido\Hit\Stat Rise Up.wav").PlaySync(); }).Start();
             }
 
             //Si se cura el pokemon
             if (curacion > 0)
             {
-                player = new SoundPlayer("Sonido\\Hit\\healing.wav");
-                textoMostrar += origen.nombre + " ha recuperado salud.\n";
-                origen.vidaActual += (int)(origen.vidaMax * ((double)curacion / (double)100));
+                if (!combate.mute)
+                    player = new SoundPlayer(@"Sonido\Hit\healing.wav");
+
+                textoMostrar += $"{origen.nombre} ha recuperado salud.\n";
+                origen.vidaActual += (int)(origen.vidaMax * (curacion / (double)100));
                 if (origen.vidaActual > origen.vidaMax)
                     origen.vidaActual = origen.vidaMax;
             }
@@ -3425,9 +3458,9 @@ namespace Pokemon
 
         #region Ataque de varios turnos
 
-        public String EmpezarAtaqueDeVariosTurnos(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
+        public string EmpezarAtaqueDeVariosTurnos(Pokemon origen, Ataque ataqueRealizado, Pokemon destino)
         {
-            String textoMostrar = "";
+            string textoMostrar = "";
             int nGolpes = NumGolpes();
 
             if (ataqueRealizado.ataqueID == AtaqueID.GOLPE || ataqueRealizado.ataqueID == AtaqueID.DANZAPETALO)
@@ -3439,7 +3472,7 @@ namespace Pokemon
             if (ataqueRealizado.ataqueID != AtaqueID.GOLPE && ataqueRealizado.ataqueID != AtaqueID.DANZAPETALO)
             {
                 destino.estadisticasActuales.turnosInmovilizado = nGolpes;
-                textoMostrar += destino.nombre + " ha sido atrapado. \n";
+                textoMostrar += $"{destino.nombre} ha sido atrapado. \n";
             }
             return textoMostrar;
         }
@@ -3451,7 +3484,7 @@ namespace Pokemon
         public void AnimacionAtaqueNormal(Pokemon destino, Ataque ataqueRealizado, double eficacia)
         {
             //Animacion de combate
-            Image img = Image.FromFile("Img\\Ataques\\" + ataqueRealizado.idMovimiento + ".png");
+            Image img = Image.FromFile($@"Img\Ataques\{ataqueRealizado.idMovimiento}.png");
             combate.picBoxAtaque.Image = img;
 
             if (destino == combate.pokemonFront)
@@ -3467,31 +3500,34 @@ namespace Pokemon
                 new AnimacionAtaque(combate.picBoxPkmnBack, combate.picBoxAtaque);
             }
             //Sonido animacion
-            new System.Threading.Thread(() =>
+            if (!combate.mute)
             {
-                switch (eficacia)
+                new System.Threading.Thread(() =>
                 {
-                    case 0:
-                    case 0.25:
-                    case 0.5:
-                        player = new SoundPlayer("Sonido\\Hit\\pocoEficaz.wav");
-                        break;
-                    case 2:
-                    case 4:
-                        player = new SoundPlayer("Sonido\\Hit\\superEficaz.wav");
-                        break;
-                    default:
-                        player = new SoundPlayer("Sonido\\Hit\\normal.wav");
-                        break;
-                }
-                player.PlaySync();
-            }).Start();
+                    switch (eficacia)
+                    {
+                        case 0:
+                        case 0.25:
+                        case 0.5:
+                            player = new SoundPlayer(@"Sonido\Hit\pocoEficaz.wav");
+                            break;
+                        case 2:
+                        case 4:
+                            player = new SoundPlayer(@"Sonido\Hit\superEficaz.wav");
+                            break;
+                        default:
+                            player = new SoundPlayer(@"Sonido\Hit\normal.wav");
+                            break;
+                    }
+                    player.PlaySync();
+                }).Start();
+            }
         }
 
         public void AnimacionEstadoRival(Pokemon destino, Ataque ataqueRealizado)
         {
             //Animacion de combate
-            Image img = Image.FromFile("Img\\Ataques\\" + ataqueRealizado.idMovimiento + ".png");
+            Image img = Image.FromFile($@"Img\Ataques\{ataqueRealizado.idMovimiento}.png");
             combate.picBoxAtaque.Image = img;
 
             if (destino == combate.pokemonFront)
@@ -3511,7 +3547,7 @@ namespace Pokemon
         public void AnimacionEstadoTu(Pokemon origen, Ataque ataqueRealizado)
         {
             //Animacion de combate
-            Image img = Image.FromFile("Img\\Ataques\\" + ataqueRealizado.idMovimiento + ".png");
+            Image img = Image.FromFile($@"Img\Ataques\{ataqueRealizado.idMovimiento}.png");
             combate.picBoxAtaque.Image = img;
 
             if (origen == combate.pokemonFront)
@@ -3535,13 +3571,13 @@ namespace Pokemon
             switch (ataqueRealizado.ataqueID)
             {
                 case AtaqueID.VUELO:
-                    img = Image.FromFile("Img\\Ataques\\vuelo.png");
+                    img = Image.FromFile(@"Img\Ataques\vuelo.png");
                     break;
                 case AtaqueID.EXCAVAR:
-                    img = Image.FromFile("Img\\Ataques\\excavar.png");
+                    img = Image.FromFile(@"Img\Ataques\excavar.png");
                     break;
                 case AtaqueID.GOLPEUMBRIO:
-                    img = Image.FromFile("Img\\Ataques\\gumbrio.png");
+                    img = Image.FromFile(@"Img\Ataques\gumbrio.png");
                     break;
             }
             combate.picBoxAtaque.Image = img;
@@ -3582,11 +3618,11 @@ namespace Pokemon
         public int NumGolpes()
         {
             double i = random.NextDouble();
-            if (i < 37.5 / (double)100)
+            if (i < 37.5 / 100)
                 return 2;
-            if (i < 75 / (double)100)
+            if (i < (double)75 / 100)
                 return 3;
-            if (i < 87.5 / (double)100)
+            if (i < 87.5 / 100)
                 return 4;
             return 5;
         }
@@ -3596,7 +3632,7 @@ namespace Pokemon
             switch (CalculoEficacia(ataqueRealizado, destino))
             {
                 case 0:
-                    return "No afecta al " + destino.nombre + " enemigo.\n";
+                    return $"No afecta al {destino.nombre} enemigo.\n";
                 case 0.25:
                     return "Es poco eficaz.\n";
                 case 0.5:
@@ -3632,7 +3668,7 @@ namespace Pokemon
                     break;
             }
 
-            if (random.NextDouble() <= probabilidad / (double)100)
+            if (random.NextDouble() <= probabilidad / 100)
                 return true;
             else
                 return false;
@@ -3682,7 +3718,7 @@ namespace Pokemon
             else B = 1;
 
             //Formula
-            double dagno = 0.01 * B * E * V * (((0.2 * N + 1) * A * P) / (25 * D) + 2);
+            double dagno = 0.01 * B * E * V * ((0.2 * N + 1) * A * P / (25 * D) + 2);
             return (int)dagno;
         }
 
@@ -3693,9 +3729,11 @@ namespace Pokemon
             //Calculamos la eficacia 1
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select MULTIPLICADOR from TIPO_EFICACIA where TIPO_ORIGEN = " + (int)ataque.tipo + " and TIPO_DESTINO= " + (int)destino.tipo1;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"SELECT MULTIPLICADOR FROM TIPO_EFICACIA WHERE TIPO_ORIGEN = {(int)ataque.tipo} AND TIPO_DESTINO = {(int)destino.tipo1}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
             if (reader.Read())
                 double.TryParse(reader[0].ToString(), out eficacia1);
@@ -3706,9 +3744,11 @@ namespace Pokemon
             //Calculamos la eficacia 2
             OleDbConnection con2 = ConexionAccess.GetConexion();
             con2.Open();
-            OleDbCommand command2 = new OleDbCommand();
-            command2.Connection = con2;
-            command2.CommandText = "select MULTIPLICADOR from TIPO_EFICACIA where tipo_origen = " + (int)ataque.tipo + " and tipo_destino= " + (int)destino.tipo2;
+            OleDbCommand command2 = new OleDbCommand
+            {
+                Connection = con2,
+                CommandText = $"SELECT MULTIPLICADOR FROM TIPO_EFICACIA WHERE TIPO_ORIGEN = {(int)ataque.tipo} AND TIPO_DESTINO = {(int)destino.tipo2}"
+            };
             OleDbDataReader reader2 = command2.ExecuteReader();
             if (reader2.Read())
                 double.TryParse(reader2[0].ToString(), out eficacia2);
@@ -3735,7 +3775,7 @@ namespace Pokemon
             double Patacante; //Precision del atacante.
             double Erival; //Evasion del rival.
 
-            PMbase = ataqueRealizado.precision / (double)100;
+            PMbase = (double)ataqueRealizado.precision / 100;
 
             //Calculo de Patacante
             int numerador = 3, denominador = 3;
@@ -3743,7 +3783,7 @@ namespace Pokemon
                 numerador += origen.estadisticasActuales.modificadorPrecision;
             if (origen.estadisticasActuales.modificadorPrecision < 0)
                 denominador += -origen.estadisticasActuales.modificadorPrecision;
-            Patacante = (double)numerador / (double)denominador;
+            Patacante = (double)numerador / denominador;
 
             //Calculo de Erival
             numerador = denominador = 3;
@@ -3751,7 +3791,7 @@ namespace Pokemon
                 denominador += destino.estadisticasActuales.modificadorEvasion;
             if (origen.estadisticasActuales.modificadorEvasion < 0)
                 numerador += -destino.estadisticasActuales.modificadorEvasion;
-            Erival = (double)numerador / (double)denominador;
+            Erival = (double)numerador / denominador;
 
             //Formula
             double probabilidadGolpeo = PMbase * Patacante / Erival;
@@ -3773,7 +3813,7 @@ namespace Pokemon
 
         public bool AciertaProbabilidad(double probabilidad)
         {
-            if (random.NextDouble() <= probabilidad / (double)100)
+            if (random.NextDouble() <= probabilidad / 100)
                 return true;
             else
                 return false;
@@ -3783,9 +3823,9 @@ namespace Pokemon
 
         #region Insulto
 
-        public String GetInsulto(Pokemon origen)
+        public string GetInsulto(Pokemon origen)
         {
-            String[] insultos = {" ha insinuado que tu madre es una llama.\n",
+            string[] insultos = {" ha insinuado que tu madre es una llama.\n",
                                  " te enseña el culo.\n",
                                  " te llama orangután, zampabollos.\n",
                                  " te escupe en el pelo.\n",

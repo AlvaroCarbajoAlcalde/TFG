@@ -22,8 +22,8 @@ namespace Pokemon
         private TcpListener server;
         public int ataqueSeleccionadoMultiplayer;
         public bool multiplayer;
-        private Random random;
-        private UC_PokemonRestantes indicadorRestantesTu, indicadorRestantesRival;
+        private readonly Random random;
+        private readonly UC_PokemonRestantes indicadorRestantesTu, indicadorRestantesRival;
         public int numTurnos, ticks;
         public Accion accionRealizadaPorFront, accionRealizadaPorBack;
         public bool menuBloqueado;
@@ -31,16 +31,17 @@ namespace Pokemon
         public Pokemon pokemonFront, pokemonBack;
         public BarraDeVida vidaTu, vidaRival;
         public TextoMostrar tm;
-        private Size originalSize;
+        private readonly Size originalSize;
         public Rectangle recPanelCombate, recPicBoxPokemonFront, recPicBoxPokemonBack, recMarcoCombate, recPanelInfoRival,
             recPanelInfoJugador, recLabelPvTu, recLabelNombrePkmnTu, recLabelNombrePkmnRival, recLabelNvlTu,
             recLabelNvlRival, recVidaVerdeTu, recVidaRojaTu, recVidaVerdeRival, recVidaRojaRival, recEstadoTu, recEstadoRival;
         public string idLogCombate;
         private bool rendido;
-        private Form_RogueLike formRogueLike;
+        private readonly Form_RogueLike formRogueLike;
         private string nombreGanador;
         private bool endEnvio;
-        private Form_Inicio inicio;
+        public bool mute;
+        private readonly Form_Inicio inicio;
 
         #endregion
 
@@ -52,6 +53,7 @@ namespace Pokemon
             inicio.Visible = false;
             InitializeComponent();
             Text = $"Combate  IP: {IPUtil.ObtenerIP()}";
+            mute = false;
 
             //TCP SERVER
             new Thread(() =>
@@ -302,7 +304,7 @@ namespace Pokemon
         private void CambiarMusicaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string[] canciones = { "CyntiaBattle", "RojoBattle", "PalkiaDialga", "AzelfUxieMesprit", "TrainerCombat", "Suicune" };
-            mediaPlayer.URL = "Sonido\\Musica\\" + canciones[random.Next(0, canciones.Length)] + ".wav";
+            mediaPlayer.URL = $@"Sonido\Musica\{canciones[random.Next(0, canciones.Length)]}.wav";
         }
 
         #endregion
@@ -383,17 +385,17 @@ namespace Pokemon
             switch (ticks)
             {
                 case 0:
-                    tm.MostrarTexto("El combate entre " + entrenadorTu.nombre + " y " + entrenadorRival.nombre + " va a comenzar.");
+                    tm.MostrarTexto($"El combate entre {entrenadorTu.nombre} y {entrenadorRival.nombre} va a comenzar.");
                     break;
                 case 1:
-                    tm.MostrarTexto(entrenadorTu.nombre + ": Adelante " + entrenadorTu.equipo[0].nombre + ".");
+                    tm.MostrarTexto($"{entrenadorTu.nombre}: Adelante {entrenadorTu.equipo[0].nombre}.");
                     break;
                 case 2:
                     CambiarPokemon(entrenadorTu.equipo[0], "Back");
                     panelInfoTu.Visible = true;
                     break;
                 case 3:
-                    tm.MostrarTexto(entrenadorRival.nombre + ": Adelante " + entrenadorRival.equipo[0].nombre + ".");
+                    tm.MostrarTexto($"{entrenadorRival.nombre}: Adelante {entrenadorRival.equipo[0].nombre}.");
                     break;
                 case 4:
                     CambiarPokemon(entrenadorRival.equipo[0], "Front");
@@ -432,8 +434,6 @@ namespace Pokemon
 
             if (posicion == "Front")
             {
-                if (pokemonFront != null)
-                    mensaje += "¡" + pokemonFront.nombre + ", cambio!\n";
                 pokemonFront = pokemon;
                 Image imgPkmnFront = pokemonFront.imagenFront;
                 picBoxPkmnFront.Image = imgPkmnFront;
@@ -444,15 +444,14 @@ namespace Pokemon
                 new AnimacionEntrada(picBoxPkmnFront, recPicBoxPokemonFront, "Front", this);
                 vidaRival = new BarraDeVida("Front", pokemonFront, this);
                 vidaRival.SetVida(pokemonFront.vidaActual);
-                labelNivelRival.Text = "Nv" + pokemonFront.nivel;
+                labelNivelRival.Text = $"Nv{pokemonFront.nivel}";
                 labelRivalNombre.Text = pokemonFront.nombre;
-                mensaje += "¡Adelante, " + pokemonFront.nombre + "!";
-                picBoxEstadoRival.BackgroundImage = Image.FromFile(@"Img\Estado\" + (int)pokemon.estadisticasActuales.estadoActual + ".png");
+                picBoxEstadoRival.BackgroundImage = Image.FromFile($@"Img\Estado\{(int)pokemon.estadisticasActuales.estadoActual}.png");
             }
             else
             {
                 if (pokemonBack != null)
-                    mensaje += "¡" + pokemonBack.nombre + ", cambio!\n";
+                    mensaje += $"¡{pokemonBack.nombre}, cambio!\n";
                 pokemonBack = pokemon;
                 Image imgPkmnBack = pokemonBack.imagenBack;
                 picBoxPkmnBack.Image = imgPkmnBack;
@@ -463,17 +462,31 @@ namespace Pokemon
                 new AnimacionEntrada(picBoxPkmnBack, recPicBoxPokemonBack, "Back", this);
                 vidaTu = new BarraDeVida("Back", pokemonBack, this);
                 vidaTu.SetVida(pokemonBack.vidaActual);
-                labelNivelTu.Text = "Nv" + pokemonBack.nivel;
+                labelNivelTu.Text = $"Nv{pokemonBack.nivel}";
                 labelNombreTu.Text = pokemonBack.nombre;
-                labelPvTu.Text = "Pv " + pokemonBack.vidaActual + "/" + pokemonBack.vidaMax;
+                labelPvTu.Text = $"Pv {pokemonBack.vidaActual}/{pokemonBack.vidaMax}";
                 if (ticks > 4)
-                    mensaje += "¡Adelante, " + pokemonBack.nombre + "!";
+                    mensaje += $"¡Adelante, {pokemonBack.nombre}!";
 
-                picBoxEstadoTu.BackgroundImage = Image.FromFile(@"Img\Estado\" + (int)pokemon.estadisticasActuales.estadoActual + ".png");
+                picBoxEstadoTu.BackgroundImage = Image.FromFile($@"Img\Estado\{(int)pokemon.estadisticasActuales.estadoActual}.png");
                 tm.MostrarTexto(mensaje);
             }
+        }
 
-
+        private void Mutear_Click(object sender, EventArgs e)
+        {
+            if(mute == false)
+            {
+                mediaPlayer.Ctlcontrols.pause();
+                mutearToolStripMenuItem.Text = "Desmutear";
+                mute = true;
+            }
+            else
+            {
+                mediaPlayer.Ctlcontrols.play();
+                mutearToolStripMenuItem.Text = "Mutear";
+                mute = false;
+            }
         }
 
         public void GenerarFondoCombate(object sender, EventArgs e)
@@ -580,7 +593,7 @@ namespace Pokemon
             //Si se debilita el rival
             if (pokemonFront.estadisticasActuales.debilitado)
             {
-                txtMostrar += pokemonFront.nombre + " se ha debilitado.\n";
+                txtMostrar += $"{pokemonFront.nombre} se ha debilitado.\n";
                 Pokemon aSacar = RivalSacaPokemon();
                 if (aSacar == null)
                 {
@@ -591,7 +604,7 @@ namespace Pokemon
                 }
                 else
                 {
-                    txtMostrar += entrenadorRival.nombre + " saca a " + aSacar.nombre + ".\n";
+                    txtMostrar += $"{entrenadorRival.nombre} saca a {aSacar.nombre}.\n";
                     CambiarPokemon(aSacar, "Front");
                 }
             }
@@ -625,7 +638,7 @@ namespace Pokemon
                     EmpezarTurno();
                 }
             }
-            Console.WriteLine("\n********** Fin del turno " + numTurnos + " **********\n");
+            Console.WriteLine($"\n********** Fin del turno {numTurnos} **********\n");
             pokemonBack.MostrarDatos();
             Console.WriteLine("----------  FIN  ----------\n");
             pokemonFront.MostrarDatos();
