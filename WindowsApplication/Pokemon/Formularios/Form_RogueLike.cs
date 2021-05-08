@@ -15,6 +15,7 @@ namespace Pokemon
         private readonly Entrenador entrenador;
         private Entrenador entrenadorRival;
         private int numCombate, auxEquipo;
+        private int ticks;
         private int auxPokElegible1, auxPokElegible2, auxPokElegible3;
         private Pokemon pokElegible1, pokElegible2, pokElegible3;
         private Objeto objetoRecibido;
@@ -37,6 +38,7 @@ namespace Pokemon
         {
             this.inicio = inicio;
             InitializeComponent();
+            iconoJugador.Location = new Point(39, 210);
             numCombate = 1;
             auxEquipo = 0;
             auxPokElegible1 = auxPokElegible2 = auxPokElegible3 = 0;
@@ -64,6 +66,7 @@ namespace Pokemon
             #endregion
 
             entrenador = new Entrenador(6);
+            iconoJugador.BackgroundImage = entrenador.imageMini;
             entrenador.GenerarEquipo();
             AlmacenarDatosListas();
             ActualizarPicBox();
@@ -84,6 +87,7 @@ namespace Pokemon
         #endregion
 
         #region Metodos
+
         private void ActualizarPicBox()
         {
             picBoxPkmn1.BackgroundImage = entrenador.equipo[0].icono;
@@ -135,6 +139,7 @@ namespace Pokemon
 
         private void RerrollPremios()
         {
+            btnCombate.Visible = labelCombate.Visible = false;
             int mediaJugador = CalcularMediaJugador();
 
             //Combate vs BOSS
@@ -196,10 +201,13 @@ namespace Pokemon
             return suma / 6;
         }
 
-        //TODO BORRAR
-        private void button2_Click(object sender, EventArgs e)
+        private void TimerAnimacion_Tick(object sender, EventArgs e)
         {
-            new Animacion_RogueLike(iconoJugador, numCombate++);
+            if (ticks++ >= 10)
+            {
+                timerAnimacion.Enabled = false;
+                IniciarCombate();
+            }
         }
 
         private void AceptaCambio_Click(object sender, EventArgs e)
@@ -239,8 +247,7 @@ namespace Pokemon
             }
 
             panelPremios.Visible = false;
-
-            //new Animacion_RogueLike(iconoJugador, numCombate);
+            btnCombate.Visible = labelCombate.Visible = true;
         }
 
         private void SeleccionarEquipoRival(int nivel)
@@ -275,6 +282,14 @@ namespace Pokemon
 
         private void BtnCombate_Click(object sender, MouseEventArgs e)
         {
+            ticks = 0;
+            new Animacion_RogueLike(iconoJugador, numCombate);
+            timerAnimacion.Enabled = true;
+        }
+
+        private void IniciarCombate()
+        {
+
             switch (numCombate)
             {
                 case 1:

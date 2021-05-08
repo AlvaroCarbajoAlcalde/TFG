@@ -29,6 +29,7 @@ namespace Pokemon
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_RogueLike));
             this.btnCombate = new System.Windows.Forms.Panel();
             this.labelCombate = new System.Windows.Forms.Label();
@@ -56,7 +57,7 @@ namespace Pokemon
             this.button1 = new System.Windows.Forms.Button();
             this.panelPremios = new System.Windows.Forms.Panel();
             this.iconoJugador = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.timerAnimacion = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectArrowEquipo4)).BeginInit();
@@ -382,7 +383,7 @@ namespace Pokemon
             this.panelPremios.Controls.Add(this.picBoxPkmn6);
             this.panelPremios.Controls.Add(this.picBoxPkmn4);
             this.panelPremios.Controls.Add(this.picBoxPkmn5);
-            this.panelPremios.Location = new System.Drawing.Point(282, 72);
+            this.panelPremios.Location = new System.Drawing.Point(271, 57);
             this.panelPremios.Name = "panelPremios";
             this.panelPremios.Size = new System.Drawing.Size(707, 270);
             this.panelPremios.TabIndex = 40;
@@ -392,20 +393,14 @@ namespace Pokemon
             this.iconoJugador.BackColor = System.Drawing.Color.Transparent;
             this.iconoJugador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconoJugador.BackgroundImage")));
             this.iconoJugador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.iconoJugador.Location = new System.Drawing.Point(36, 213);
+            this.iconoJugador.Location = new System.Drawing.Point(39, 210);
             this.iconoJugador.Name = "iconoJugador";
             this.iconoJugador.Size = new System.Drawing.Size(21, 21);
             this.iconoJugador.TabIndex = 41;
             // 
-            // button2
+            // timerAnimacion
             // 
-            this.button2.Location = new System.Drawing.Point(57, 29);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 42;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.timerAnimacion.Tick += new System.EventHandler(this.TimerAnimacion_Tick);
             // 
             // Form_RogueLike
             // 
@@ -414,11 +409,11 @@ namespace Pokemon
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1203, 426);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.iconoJugador);
             this.Controls.Add(this.panelPremios);
             this.Controls.Add(this.labelCombate);
             this.Controls.Add(this.btnCombate);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1219, 465);
@@ -478,6 +473,6 @@ namespace Pokemon
         public System.Windows.Forms.PictureBox selectArrow1;
         public System.Windows.Forms.Panel panelPremios;
         private System.Windows.Forms.Panel iconoJugador;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer timerAnimacion;
     }
 }

@@ -13,7 +13,7 @@ namespace Pokemon
         private Random random;
         public int auxPok1 = 0, auxPok2 = 0, auxPok3 = 0, auxPok4 = 0, auxPok5 = 0, auxPok6 = 0;
         public int numEntrenador, numPartidas, numVictorias;
-        public Image imageFront, imageBack, iconP1, iconP2, iconP3, iconP4, iconP5, iconP6;
+        public Image imageFront, imageBack, imageMini, iconP1, iconP2, iconP3, iconP4, iconP5, iconP6;
         public string nombre, auxImagen, rutaImagenFront;
         public Pokemon[] equipo;
         public List<Objeto> objetos;
@@ -49,10 +49,11 @@ namespace Pokemon
                 numVictorias = int.Parse(reader[9].ToString());
                 auxImagen = reader[10].ToString();
 
-                imageFront = Image.FromFile(@"Img\Entrenadores\Elegibles\" + auxImagen + "Front.gif");
-                imageBack = Image.FromFile(@"Img\Entrenadores\Elegibles\" + auxImagen + "Back.png");
+                imageFront = Image.FromFile($@"Img\Entrenadores\Elegibles\{auxImagen}Front.gif");
+                imageBack = Image.FromFile($@"Img\Entrenadores\Elegibles\{auxImagen}Back.png");
+                imageMini = Image.FromFile($@"Img\Entrenadores\Elegibles\{auxImagen }Mini.png");
 
-                rutaImagenFront = @"Img\Entrenadores\Elegibles\" + auxImagen + "Front.gif";
+                rutaImagenFront = $@"Img\Entrenadores\Elegibles\{auxImagen}Front.gif";
             }
             reader.Close();
             con.Close();
@@ -67,13 +68,13 @@ namespace Pokemon
         }
         public Entrenador()
         {
-            random = new Random((int)System.DateTime.Now.Ticks);
+            random = new Random((int)DateTime.Now.Ticks);
             equipo = new Pokemon[6];
 
             nombre = GenerarNombreAleatorio();
-            iconP1 = iconP2 = iconP3 = iconP4 = iconP5 = iconP6 = iconP3 = Image.FromFile(@"Img\\PkmIcons\\0.png");
-            imageFront = imageBack = Image.FromFile(@"Img\Entrenadores\NoElegibles\" + nombre + ".png");
-            rutaImagenFront = @"Img\Entrenadores\NoElegibles\" + nombre + ".png";
+            iconP1 = iconP2 = iconP3 = iconP4 = iconP5 = iconP6 = iconP3 = Image.FromFile(@"Img\PkmIcons\0.png");
+            imageFront = imageBack = Image.FromFile($@"Img\Entrenadores\NoElegibles\{nombre}.png");
+            rutaImagenFront = $@"Img\Entrenadores\NoElegibles\{nombre}.png";
 
             //Establecemos los pokemon del equipo
             equipo[0] = new Pokemon(GetNumPokemonAleatorio());
@@ -86,23 +87,23 @@ namespace Pokemon
 
         public Entrenador(Pokemon[] equipo)
         {
-            random = new Random((int)System.DateTime.Now.Ticks);
+            random = new Random((int)DateTime.Now.Ticks);
             this.equipo = equipo;
 
             nombre = GenerarNombreAleatorio();
-            iconP1 = iconP2 = iconP3 = iconP4 = iconP5 = iconP6 = iconP3 = Image.FromFile(@"Img\\PkmIcons\\0.png");
-            imageFront = imageBack = Image.FromFile(@"Img\Entrenadores\NoElegibles\" + nombre + ".png");
-            rutaImagenFront = @"Img\Entrenadores\NoElegibles\" + nombre + ".png";
+            iconP1 = iconP2 = iconP3 = iconP4 = iconP5 = iconP6 = iconP3 = Image.FromFile(@"Img\PkmIcons\0.png");
+            imageFront = imageBack = Image.FromFile($@"Img\Entrenadores\NoElegibles\{nombre}.png");
+            rutaImagenFront = $@"Img\Entrenadores\NoElegibles\{nombre}.png";
         }
 
         public Entrenador(string nombre, int pok1, int pok2, int pok3, int pok4, int pok5, int pok6, string rutaImagenEntrenador)
         {
-            random = new Random((int)System.DateTime.Now.Ticks);
+            random = new Random((int)DateTime.Now.Ticks);
             equipo = new Pokemon[6];
 
             this.nombre = nombre;
             rutaImagenFront = rutaImagenEntrenador;
-            iconP1 = iconP2 = iconP3 = iconP4 = iconP5 = iconP6 = iconP3 = Image.FromFile(@"Img\\PkmIcons\\0.png");
+            iconP1 = iconP2 = iconP3 = iconP4 = iconP5 = iconP6 = iconP3 = Image.FromFile(@"Img\PkmIcons\0.png");
             imageFront = imageBack = Image.FromFile(rutaImagenFront);
             //Establecemos los pokemon del equipo
             equipo[0] = new Pokemon(pok1);
@@ -113,16 +114,18 @@ namespace Pokemon
             equipo[5] = new Pokemon(pok6);
         }
 
-        public Entrenador(int numEntrenador, String cadena)
+        public Entrenador(int numEntrenador, string cadena)
         {
-            random = new Random((int)System.DateTime.Now.Ticks);
+            random = new Random((int)DateTime.Now.Ticks);
 
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select * from RIVAL where ID=" + numEntrenador;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select * from RIVAL where ID={numEntrenador}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -139,10 +142,10 @@ namespace Pokemon
                 auxPok6 = int.Parse(reader[7].ToString());
                 auxImagen = reader[8].ToString();
 
-                imageFront = Image.FromFile(@"Img\Entrenadores\Rivales\" + auxImagen);
-                imageBack = Image.FromFile(@"Img\Entrenadores\Rivales\" + auxImagen);
+                imageFront = Image.FromFile($@"Img\Entrenadores\Rivales\{auxImagen}");
+                imageBack = Image.FromFile($@"Img\Entrenadores\Rivales\{auxImagen}");
 
-                rutaImagenFront = @"Img\Entrenadores\Rivales\" + auxImagen;
+                rutaImagenFront = $@"Img\Entrenadores\Rivales\{auxImagen}";
             }
             reader.Close();
             con.Close();
@@ -155,7 +158,7 @@ namespace Pokemon
         public void GenerarBolsa()
         {
             objetos = new List<Objeto>();
-            Random random = new Random((int)System.DateTime.Now.Ticks);
+            Random random = new Random((int)DateTime.Now.Ticks);
             int numObjetos = random.Next(10, 25);
             for (int i = 0; i < numObjetos; i++)
                 objetos.Add(new Objeto(random.Next(1, 66)));
@@ -203,18 +206,20 @@ namespace Pokemon
 
         private Image GetIcon(int auxPok)
         {
-            Image toReturn = Image.FromFile(@"Img\\PkmIcons\\0.png"); ;
+            Image toReturn = Image.FromFile(@"Img\PkmIcons\0.png"); ;
 
             OleDbConnection con = ConexionAccess.GetConexion();
             con.Open();
 
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "select fk_pokedex from ALMACENAMIENTO where id=" + auxPok;
+            OleDbCommand command = new OleDbCommand
+            {
+                Connection = con,
+                CommandText = $"select fk_pokedex from ALMACENAMIENTO where id={auxPok}"
+            };
             OleDbDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
-                toReturn = Image.FromFile(@"Img\\PkmIcons\\" + reader[0] + ".png");
+                toReturn = Image.FromFile($@"Img\PkmIcons\{reader[0]}.png");
 
             reader.Close();
             con.Close();
