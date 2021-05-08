@@ -28,9 +28,6 @@ namespace Pokemon
         private readonly int[] listaRivalesNvl1, listaRivalesNvl2, listaRivalesNvl3, listaRivalesNvl4, listaRivalesLegendarios;
 
         private readonly Form_Inicio inicio;
-        private static readonly Size originalSize = new Size(1219, 465);
-
-        public Rectangle recLblCombate, recIconoJugador, recBtnCombate;
 
         #endregion
 
@@ -41,9 +38,6 @@ namespace Pokemon
             this.inicio = inicio;
             InitializeComponent();
             iconoJugador.Location = new Point(39, 210);
-            recBtnCombate = btnCombate.Bounds;
-            recLblCombate = labelCombate.Bounds;
-            recIconoJugador = iconoJugador.Bounds;
             numCombate = 1;
             auxEquipo = 0;
             auxPokElegible1 = auxPokElegible2 = auxPokElegible3 = 0;
@@ -363,33 +357,6 @@ namespace Pokemon
                 inicio.Show();
                 Close();
             }
-        }
-
-        #endregion
-
-        #region MustafaResize
-
-        private void Form_Resize(object sender, EventArgs e)
-        {
-            ResizeControl(recIconoJugador, iconoJugador);
-            ResizeControl(recLblCombate, labelCombate);
-            ResizeControl(recBtnCombate, btnCombate);
-        }
-
-        public void ResizeControl(Rectangle originalControl, Control control)
-        {
-            float xRatio = Width / (float)originalSize.Width;
-            float yRatio = Height / (float)originalSize.Height;
-
-            int newX = (int)(originalControl.Location.X * xRatio);
-            int newY = (int)(originalControl.Location.Y * yRatio);
-            int newWidth = (int)(originalControl.Size.Width * xRatio);
-            int newHeight = (int)(originalControl.Size.Height * yRatio);
-
-            control.Size = new Size(newWidth, newHeight);
-            control.Location = new Point(newX, newY);
-
-            control.Font = new Font(control.Font.FontFamily, 12 * yRatio, control.Font.Style);
         }
 
         #endregion
