@@ -101,25 +101,41 @@ public class CombateActivity extends AppCompatActivity {
         btnMov1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Client.enviarMensaje("1");
+                if(!btnMov1.getText().toString().contains(" 0 /")){
+                    Client.enviarMensaje("1");
+                }else{
+                    Toast.makeText(getApplicationContext(), "No quedan PP.", Toast.LENGTH_LONG).show();
+                }
             }
         });
         btnMov2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Client.enviarMensaje("2");
+                if(!btnMov2.getText().toString().contains(" 0 /")){
+                    Client.enviarMensaje("2");
+                }else{
+                    Toast.makeText(getApplicationContext(), "No quedan PP.", Toast.LENGTH_LONG).show();
+                }
             }
         });
         btnMov3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Client.enviarMensaje("3");
+                if(!btnMov3.getText().toString().contains(" 0 /")){
+                    Client.enviarMensaje("3");
+                }else{
+                    Toast.makeText(getApplicationContext(), "No quedan PP.", Toast.LENGTH_LONG).show();
+                }
             }
         });
         btnMov4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Client.enviarMensaje("4");
+                if(!btnMov4.getText().toString().contains(" 0 /")){
+                    Client.enviarMensaje("4");
+                }else{
+                    Toast.makeText(getApplicationContext(), "No quedan PP.", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -166,9 +182,9 @@ public class CombateActivity extends AppCompatActivity {
                             public void run() {
                                 //Trato el contenido
                                 if (mensajeFinal.contains("END")) {
-                                    linearBotonesMovimientos.setVisibility(View.VISIBLE);
-                                } else {
-                                    linearBotonesMovimientos.setVisibility(View.GONE);
+                                    //linearBotonesMovimientos.setVisibility(View.VISIBLE);
+                                } else if(!mensajeFinal.equals("")){
+                                    //linearBotonesMovimientos.setVisibility(View.GONE);
                                     Toast.makeText(getApplicationContext(), mensajeFinal, Toast.LENGTH_LONG).show();
                                 }
                             }

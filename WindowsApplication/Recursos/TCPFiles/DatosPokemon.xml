@@ -9,7 +9,7 @@
 			<NumPokedex>282</NumPokedex>
 			<Nombre>Gardevoir</Nombre>
 			<VidaMax>151</VidaMax>
-			<VidaAct>77</VidaAct>
+			<VidaAct>0</VidaAct>
 
 			<Estado>0</Estado>
 
@@ -41,7 +41,7 @@
 				<MovId>128</MovId>
 				<MovNombre>Comesueños</MovNombre>
 				<MovTipo>13</MovTipo>
-				<PP>15</PP>
+				<PP>14</PP>
 				<PPmax>15</PPmax>
 			</Mov4>
 
@@ -52,48 +52,48 @@
 
 	<Pokemon>
 
-			<IdPok>991</IdPok>
-			<NumPokedex>85</NumPokedex>
-			<Nombre>Dodrio</Nombre>
-			<VidaMax>143</VidaMax>
-			<VidaAct>50</VidaAct>
+			<IdPok>642</IdPok>
+			<NumPokedex>381</NumPokedex>
+			<Nombre>Latios</Nombre>
+			<VidaMax>163</VidaMax>
+			<VidaAct>134</VidaAct>
 
 			<Estado>0</Estado>
 
 			<Mov1>
-				<MovId>161</MovId>
-				<MovNombre>Picotazo</MovNombre>
-				<MovTipo>18</MovTipo>
-				<PP>35</PP>
-				<PPmax>35</PPmax>
+				<MovId>130</MovId>
+				<MovNombre>Descanso</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>10</PP>
+				<PPmax>10</PPmax>
 			</Mov1>
 
 			<Mov2>
-				<MovId>160</MovId>
-				<MovNombre>Pico Taladro</MovNombre>
-				<MovTipo>18</MovTipo>
-				<PP>19</PP>
+				<MovId>126</MovId>
+				<MovNombre>Amnesia</MovNombre>
+				<MovTipo>13</MovTipo>
+				<PP>20</PP>
 				<PPmax>20</PPmax>
 			</Mov2>
 
 			<Mov3>
-				<MovId>193</MovId>
-				<MovNombre>Velocidad Extrema</MovNombre>
-				<MovTipo>11</MovTipo>
-				<PP>5</PP>
-				<PPmax>5</PPmax>
+				<MovId>261</MovId>
+				<MovNombre>Pulso Dragon</MovNombre>
+				<MovTipo>4</MovTipo>
+				<PP>7</PP>
+				<PPmax>10</PPmax>
 			</Mov3>
 
 			<Mov4>
-				<MovId>228</MovId>
-				<MovNombre>Garra Brutal</MovNombre>
-				<MovTipo>11</MovTipo>
-				<PP>10</PP>
-				<PPmax>10</PPmax>
+				<MovId>258</MovId>
+				<MovNombre>Cometa Draco</MovNombre>
+				<MovTipo>4</MovTipo>
+				<PP>4</PP>
+				<PPmax>5</PPmax>
 			</Mov4>
 
-			<Tipo1>11</Tipo1>
-			<Tipo2>18</Tipo2>
+			<Tipo1>4</Tipo1>
+			<Tipo2>13</Tipo2>
 
 	</Pokemon>
 

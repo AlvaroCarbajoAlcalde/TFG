@@ -11,12 +11,6 @@ public class Movimiento {
 
     }
 
-    public Movimiento(int id, String nombre, int tipo){
-        this.id = id;
-        this.nombre = nombre;
-        this.tipo = tipo;
-    }
-
     public int getId() {
         return id;
     }

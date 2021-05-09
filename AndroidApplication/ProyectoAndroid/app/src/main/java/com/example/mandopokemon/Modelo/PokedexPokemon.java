@@ -74,4 +74,5 @@ public class PokedexPokemon {
     public void setAltura(String altura) {
         this.altura = altura;
     }
+
 }
