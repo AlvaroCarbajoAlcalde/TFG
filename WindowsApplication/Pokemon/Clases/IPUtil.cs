@@ -4,6 +4,9 @@ namespace Pokemon.Clases
 {
     class IPUtil
     {
+
+        #region Metodos Estaticos
+
         public static string ObtenerIP()
         {
             IPHostEntry host = Dns.GetHostEntry(Dns.GetHostName());
@@ -16,6 +19,8 @@ namespace Pokemon.Clases
             }
             return string.Empty;
         }
+
+        #endregion
 
     }
 }

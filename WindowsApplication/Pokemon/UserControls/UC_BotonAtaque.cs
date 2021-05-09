@@ -1,19 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Pokemon
 {
     public partial class UC_BotonAtaque : UserControl
     {
+
+        #region Propiedades
+
         public Ataque ataque;
         public Form_Combate combate;
+
+        #endregion
+
+        #region Constructor
 
         public UC_BotonAtaque(Ataque ataque, Form_Combate combate)
         {
@@ -40,6 +41,10 @@ namespace Pokemon
                 labelNombreAtaque.Text = "";
             }
         }
+
+        #endregion
+
+        #region Metodos
 
         private void OnClick(object sender, EventArgs e)
         {
@@ -69,5 +74,8 @@ namespace Pokemon
             if (ataque != null && combate.tm.texto != ataque.descripcion)
                 combate.tm.MostrarTexto(ataque.descripcion);
         }
+
+        #endregion
+
     }
 }

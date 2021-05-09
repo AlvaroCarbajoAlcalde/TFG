@@ -4,6 +4,9 @@ namespace Pokemon
 {
     public partial class Pokedex_Objeto : Form
     {
+
+        #region Constructor
+
         public Pokedex_Objeto()
         {
             InitializeComponent();
@@ -15,5 +18,8 @@ namespace Pokemon
                 panelBolsa.Controls.Add(selector);
             }
         }
+
+        #endregion
+
     }
 }

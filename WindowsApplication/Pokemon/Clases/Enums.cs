@@ -1,6 +1,5 @@
 ﻿namespace Pokemon
 {
-
     #region Estado
 
     //Estados no cambia al ser cambiado el pokemon.

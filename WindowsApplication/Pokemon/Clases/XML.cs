@@ -2,7 +2,7 @@
 using System.Data.OleDb;
 using System.IO;
 
-namespace Pokemon.TFG
+namespace Pokemon
 {
     class XML
     {

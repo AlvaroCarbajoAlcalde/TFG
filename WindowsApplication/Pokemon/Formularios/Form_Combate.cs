@@ -1,5 +1,4 @@
 ﻿using Pokemon.Clases;
-using Pokemon.TFG;
 using System;
 using System.Collections.Generic;
 using System.Data.OleDb;

@@ -9,7 +9,11 @@ namespace Pokemon
 
         #region Propiedades
 
-        private int vidaActual, vidaMaxima, ticksAnimacion, ticksTotales = 15, maximoBarra, vidaCambio, vidaAux;
+        private int vidaActual;
+        private int ticksAnimacion;
+        private readonly int ticksTotales = 15;
+        private readonly int maximoBarra, vidaMaxima;
+        private int vidaCambio, vidaAux;
         private Rectangle vidaVerde, vidaRoja;
         private readonly PictureBox picBoxBarraDeVida, picBoxBarraDeVidaRoja;
         private readonly Label labelVida;
@@ -45,11 +49,9 @@ namespace Pokemon
             vidaActual = pokemon.vidaActual;
 
             //Timers
-            timerAumentarVida = new Timer();
-            timerAumentarVida.Interval = 84;
+            timerAumentarVida = new Timer { Interval = 84 };
             timerAumentarVida.Tick += new EventHandler(TimerAumentarVida_Tick);
-            timerReducirVida = new Timer();
-            timerReducirVida.Interval = 84;
+            timerReducirVida = new Timer { Interval = 84 };
             timerReducirVida.Tick += new EventHandler(TimerReducirVida_Tick);
 
             maximoBarra = 86;

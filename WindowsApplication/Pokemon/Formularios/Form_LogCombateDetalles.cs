@@ -5,6 +5,9 @@ namespace Pokemon
 {
     public partial class Form_LogCombateDetalles : Form
     {
+
+        #region Constructor 
+
         public Form_LogCombateDetalles(string id)
         {
             InitializeComponent();
@@ -24,5 +27,8 @@ namespace Pokemon
             reader.Close();
             con.Close();
         }
+
+        #endregion
+
     }
 }

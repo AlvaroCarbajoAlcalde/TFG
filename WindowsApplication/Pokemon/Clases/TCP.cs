@@ -3,7 +3,7 @@ using System.IO;
 using System.Net.Sockets;
 using System.Text;
 
-namespace Pokemon.TFG
+namespace Pokemon
 {
     public static class TCP
     {

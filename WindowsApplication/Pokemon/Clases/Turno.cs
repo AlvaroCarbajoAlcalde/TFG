@@ -1,5 +1,4 @@
-﻿using Pokemon.TFG;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Drawing;
@@ -333,25 +332,25 @@ namespace Pokemon
                 case Objeto.ObjetcID.Elixir:
                     if (pokemon.mov1 != null)
                     {
-                        pokemon.mov1.ppActuales = pokemon.mov1.ppActuales + 5;
+                        pokemon.mov1.ppActuales += 5;
                         if (pokemon.mov1.ppActuales > pokemon.mov1.ppMax)
                             pokemon.mov1.ppActuales = pokemon.mov1.ppMax;
                     }
                     if (pokemon.mov2 != null)
                     {
-                        pokemon.mov2.ppActuales = pokemon.mov2.ppActuales + 5;
+                        pokemon.mov2.ppActuales += 5;
                         if (pokemon.mov2.ppActuales > pokemon.mov2.ppMax)
                             pokemon.mov2.ppActuales = pokemon.mov2.ppMax;
                     }
                     if (pokemon.mov3 != null)
                     {
-                        pokemon.mov3.ppActuales = pokemon.mov3.ppActuales + 5;
+                        pokemon.mov3.ppActuales += 5;
                         if (pokemon.mov3.ppActuales > pokemon.mov3.ppMax)
                             pokemon.mov3.ppActuales = pokemon.mov3.ppMax;
                     }
                     if (pokemon.mov4 != null)
                     {
-                        pokemon.mov4.ppActuales = pokemon.mov4.ppActuales + 5;
+                        pokemon.mov4.ppActuales += 5;
                         if (pokemon.mov4.ppActuales > pokemon.mov4.ppMax)
                             pokemon.mov4.ppActuales = pokemon.mov4.ppMax;
                     }
@@ -1652,28 +1651,19 @@ namespace Pokemon
                         combate.pokemonBack.imagenFront = combate.pokemonFront.imagenFront;
 
                         if (combate.pokemonFront.mov1 != null)
-                        {
-                            combate.pokemonBack.mov1 = new Ataque(combate.pokemonFront.mov1.idMovimiento);
-                            combate.pokemonBack.mov1.ppActuales = 5;
-                        }
+                            combate.pokemonBack.mov1 = new Ataque(combate.pokemonFront.mov1.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonBack.mov1 = null;
+
                         if (combate.pokemonFront.mov2 != null)
-                        {
-                            combate.pokemonBack.mov2 = new Ataque(combate.pokemonFront.mov2.idMovimiento);
-                            combate.pokemonBack.mov2.ppActuales = 5;
-                        }
+                            combate.pokemonBack.mov2 = new Ataque(combate.pokemonFront.mov2.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonBack.mov2 = null;
+
                         if (combate.pokemonFront.mov3 != null)
-                        {
-                            combate.pokemonBack.mov3 = new Ataque(combate.pokemonFront.mov3.idMovimiento);
-                            combate.pokemonBack.mov3.ppActuales = 5;
-                        }
+                            combate.pokemonBack.mov3 = new Ataque(combate.pokemonFront.mov3.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonBack.mov3 = null;
+
                         if (combate.pokemonFront.mov4 != null)
-                        {
-                            combate.pokemonBack.mov4 = new Ataque(combate.pokemonFront.mov4.idMovimiento);
-                            combate.pokemonBack.mov4.ppActuales = 5;
-                        }
+                            combate.pokemonBack.mov4 = new Ataque(combate.pokemonFront.mov4.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonBack.mov4 = null;
 
                         Image imgPkmnBack = combate.pokemonFront.imagenBack;
@@ -1699,28 +1689,19 @@ namespace Pokemon
                         combate.pokemonFront.imagenFront = combate.pokemonBack.imagenFront;
 
                         if (combate.pokemonBack.mov1 != null)
-                        {
-                            combate.pokemonFront.mov1 = new Ataque(combate.pokemonBack.mov1.idMovimiento);
-                            combate.pokemonFront.mov1.ppActuales = 5;
-                        }
+                            combate.pokemonFront.mov1 = new Ataque(combate.pokemonBack.mov1.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonFront.mov1 = null;
+
                         if (combate.pokemonBack.mov2 != null)
-                        {
-                            combate.pokemonFront.mov2 = new Ataque(combate.pokemonBack.mov2.idMovimiento);
-                            combate.pokemonFront.mov2.ppActuales = 5;
-                        }
+                            combate.pokemonFront.mov2 = new Ataque(combate.pokemonBack.mov2.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonFront.mov2 = null;
+
                         if (combate.pokemonBack.mov3 != null)
-                        {
-                            combate.pokemonFront.mov3 = new Ataque(combate.pokemonBack.mov3.idMovimiento);
-                            combate.pokemonFront.mov3.ppActuales = 5;
-                        }
+                            combate.pokemonFront.mov3 = new Ataque(combate.pokemonBack.mov3.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonFront.mov3 = null;
+
                         if (combate.pokemonBack.mov4 != null)
-                        {
-                            combate.pokemonFront.mov4 = new Ataque(combate.pokemonBack.mov4.idMovimiento);
-                            combate.pokemonFront.mov4.ppActuales = 5;
-                        }
+                            combate.pokemonFront.mov4 = new Ataque(combate.pokemonBack.mov4.idMovimiento) { ppActuales = 5 };
                         else combate.pokemonFront.mov4 = null;
 
                         Image imgPkmnFront = combate.pokemonFront.imagenFront;

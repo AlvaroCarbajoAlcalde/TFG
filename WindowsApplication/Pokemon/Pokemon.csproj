@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationFramework" />
@@ -74,8 +75,8 @@
     <Compile Include="Formularios\Form_RogueLike.Designer.cs">
       <DependentUpon>Form_RogueLike.cs</DependentUpon>
     </Compile>
-    <Compile Include="TFG\XML.cs" />
-    <Compile Include="TFG\TCP.cs" />
+    <Compile Include="Clases\XML.cs" />
+    <Compile Include="Clases\TCP.cs" />
     <Compile Include="UserControls\UC_PokemonRestantes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -316,9 +317,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Img\Recursos\pokeball.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

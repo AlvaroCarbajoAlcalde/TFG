@@ -17,7 +17,7 @@ namespace Pokemon
         public Ataque mov1, mov2, mov3, mov4;
         public Image icono, imagenFront, imagenBack;
         public EstadisticasActuales estadisticasActuales;
-        private int auxiliarM1 = 0, auxiliarM2 = 0, auxiliarM3 = 0, auxiliarM4 = 0;
+        private readonly int auxiliarM1 = 0, auxiliarM2 = 0, auxiliarM3 = 0, auxiliarM4 = 0;
         public bool esShiny;
         public string idLog;
 

@@ -1,5 +1,4 @@
-﻿using Pokemon.TFG;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -10,7 +9,7 @@ namespace Pokemon
 
         #region Propiedades
 
-        private Entrenador[] listaEntrenadores;
+        private readonly Entrenador[] listaEntrenadores;
         private int idActual;
         private readonly int numDatos;
         private bool front;

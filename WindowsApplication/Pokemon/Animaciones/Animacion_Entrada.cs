@@ -37,13 +37,11 @@ namespace Pokemon
             ticks = 0;
 
             //Timers
-            timerAnimacion = new Timer();
-            timerAnimacion.Interval = 55;
-            timerAnimacion.Tick += new EventHandler(this.TimerAnimacion_Tick);
+            timerAnimacion = new Timer { Interval = 55 };
+            timerAnimacion.Tick += new EventHandler(TimerAnimacion_Tick);
 
-            timerPokeball = new Timer();
-            timerPokeball.Interval = 85;
-            timerPokeball.Tick += new EventHandler(this.TimerPokeball_Tick);
+            timerPokeball = new Timer { Interval = 85 };
+            timerPokeball.Tick += new EventHandler(TimerPokeball_Tick);
 
             //Imagen pokemon
             Image imgPokeball = GenerarPokebalRandom();

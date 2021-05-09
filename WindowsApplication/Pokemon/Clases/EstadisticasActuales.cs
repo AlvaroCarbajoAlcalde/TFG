@@ -1,6 +1,6 @@
 ﻿namespace Pokemon
 {
-    public class EstadisticasActuales //Va dentro del pokemon
+    public class EstadisticasActuales
     {
 
         #region Propiedades

@@ -20,8 +20,7 @@ namespace Pokemon
         public TextoMostrar(Label labelTexto)
         {
             this.labelTexto = labelTexto;
-            timerAnimacion = new Timer();
-            timerAnimacion.Interval = 55;
+            timerAnimacion = new Timer { Interval = 55 };
             timerAnimacion.Tick += new EventHandler(TimerAnimacion_Tick);
         }
 
@@ -31,7 +30,7 @@ namespace Pokemon
 
         private void TimerAnimacion_Tick(object sender, EventArgs e)
         {
-            if (ticks >= texto.Length-1)
+            if (ticks >= texto.Length - 1)
             {
                 timerAnimacion.Enabled = false;
                 labelTexto.Text = texto;

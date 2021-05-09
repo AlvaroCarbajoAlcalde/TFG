@@ -4,7 +4,14 @@ namespace Pokemon
 {
     class ConexionAccess
     {
+
+        #region Propiedades
+
         private static OleDbConnection con;
+
+        #endregion
+
+        #region Constructor
 
         private ConexionAccess()
         {
@@ -14,11 +21,18 @@ namespace Pokemon
             };
         }
 
+        #endregion
+
+        #region Metodos
+
         public static OleDbConnection GetConexion()
         {
             if (con == null)
                 new ConexionAccess();
             return con;
         }
+
+        #endregion
+
     }
 }
