@@ -1,0 +1,5428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Pokemons>
+
+	<Pokemon>
+		<IdPok>1</IdPok>
+		<Nombre>Bulbasaur</Nombre>
+		<Categoria>Semilla</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Una rara semilla fue plantada en su espalda al nacer. La planta brota y crece con este Pokémon.</Descripcion>
+		<Peso>6,9 kg</Peso>
+		<Altura>0,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>2</IdPok>
+		<Nombre>Ivysaur</Nombre>
+		<Categoria>Semilla</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Puede aumentar su fuerza con energía solar. Esta también hace que crezca el capullo de su lomo.</Descripcion>
+		<Peso>13 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>3</IdPok>
+		<Nombre>Venusaur</Nombre>
+		<Categoria>Semilla</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Llena su cuerpo de energía con los rayos solares que captan los anchos pétalos de su flor.</Descripcion>
+		<Peso>100 kg</Peso>
+		<Altura>2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>4</IdPok>
+		<Nombre>Charmander</Nombre>
+		<Categoria>Lagartija</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>La llama de la punta de su cola indica su salud. Si Charmander está sano, arderá con más fuerza.</Descripcion>
+		<Peso>8,5 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>5</IdPok>
+		<Nombre>Charmeleon</Nombre>
+		<Categoria>Llama</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando balancea su ardiente cola, eleva la temperatura a niveles muy altos.</Descripcion>
+		<Peso>19 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>6</IdPok>
+		<Nombre>Charizard</Nombre>
+		<Categoria>Llama</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Si Charizard se enfurece, la llama de la punta de su cola producirá destellos de color azul claro.</Descripcion>
+		<Peso>90,5 kg</Peso>
+		<Altura>1,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>7</IdPok>
+		<Nombre>Squirtle</Nombre>
+		<Categoria>Tortuguita</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>El caparazón de Squirtle no sólo lo protege; su forma redondeada y sus hendiduras reducen su resistencia al agua y le permiten nadar más.</Descripcion>
+		<Peso>9 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>8</IdPok>
+		<Nombre>Wartortle</Nombre>
+		<Categoria>Tortuga</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Es el Pokémon que se suele tener como mascota. La cola tan larga y peluda que posee simboliza lo longevo que es.</Descripcion>
+		<Peso>22,5 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>9</IdPok>
+		<Nombre>Blastoise</Nombre>
+		<Categoria>Armazón</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Para acabar con su enemigo, lo aplasta con el peso de su cuerpo. En momentos de apuro, se esconde en el caparzón.</Descripcion>
+		<Peso>85,5 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>10</IdPok>
+		<Nombre>Caterpie</Nombre>
+		<Categoria>Gusano</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Caterpie tiene un apetito voraz. Es capaz de devorar hojas que superen su tamaño en un abrir y cerrar de ojos.</Descripcion>
+		<Peso>2,9 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>11</IdPok>
+		<Nombre>Metapod</Nombre>
+		<Categoria>Capullo</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>La capa que recubre el cuerpo de este Pokémon es tan dura como una plancha de hierro.</Descripcion>
+		<Peso>9,9 kg</Peso>
+		<Altura>0,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>12</IdPok>
+		<Nombre>Butterfree</Nombre>
+		<Categoria>Mariposa</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Butterfree tiene una habilidad especial para encontrar rico néctar en las flores. Localiza, extrae y transporta polen de flores.</Descripcion>
+		<Peso>32 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>13</IdPok>
+		<Nombre>Weedle</Nombre>
+		<Categoria>Oruga</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Suele habitar bosques y praderas. Tiene afilado y venenoso aguijón de unos 5 cm encima de su cabeza.</Descripcion>
+		<Peso>3,2 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>14</IdPok>
+		<Nombre>Kakuna</Nombre>
+		<Categoria>Capullo</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Este Pokémon permanece inmóvil mientras desarrolla internamente su organismo. Es prácticamente incapaz de moverse solo.</Descripcion>
+		<Peso>10 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>15</IdPok>
+		<Nombre>Beedrill</Nombre>
+		<Categoria>Abeja veneno</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Puede aparecer en enjambres volando a gran velocidad. Suele usar el venenoso aguijón inferior para atacar.</Descripcion>
+		<Peso>29,5 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>16</IdPok>
+		<Nombre>Pidgey</Nombre>
+		<Categoria>Pajarito</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Es muy manso y prefiere evitar los problemas. Sin embargo, si le molestan atacará ferozmente.</Descripcion>
+		<Peso>1,8 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>17</IdPok>
+		<Nombre>Pidgeotto</Nombre>
+		<Categoria>Pájaro</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Muy protector de su amplio territorio, este Pokémon picoteará ferozmente a los intrusos.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>18</IdPok>
+		<Nombre>Pidgeot</Nombre>
+		<Categoria>Pájaro</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Aleteando sus alas con toda su fuerza, Pidgeot puede hacer una ráfaga de viento capaz de doblar árboles altos.</Descripcion>
+		<Peso>39,5 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>19</IdPok>
+		<Nombre>Rattata</Nombre>
+		<Categoria>Ratón</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Tiene unos largos y afilados colmillos que no dejan de crecer. Le resultan muy útiles para destruir cosas.</Descripcion>
+		<Peso>3,5 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>20</IdPok>
+		<Nombre>Raticate</Nombre>
+		<Categoria>Ratón</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Lima sus colmillos royendo objetos duros. Con ellos puede destruir incluso paredes de hormigón.</Descripcion>
+		<Peso>18,5 kg</Peso>
+		<Altura>0,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>21</IdPok>
+		<Nombre>Spearow</Nombre>
+		<Categoria>Pajarito</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Cuando pía, se le puede oír a 1 km. Si a su agudo chillido le sigue una especie de eco, estaremos oyendo a otros Spearow responder.</Descripcion>
+		<Peso>2 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>22</IdPok>
+		<Nombre>Fearow</Nombre>
+		<Categoria>Pico</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Gracias a sus espléndidas alas puede alcanzar una gran altura y volar durante un día entero sin tener que parar.</Descripcion>
+		<Peso>38 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>23</IdPok>
+		<Nombre>Ekans</Nombre>
+		<Categoria>Serpiente</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Se enrosca para descansar. Esta posición le permite responder en caso de amenaza, pues le basta erguir la cabeza en cualquier dirección.</Descripcion>
+		<Peso>6,9 kg</Peso>
+		<Altura>2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>24</IdPok>
+		<Nombre>Arbok</Nombre>
+		<Categoria>Cobra</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>El dibujo que tiene en la panza aterroriza. Los rivales más débiles salen huyendo al verlo.</Descripcion>
+		<Peso>65 kg</Peso>
+		<Altura>3,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>25</IdPok>
+		<Nombre>Pikachu</Nombre>
+		<Categoria>Ratón</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de los mofletes.</Descripcion>
+		<Peso>6 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>26</IdPok>
+		<Nombre>Raichu</Nombre>
+		<Categoria>Ratón</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Si sus mejillas se cargan por completo de electricidad, ambas orejas se levantarán.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>27</IdPok>
+		<Nombre>Sandshrew</Nombre>
+		<Categoria>Ratón</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Si cae de gran altura, este Pokémon podría convertirse en una pelota y rebotar contra el suelo.</Descripcion>
+		<Peso>12 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>28</IdPok>
+		<Nombre>Sandslash</Nombre>
+		<Categoria>Ratón</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Se enrosca para protegerse del enemigo y de los golpes de calor que hay durante el día, cuando aumenta la temperatura.</Descripcion>
+		<Peso>29,5 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>29</IdPok>
+		<Nombre>NidoranHembra</Nombre>
+		<Categoria>Pin veneno</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Pequeña y dócil, cuando la atacan, utiliza el cuerno venenoso que tiene encima de la cabeza.</Descripcion>
+		<Peso>7 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>30</IdPok>
+		<Nombre>Nidorina</Nombre>
+		<Categoria>Pin veneno</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando descansa profundamente, sus cuernos se contraen.</Descripcion>
+		<Peso>20 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>31</IdPok>
+		<Nombre>Nidoqueen</Nombre>
+		<Categoria>Taladro</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Su cuerpo está cubierto por pequeñas escamas. Nunca parece acobardarse ante ningún ataque.</Descripcion>
+		<Peso>60 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>32</IdPok>
+		<Nombre>NidoranMacho</Nombre>
+		<Categoria>Pin veneno</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sus largas orejas se mantienen siempre alerta. Si siente peligro, atacará con su venenoso cuerno.</Descripcion>
+		<Peso>9 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>33</IdPok>
+		<Nombre>Nidorino</Nombre>
+		<Categoria>Pin veneno</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sus cuernos contienen veneno. Si se introducen en el cuerpo del enemigo, soltarán su tóxica carga.</Descripcion>
+		<Peso>19,5 kg</Peso>
+		<Altura>0,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>34</IdPok>
+		<Nombre>Nidoking</Nombre>
+		<Categoria>Taladro</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Duro como el acero, posee una poderosa carga. Sus cuernos son tan duros como el diamante.</Descripcion>
+		<Peso>62 kg</Peso>
+		<Altura>1,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>35</IdPok>
+		<Nombre>Clefairy</Nombre>
+		<Categoria>Hada</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su aspecto jovial y vivaracho lo hace adorable. Piensan que son raros, ya que no son muy comunes.</Descripcion>
+		<Peso>7,5 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>36</IdPok>
+		<Nombre>Clefable</Nombre>
+		<Categoria>Hada</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Protege bastante bien su propio entorno.</Descripcion>
+		<Peso>40 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>37</IdPok>
+		<Nombre>Vulpix</Nombre>
+		<Categoria>Zorro</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su piel y colas son preciosas. Cuando crecen las colas, se dividen formando nuevas colas.</Descripcion>
+		<Peso>9,9 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>38</IdPok>
+		<Nombre>Ninetales</Nombre>
+		<Categoria>Zorro</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>De acuerdo con una antigua leyenda, este Pokémon es la reencarnación de 9 nobles santos.</Descripcion>
+		<Peso>19,9 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>39</IdPok>
+		<Nombre>Jigglypuff</Nombre>
+		<Categoria>Globo</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Utiliza sus misteriosos ojos para engañar a su enemigo. También cantará para dormirlo</Descripcion>
+		<Peso>5,5 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>40</IdPok>
+		<Nombre>Wigglytuff</Nombre>
+		<Categoria>Globo</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su piel es tan suave que si dos de ellos se acurrucan juntos, no querrán separarse nunca.</Descripcion>
+		<Peso>12 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>41</IdPok>
+		<Nombre>Zubat</Nombre>
+		<Categoria>Murcielago</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Emite sonidos ultrasónicos mientras vuela. Los utiliza como sónar para evitar obstáculos.</Descripcion>
+		<Peso>7,5 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>42</IdPok>
+		<Nombre>Golbat</Nombre>
+		<Categoria>Murcielago</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Por muy dura que sea la piel de su víctima, clava sus afilados colmillos para atiborrarse de su sangre</Descripcion>
+		<Peso>55 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>43</IdPok>
+		<Nombre>Oddish</Nombre>
+		<Categoria>Hierbajo</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Despertado por la luz de la luna, vaga por la noche. De día se mantiene en silencio bajo la tierra.</Descripcion>
+		<Peso>5,4 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>44</IdPok>
+		<Nombre>Gloom</Nombre>
+		<Categoria>Hierbajo</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Lo que parece ser baba es realmente miel. Es muy pegajoso y se adhiere tercamente si lo tocas.</Descripcion>
+		<Peso>8,6 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>45</IdPok>
+		<Nombre>Vileplume</Nombre>
+		<Categoria>Flor</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Tiene los pétalos más grandes del mundo. Éstos expulsan densas nubes de polen tóxico al caminar</Descripcion>
+		<Peso>18,6 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>46</IdPok>
+		<Nombre>Paras</Nombre>
+		<Categoria>Hongo</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>3</Tipo2>
+		<Descripcion>Está cubierto de esporas de seta al nacer. A medida que crece, las setas brotan de su lomo.</Descripcion>
+		<Peso>5,4 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>47</IdPok>
+		<Nombre>Parasect</Nombre>
+		<Categoria>Hongo</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>3</Tipo2>
+		<Descripcion>	Suele vivir en lugares oscuros y húmedos, los preferidos, no del bicho, sino de la seta de su lmo</Descripcion>
+		<Peso>29,5 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>48</IdPok>
+		<Nombre>Venonat</Nombre>
+		<Categoria>Insecto</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sus ojos también funcionan como radares. Atrapa y come pequeños bichos ocultos en la oscuridad.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>49</IdPok>
+		<Nombre>Venomoth</Nombre>
+		<Categoria>Polilla Venenosa</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Cuando ataca, agita sus largas alas violentamente para esparcir polvo venenoso a su alrededor</Descripcion>
+		<Peso>12,5 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>50</IdPok>
+		<Nombre>Diglett</Nombre>
+		<Categoria>Topo</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su piel es muy fina. Si se expone a la luz, su sangre se calienta y su crecimiento se debilita</Descripcion>
+		<Peso>0,8 kg</Peso>
+		<Altura>0,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>51</IdPok>
+		<Nombre>Dugtrio</Nombre>
+		<Categoria>Topo</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Un trío de Diglett. Causa enormes terremotos cavando 80 km por debajo del suelo.</Descripcion>
+		<Peso>33,3 kg</Peso>
+		<Altura>0,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>52</IdPok>
+		<Nombre>Meowth</Nombre>
+		<Categoria>Gato araña</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Adora los objetos redondos. De noche, camina por las calles en busca de monedas perdidas.</Descripcion>
+		<Peso>4,2 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>53</IdPok>
+		<Nombre>Persian</Nombre>
+		<Categoria>Gato fino</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Aunque es muy admirado por su pelo, es difícil de entrenar como mascota por su voluble maldad.</Descripcion>
+		<Peso>32 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>54</IdPok>
+		<Nombre>Psyduck</Nombre>
+		<Categoria>Pato</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Aunque calma al enemigo con su vacía mirada, este Pokémon usará poderes psicoquinéticos.</Descripcion>
+		<Peso>19,6 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>55</IdPok>
+		<Nombre>Golduck</Nombre>
+		<Categoria>Pato</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Suele ser visto nadando elegante por los lagos. Es confundido con el monstruo japonés, Kappa.</Descripcion>
+		<Peso>76,6 kg</Peso>
+		<Altura>1,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>56</IdPok>
+		<Nombre>Mankey</Nombre>
+		<Categoria>Mono cerdo</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Se enfada muy fácilmente. Puede pasar de la tranquilidad a la ira en apenas un segundo.</Descripcion>
+		<Peso>28 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>57</IdPok>
+		<Nombre>Primeape</Nombre>
+		<Categoria>Mono cerdo</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Siempre furioso y tenaz con sus patadas. Perseguirá a su presa hasta que la atrape.</Descripcion>
+		<Peso>32 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>58</IdPok>
+		<Nombre>Growlithe</Nombre>
+		<Categoria>Perrito</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Gran defensor de su territorio. Ladrará y morderá para echar a los intrusos de su espacio.</Descripcion>
+		<Peso>19 kg</Peso>
+		<Altura>0,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>59</IdPok>
+		<Nombre>Arcanine</Nombre>
+		<Categoria>Leyenda</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Un Pokémon muy admirado desde la antigüedad por su belleza. Corre ágilmente como si tuviera alas.</Descripcion>
+		<Peso>155 kg</Peso>
+		<Altura>1,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>60</IdPok>
+		<Nombre>Poliwag</Nombre>
+		<Categoria>Renacuajo</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sus nuevas y pequeñas patas no le dejan correr. Parece que prefiere nadar a estar de pie.</Descripcion>
+		<Peso>12,4 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>61</IdPok>
+		<Nombre>Poliwhirl</Nombre>
+		<Categoria>Renacuajo</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Capaz de vivir dentro o fuera del agua. Fuera del agua suda para mantener su cuerpo baboso.</Descripcion>
+		<Peso>20 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>62</IdPok>
+		<Nombre>Poliwrath</Nombre>
+		<Categoria>Renacuajo</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Experto nadador tanto en braza como en crawl. Gana fácilmente a todo nadador humano.</Descripcion>
+		<Peso>54 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>63</IdPok>
+		<Nombre>Abra</Nombre>
+		<Categoria>Psi</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Con su capacidad de leer la mente, detecta cualquier peligro y se teletransporta a un lugar seguro.</Descripcion>
+		<Peso>19,5 kg</Peso>
+		<Altura>0,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>64</IdPok>
+		<Nombre>Kadabra</Nombre>
+		<Categoria>Psi</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Emite ondas-alfa especiales de su cuerpo que causan jaquecas a todo aquel que se acerca.</Descripcion>
+		<Peso>56,5 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>65</IdPok>
+		<Nombre>Alakazam</Nombre>
+		<Categoria>Psi</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su cerebro puede ganar al de un súper-ordenador. Tiene un coeficiente intelectual de 5000.</Descripcion>
+		<Peso>48 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>66</IdPok>
+		<Nombre>Machop</Nombre>
+		<Categoria>Superpoder</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Le encanta ser musculoso. Se entrena en todo tipo de arte marcial para ser aún más fuerte.</Descripcion>
+		<Peso>19,5 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>67</IdPok>
+		<Nombre>Machoke</Nombre>
+		<Categoria>Superpoder</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su musculoso cuerpo es tan fuerte que usa un cinto anti-fuerza para controlar sus movimientos.</Descripcion>
+		<Peso>70,5 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>68</IdPok>
+		<Nombre>Machamp</Nombre>
+		<Categoria>Superpoder</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Con sus fuertes músculos, lanza bestiales puñetazos y envía a su víctima al lejano horizonte.</Descripcion>
+		<Peso>130 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>69</IdPok>
+		<Nombre>Bellsprout</Nombre>
+		<Categoria>Flor</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Un Pokémon carnívoro que caza insectos. Usa sus raíces para absorber humedad.</Descripcion>
+		<Peso>4 kg</Peso>
+		<Altura>0,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>70</IdPok>
+		<Nombre>Weepinbell</Nombre>
+		<Categoria>Matamoscas</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Escupe polvo-veneno para envenenar al enemigo, y luego lo liquida con su ácido.</Descripcion>
+		<Peso>6,4 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>71</IdPok>
+		<Nombre>Victreebel</Nombre>
+		<Categoria>Matamoscas</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Vive en grandes colonias en el interior de las junglas, aunque nadie ha podido verificarlo.</Descripcion>
+		<Peso>15,5 kg</Peso>
+		<Altura>1,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>72</IdPok>
+		<Nombre>Tentacool</Nombre>
+		<Categoria>Medusa</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Va a la deriva a poca profundidad. Si es pescado por accidente, el castigo será su punzante ácido</Descripcion>
+		<Peso>45,5 kg</Peso>
+		<Altura>0,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>73</IdPok>
+		<Nombre>Tentacruel</Nombre>
+		<Categoria>Medusa</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>De tentáculos cortos, cuando caza los extiende para atrapar e inmovilizar a su presa.</Descripcion>
+		<Peso>55 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>74</IdPok>
+		<Nombre>Geodude</Nombre>
+		<Categoria>Roca</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Aparece en llanos y montañas. Semejantes a las rocas, la gente se tropieza con ellos o los pisa.</Descripcion>
+		<Peso>20 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>75</IdPok>
+		<Nombre>Graveler</Nombre>
+		<Categoria>Roca</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Se mueve rodando cuesta abajo. Rueda sobre todo obstáculo sin frenar o cambiar de dirección.</Descripcion>
+		<Peso>105 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>76</IdPok>
+		<Nombre>Golem</Nombre>
+		<Categoria>Megaton</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Su cuerpo rocoso es super duro. Soporta las explosiones de dinamita sin sufrir daño.</Descripcion>
+		<Peso>300 kg</Peso>
+		<Altura>1,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>77</IdPok>
+		<Nombre>Ponyta</Nombre>
+		<Categoria>Caballo fuego</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sus cascos son 10 veces más duros que el diamante. Puede pisotear cualquier cosa en poco tiempo.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>78</IdPok>
+		<Nombre>Rapidash</Nombre>
+		<Categoria>Caballo fuego</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Muy competitivo, este Pokémon perseguirá a todo lo que se mueva rápido, esperando ganarle.</Descripcion>
+		<Peso>95 kg</Peso>
+		<Altura>1,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>79</IdPok>
+		<Nombre>Slowpoke</Nombre>
+		<Categoria>Atontado</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Increíblemente lento y torpe. Tardará 5 segundos en sentir dolor si es atacado.</Descripcion>
+		<Peso>36 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>80</IdPok>
+		<Nombre>Slowbro</Nombre>
+		<Categoria>Ermitaño</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Dicen que el Shellder pegado a la cola de Slowpoke se nutre de los residuos del anfitrión.</Descripcion>
+		<Peso>78,5 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>81</IdPok>
+		<Nombre>Magnemite</Nombre>
+		<Categoria>Iman</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Anula la gravedad para mantenerse en el aire. Sin previo aviso usa la ondatrueno y parecidos.</Descripcion>
+		<Peso>6 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>82</IdPok>
+		<Nombre>Magneton</Nombre>
+		<Categoria>Iman</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Están formados por Magnemite unidos. Suelen aparecer cuando arden las manchas solares.</Descripcion>
+		<Peso>60 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>83</IdPok>
+		<Nombre>Farfetch'd</Nombre>
+		<Categoria>Pato salvaje</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>La ramita de cebollas verdes que lleva es su arma. Suele usarla como una espada.</Descripcion>
+		<Peso>15 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>84</IdPok>
+		<Nombre>Doduo</Nombre>
+		<Categoria>Ave gemela</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Un pájaro que compensa su pobre vuelo caminando muy rápidamente. Deja enormes huellas.</Descripcion>
+		<Peso>39,2 kg</Peso>
+		<Altura>1,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>85</IdPok>
+		<Nombre>Dodrio</Nombre>
+		<Categoria>Ave triple</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Para tramar sus planes usa sus tres cerebros. Cuando 2 cabezas duermen, la otra sigue despierta.</Descripcion>
+		<Peso>85,2 kg</Peso>
+		<Altura>1,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>86</IdPok>
+		<Nombre>Seel</Nombre>
+		<Categoria>Leon marino</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>El cuerno que sobresale de su cabeza es muy duro. Suele usarlo para romper el hielo.</Descripcion>
+		<Peso>90 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>87</IdPok>
+		<Nombre>Dewgong</Nombre>
+		<Categoria>Leon marino</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Guarda energía térmica en su cuerpo. Nada a 8 nudos sin parar hasta en aguas muy frías.</Descripcion>
+		<Peso>120 kg</Peso>
+		<Altura>1,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>88</IdPok>
+		<Nombre>Grimer</Nombre>
+		<Categoria>Lodo</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Aparece en zonas asquerosas. Crece absorbiendo los residuos tóxicos expulsados por las fábricas.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>0,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>89</IdPok>
+		<Nombre>Muk</Nombre>
+		<Categoria>Lodo</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Está cubierto por un repugnante lodo. Es tan tóxico que hasta sus huellas son venenosas.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>90</IdPok>
+		<Nombre>Shellder</Nombre>
+		<Categoria>Bivalvo</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su caparazón repele cualquier tipo de ataque. Sólo cuando abre su caparazón es vulnerable.</Descripcion>
+		<Peso>4 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>91</IdPok>
+		<Nombre>Cloyster</Nombre>
+		<Categoria>Bivalvo</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Cuando es atacado lanza sus cuernos con gran rapidez. Sus entrañas jamás han sido vistas.</Descripcion>
+		<Peso>132,5 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>92</IdPok>
+		<Nombre>Gastly</Nombre>
+		<Categoria>Gas</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Casi invisible, este gaseoso Pokémon cubre al enemigo y lo adormece sin previo aviso.</Descripcion>
+		<Peso>0,1 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>93</IdPok>
+		<Nombre>Haunter</Nombre>
+		<Categoria>Gas</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Por su habilidad para atravesar muros de piedra, se dice que viene de otra dimensión.</Descripcion>
+		<Peso>0,1 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>94</IdPok>
+		<Nombre>Gengar</Nombre>
+		<Categoria>Sombra</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>En luna llena, a este Pokémon le gusta imitar las sombras de la gente y burlarse de sus miedos.</Descripcion>
+		<Peso>40,5 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>95</IdPok>
+		<Nombre>Onix</Nombre>
+		<Categoria>Serpiente roca</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Cuando crece, las partes rocosas de su cuerpo se endurecen. Acaba pareciéndose a un diamante negro.</Descripcion>
+		<Peso>210 kg</Peso>
+		<Altura>8,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>96</IdPok>
+		<Nombre>Drowzee</Nombre>
+		<Categoria>Hipnosis</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Adormece a sus enemigos y se come sus sueños. A veces se pone enfermo si come pesadillas.</Descripcion>
+		<Peso>32,4 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>97</IdPok>
+		<Nombre>Hypno</Nombre>
+		<Categoria>Hipnosis</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando mira al enemigo, usa una mezcla de movimientos psíquicos, como la hipnosis y la confusión.</Descripcion>
+		<Peso>75,6 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>98</IdPok>
+		<Nombre>Krabby</Nombre>
+		<Categoria>Cangrejo</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sus pinzas son potentes armas, además de usarlas para equilibrarse cuando camina lateralmente.</Descripcion>
+		<Peso>6,5 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>99</IdPok>
+		<Nombre>Kingler</Nombre>
+		<Categoria>Tenaza</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>La pinza más grande tiene una enorme potencia, pero su gran tamaño la hace poco manejable.</Descripcion>
+		<Peso>60 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>100</IdPok>
+		<Nombre>Voltorb</Nombre>
+		<Categoria>Bola</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Suele vivir en centrales de energía. Mucha gente muere al confundirlo con una Poké Ball.</Descripcion>
+		<Peso>10,4 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>101</IdPok>
+		<Nombre>Electrode</Nombre>
+		<Categoria>Bola</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Almacena una gran cantidad de electricidad en su Una pequeña sacudida le hará explotar.</Descripcion>
+		<Peso>66,6 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>102</IdPok>
+		<Nombre>Exeggcute</Nombre>
+		<Categoria>Huevo</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Si alguno se separa de los seis, la energía que les une le absorberá y le devolverá junto a sus compañeros.</Descripcion>
+		<Peso>2,5 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>103</IdPok>
+		<Nombre>Exeggutor</Nombre>
+		<Categoria>Coco</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Si se le cae una cabeza, emite una señal telepática para buscar a más y formar un grupo de Exeggcute</Descripcion>
+		<Peso>120 kg</Peso>
+		<Altura>2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>104</IdPok>
+		<Nombre>Cubone</Nombre>
+		<Categoria>Solitario</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Nada más nacer perdió a su madre. Lleva puesto su cráneo para no desvelar a nadie su identidad.</Descripcion>
+		<Peso>6,5 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>105</IdPok>
+		<Nombre>Marowak</Nombre>
+		<Categoria>Apilahueso</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>En algún rincón del mundo, hay un cementerio sólo para Marowak. De ahí es de donde coge los huesos</Descripcion>
+		<Peso>45 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>106</IdPok>
+		<Nombre>Hitmonlee</Nombre>
+		<Categoria>Patada</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Se le conoce como el Maestro de las Patadas. Utiliza la elasticidad que tiene para dar sus famosas patadas.</Descripcion>
+		<Peso>49,8 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>107</IdPok>
+		<Nombre>Hitmonchan</Nombre>
+		<Categoria>Puñetazo</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Gira los brazos con rapidez para coger fuerza antes de golpear. Los ataques con puño son su fuerte.</Descripcion>
+		<Peso>50,2 kg</Peso>
+		<Altura>1,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>108</IdPok>
+		<Nombre>Lickitung</Nombre>
+		<Categoria>Lengutazo</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Este Pokémon está provisto de una lengua de más de 2 m que le viene muy bien para asearse a diario.</Descripcion>
+		<Peso>65,5 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>109</IdPok>
+		<Nombre>Koffing</Nombre>
+		<Categoria>Gas Venenoso</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Si alguien se le acerca cuando libera gas venenoso, se puede ver el remolino gaseoso que tiene dentro.</Descripcion>
+		<Peso>1 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>110</IdPok>
+		<Nombre>Weezing</Nombre>
+		<Categoria>Gas Venenoso</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Al inhalar los gases tóxicos que se desprenden de la basura, se hincha y el hedor que emite es horrible.</Descripcion>
+		<Peso>9,5 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>111</IdPok>
+		<Nombre>Rhyhorn</Nombre>
+		<Categoria>Clavos</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>La cabeza no le da para retener más de una cosa. Si se pone a correr, se le olvida por qué empezó a hacerlo.</Descripcion>
+		<Peso>115 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>112</IdPok>
+		<Nombre>Rhydon</Nombre>
+		<Categoria>Taladro</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Con poco que haga girar el cuerno anillado de la cabeza, será capaz de horadar el diamante más duro.</Descripcion>
+		<Peso>120 kg</Peso>
+		<Altura>1,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>113</IdPok>
+		<Nombre>Chansey</Nombre>
+		<Categoria>Huevo</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Es un Pokémon muy codiciado por los nutritivos huevos que lleva. Pero es realmente difícil dar con él.</Descripcion>
+		<Peso>34,6 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>114</IdPok>
+		<Nombre>Tangela</Nombre>
+		<Categoria>Enredadera</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Durante el combate no deja de mover los tentáculos que cubren su cuerpo para molestar a sus enemigos.</Descripcion>
+		<Peso>35 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>115</IdPok>
+		<Nombre>Kangaskhan</Nombre>
+		<Categoria>Maternal</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Tiene la costumbre de dormir de pie para no aplastar a la cría que lleva acurrucada en la bolsa.</Descripcion>
+		<Peso>80 kg</Peso>
+		<Altura>2,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>116</IdPok>
+		<Nombre>Horsea</Nombre>
+		<Categoria>Dragon</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando están en un lugar seguro, se ponen a juguetear y a enroscarse entre ellos por las colas.</Descripcion>
+		<Peso>8 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>117</IdPok>
+		<Nombre>Seadra</Nombre>
+		<Categoria>Dragon</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>En esta especie, es el macho quien cría a la prole. Si se acerca algún intruso, usará sus venenosos pinchos.</Descripcion>
+		<Peso>25 kg</Peso>
+		<Altura>1,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>118</IdPok>
+		<Nombre>Goldeen</Nombre>
+		<Categoria>Pez color</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>En época de desove, resulta fácil verles chapotear en busca de la pareja perfecta.</Descripcion>
+		<Peso>15 kg</Peso>
+		<Altura>0,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>119</IdPok>
+		<Nombre>Seaking</Nombre>
+		<Categoria>Pez color</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Con la llegada del otoño, los machos patrullan la zona donde están sus nidos para evitar cualquier peligro.</Descripcion>
+		<Peso>39 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>120</IdPok>
+		<Nombre>Staryu</Nombre>
+		<Categoria>Estrella</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Por la noche, con el centelleo de las estrellas, emergen del agua y les parpadea el núcleo del cuerpo.</Descripcion>
+		<Peso>34,5 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>121</IdPok>
+		<Nombre>Starmie</Nombre>
+		<Categoria>Misterioso</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin tener en cuenta el entorno en el que vive, su cuerpo crece para formar una figura geométrica.</Descripcion>
+		<Peso>80 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>122</IdPok>
+		<Nombre>Mr_Mime</Nombre>
+		<Categoria>Barrera</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Tiene una rara habilidad: puede solidificar el aire con los dedos y crear un muro invisible.</Descripcion>
+		<Peso>54,5 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>123</IdPok>
+		<Nombre>Scyther</Nombre>
+		<Categoria>Mantis</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Está orgulloso de la velocidad que alcanza. Sus ataques son tan rápidos que ni ves que te ha dado.</Descripcion>
+		<Peso>56 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>124</IdPok>
+		<Nombre>Jynx</Nombre>
+		<Categoria>Forma humana</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Uno de sus rasgos es el amplio abanico de alaridos que tiene. Según parece, cada uno significa algo.</Descripcion>
+		<Peso>40,6 kg</Peso>
+		<Altura>1,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>125</IdPok>
+		<Nombre>Electabuzz</Nombre>
+		<Categoria>Electrico</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Al rozarse con otro Electabuzz, controla las corrientes eléctricas que comunican sus sentimientos.</Descripcion>
+		<Peso>30 kg</Peso>
+		<Altura>1,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>126</IdPok>
+		<Nombre>Magmar</Nombre>
+		<Categoria>Escupefuego</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Su cuerpo siempre arde con brillo naranja, con el que se oculta entre las llamas.</Descripcion>
+		<Peso>44,5 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>127</IdPok>
+		<Nombre>Pinsir</Nombre>
+		<Categoria>Escarabajo</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Si no consigue triturar a su víctima con sus pinzas, le dará vueltas y la arrojará lejos.</Descripcion>
+		<Peso>55 kg</Peso>
+		<Altura>1,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>128</IdPok>
+		<Nombre>Tauros</Nombre>
+		<Categoria>Toro bravo</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando ve a un enemigo, carga ferozmente con su cuerpo azotando sus largas colas.</Descripcion>
+		<Peso>88,4 kg</Peso>
+		<Altura>1,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>129</IdPok>
+		<Nombre>Magikarp</Nombre>
+		<Categoria>Pez</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>En un pasado lejano, era más fuerte que sus horribles descendientes de hoy en día.</Descripcion>
+		<Peso>10 kg</Peso>
+		<Altura>0,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>130</IdPok>
+		<Nombre>Gyarados</Nombre>
+		<Categoria>Atrocidad</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Poco visto en la naturaleza. Enorme y malo, es capaz de destruir ciudades enteras de un ataque.</Descripcion>
+		<Peso>235 kg</Peso>
+		<Altura>6,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>131</IdPok>
+		<Nombre>Lapras</Nombre>
+		<Categoria>Transporte</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Un Pokémon que ha sido cazado casi hasta la extinción. Puede llevar a la gente por el agua.</Descripcion>
+		<Peso>220 kg</Peso>
+		<Altura>2,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>132</IdPok>
+		<Nombre>Ditto</Nombre>
+		<Categoria>Transformación</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Puede copiar el código genético de un enemigo y transformarse en una réplica de éste.</Descripcion>
+		<Peso>4 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>133</IdPok>
+		<Nombre>Eevee</Nombre>
+		<Categoria>Evolución</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>De irregular código genético, puede mutar si se le expone a la radiación de los elementos roca.</Descripcion>
+		<Peso>6,5 kg</Peso>
+		<Altura>0,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>134</IdPok>
+		<Nombre>Vaporeon</Nombre>
+		<Categoria>Burbuja</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Vive cerca del agua. Su larga cola termina en una aleta muy parecida a la de una sirena.</Descripcion>
+		<Peso>29 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>135</IdPok>
+		<Nombre>Jolteon</Nombre>
+		<Categoria>Relámpago</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Acumula iones negativos en la atmósfera para lanzar rayos de 10000 voltios de potencia.</Descripcion>
+		<Peso>24,5 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>136</IdPok>
+		<Nombre>Flareon</Nombre>
+		<Categoria>Llama</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Cuando almacena energía térmica en su cuerpo, su temperatura puede subir a más de 1600 grados.</Descripcion>
+		<Peso>25 kg</Peso>
+		<Altura>0,9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>137</IdPok>
+		<Nombre>Porygon</Nombre>
+		<Categoria>Virtual</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Un Pokémon formado por códigos de programación. Se mueve libre en el ciberespacio.</Descripcion>
+		<Peso>36,5 kg</Peso>
+		<Altura>0,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>138</IdPok>
+		<Nombre>Omanyte</Nombre>
+		<Categoria>Espiral</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Aunque extinto, en algunas ocasiones puede ser resucitado genéticamente de los fósiles.</Descripcion>
+		<Peso>7,5 kg</Peso>
+		<Altura>0,4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>139</IdPok>
+		<Nombre>Omastar</Nombre>
+		<Categoria>Espiral</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Un prehistórico Pokémon que murió cuando su pesada concha le impidió atrapar a sus presas.</Descripcion>
+		<Peso>35 kg</Peso>
+		<Altura>1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>140</IdPok>
+		<Nombre>Kabuto</Nombre>
+		<Categoria>Armazón</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Un Pokémon resucitado de un fósil, encontrado en lo que hace eones fuera el fondo oceánico.</Descripcion>
+		<Peso>11,5 kg</Peso>
+		<Altura>0,5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>141</IdPok>
+		<Nombre>Kabutops</Nombre>
+		<Categoria>Armazón</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Con su impecable forma es un gran nadador. Corta a su presa con sus garras y absorbe sus fluidos.</Descripcion>
+		<Peso>40,5 kg</Peso>
+		<Altura>1,3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>142</IdPok>
+		<Nombre>Aerodactyl</Nombre>
+		<Categoria>Fósil</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Un prehistórico y feroz Pokémon que ataca con sus colmillos la garganta del enemigo.</Descripcion>
+		<Peso>59 kg</Peso>
+		<Altura>1,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>143</IdPok>
+		<Nombre>Snorlax</Nombre>
+		<Categoria>Dormilón</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Es muy vago. Sólo come y duerme. A medida que engorda se vuelve cada vez más perezoso.</Descripcion>
+		<Peso>460 kg</Peso>
+		<Altura>2,1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>144</IdPok>
+		<Nombre>Articuno</Nombre>
+		<Categoria>Congelar</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Un legendario pájaro Pokémon. Se aparece a la gente que se ha perdido en las heladas montañas.</Descripcion>
+		<Peso>55,4 kg</Peso>
+		<Altura>1,7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>145</IdPok>
+		<Nombre>Zapdos</Nombre>
+		<Categoria>Eléctrico</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Un legendario pájaro Pokémon. Dicen que aparece entre las nubes lanzando enormes rayos brillantes.</Descripcion>
+		<Peso>52,6 kg</Peso>
+		<Altura>1,6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>146</IdPok>
+		<Nombre>Moltres</Nombre>
+		<Categoria>Llama</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Más conocido como el legendario pájaro de fuego. Con cada aleteo crea brillantes llamas.</Descripcion>
+		<Peso>60 kg</Peso>
+		<Altura>2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>147</IdPok>
+		<Nombre>Dratini</Nombre>
+		<Categoria>Dragón</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Considerado como un mítico Pokémon durante años hasta que fue encontrada una colonia submarina.</Descripcion>
+		<Peso>3,3 kg</Peso>
+		<Altura>1,8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>148</IdPok>
+		<Nombre>Dragonair</Nombre>
+		<Categoria>Dragón</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Un místico Pokémon rodeado de una sutil aura y con capacidad de cambiar la climatología.</Descripcion>
+		<Peso>16,5 kg</Peso>
+		<Altura>4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>149</IdPok>
+		<Nombre>Dragonite</Nombre>
+		<Categoria>Dragón</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Un Pokémon marino que es muy raro de ver. Dicen que es tan inteligente como los humanos.</Descripcion>
+		<Peso>210 kg</Peso>
+		<Altura>2,2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>150</IdPok>
+		<Nombre>Mewtwo</Nombre>
+		<Categoria>Genético</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Fue creado por un científico tras años de horribles experimentos de ingeniería genética.</Descripcion>
+		<Peso>122 kg</Peso>
+		<Altura>2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>151</IdPok>
+		<Nombre>Mew</Nombre>
+		<Categoria>Nueva especie</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Es tan raro que muchos expertos opinan que es solo una ilusión. Solo unos pocos lo han visto.</Descripcion>
+		<Peso>4 kg</Peso>
+		<Altura>0,4</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>152</IdPok>
+		<Nombre>Chikorita</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.4 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>153</IdPok>
+		<Nombre>Bayleef</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.8 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>154</IdPok>
+		<Nombre>Meganium</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>100.5 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>155</IdPok>
+		<Nombre>Cyndaquil</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.9 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>156</IdPok>
+		<Nombre>Quilava</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>19.0 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>157</IdPok>
+		<Nombre>Typhlosion</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>79.5 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>158</IdPok>
+		<Nombre>Totodile</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>9.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>159</IdPok>
+		<Nombre>Croconaw</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>25.0 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>160</IdPok>
+		<Nombre>Feraligatr</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>88.8 kg</Peso>
+		<Altura>2.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>161</IdPok>
+		<Nombre>Sentret</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>162</IdPok>
+		<Nombre>Furret</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>32.5 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>163</IdPok>
+		<Nombre>Hoothoot</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>21.2 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>164</IdPok>
+		<Nombre>Noctowl</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>40.8 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>165</IdPok>
+		<Nombre>Ledyba</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>10.8 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>166</IdPok>
+		<Nombre>Ledian</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>35.6 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>167</IdPok>
+		<Nombre>Spinarak</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>8.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>168</IdPok>
+		<Nombre>Ariados</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>33.5 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>169</IdPok>
+		<Nombre>Crobat</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>75.0 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>170</IdPok>
+		<Nombre>Chinchou</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>5</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>12.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>171</IdPok>
+		<Nombre>Lanturn</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>5</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>22.5 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>172</IdPok>
+		<Nombre>Pichu</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.0 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>173</IdPok>
+		<Nombre>Cleffa</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.0 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>174</IdPok>
+		<Nombre>Igglybuff</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.0 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>175</IdPok>
+		<Nombre>Togepi</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.5 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>176</IdPok>
+		<Nombre>Togetic</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.2 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>177</IdPok>
+		<Nombre>Natu</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.0 kg</Peso>
+		<Altura>0.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>178</IdPok>
+		<Nombre>Xatu</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>179</IdPok>
+		<Nombre>Mareep</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.8 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>180</IdPok>
+		<Nombre>Flaaffy</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>13.3 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>181</IdPok>
+		<Nombre>Ampharos</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>61.5 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>182</IdPok>
+		<Nombre>Bellossom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.8 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>183</IdPok>
+		<Nombre>Marill</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>8.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>184</IdPok>
+		<Nombre>Azumarill</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.5 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>185</IdPok>
+		<Nombre>Sudowoodo</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>38.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>186</IdPok>
+		<Nombre>Politoed</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>33.9 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>187</IdPok>
+		<Nombre>Hoppip</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>188</IdPok>
+		<Nombre>Skiploom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>189</IdPok>
+		<Nombre>Jumpluff</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>190</IdPok>
+		<Nombre>Aipom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.5 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>191</IdPok>
+		<Nombre>Sunkern</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.8 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>192</IdPok>
+		<Nombre>Sunflora</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>8.5 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>193</IdPok>
+		<Nombre>Yanma</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>38.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>194</IdPok>
+		<Nombre>Wooper</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>8.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>195</IdPok>
+		<Nombre>Quagsire</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>75.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>196</IdPok>
+		<Nombre>Espeon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>26.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>197</IdPok>
+		<Nombre>Umbreon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>27.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>198</IdPok>
+		<Nombre>Murkrow</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.1 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>199</IdPok>
+		<Nombre>Slowking</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>79.5 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>200</IdPok>
+		<Nombre>Misdreavus</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>201</IdPok>
+		<Nombre>Unown</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>202</IdPok>
+		<Nombre>Wobbuffet</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.5 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>203</IdPok>
+		<Nombre>Girafarig</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>41.5 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>204</IdPok>
+		<Nombre>Pineco</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.2 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>205</IdPok>
+		<Nombre>Forretress</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>125.8 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>206</IdPok>
+		<Nombre>Dunsparce</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>14.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>207</IdPok>
+		<Nombre>Gligar</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>64.8 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>208</IdPok>
+		<Nombre>Steelix</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>400.0 kg</Peso>
+		<Altura>9.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>209</IdPok>
+		<Nombre>Snubbull</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.8 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>210</IdPok>
+		<Nombre>Granbull</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>48.7 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>211</IdPok>
+		<Nombre>Qwilfish</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.9 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>212</IdPok>
+		<Nombre>Scizor</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>118.0 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>213</IdPok>
+		<Nombre>Shuckle</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>214</IdPok>
+		<Nombre>Heracross</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>54.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>215</IdPok>
+		<Nombre>Sneasel</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.0 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>216</IdPok>
+		<Nombre>Teddiursa</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>8.8 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>217</IdPok>
+		<Nombre>Ursaring</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>125.8 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>218</IdPok>
+		<Nombre>Slugma</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>35.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>219</IdPok>
+		<Nombre>Magcargo</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>55.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>220</IdPok>
+		<Nombre>Swinub</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>221</IdPok>
+		<Nombre>Piloswine</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>55.8 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>222</IdPok>
+		<Nombre>Corsola</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>223</IdPok>
+		<Nombre>Remoraid</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>12.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>224</IdPok>
+		<Nombre>Octillery</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>225</IdPok>
+		<Nombre>Delibird</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>16.0 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>226</IdPok>
+		<Nombre>Mantine</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>220.0 kg</Peso>
+		<Altura>2.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>227</IdPok>
+		<Nombre>Skarmory</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>50.5 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>228</IdPok>
+		<Nombre>Houndour</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>7</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>10.8 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>229</IdPok>
+		<Nombre>Houndoom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>7</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>35.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>230</IdPok>
+		<Nombre>Kingdra</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>4</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>152.0 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>231</IdPok>
+		<Nombre>Phanpy</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>33.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>232</IdPok>
+		<Nombre>Donphan</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>120.0 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>233</IdPok>
+		<Nombre>Porygon2</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>32.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>234</IdPok>
+		<Nombre>Stantler</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>71.2 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>235</IdPok>
+		<Nombre>Smeargle</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>58.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>236</IdPok>
+		<Nombre>Tyrogue</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>21.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>237</IdPok>
+		<Nombre>Hitmontop</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>48.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>238</IdPok>
+		<Nombre>Smoochum</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.0 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>239</IdPok>
+		<Nombre>Elekid</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>240</IdPok>
+		<Nombre>Magby</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>21.4 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>241</IdPok>
+		<Nombre>Miltank</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>75.5 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>242</IdPok>
+		<Nombre>Blissey</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>46.8 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>243</IdPok>
+		<Nombre>Raikou</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>178.0 kg</Peso>
+		<Altura>1.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>244</IdPok>
+		<Nombre>Entei</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>198.0 kg</Peso>
+		<Altura>2.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>245</IdPok>
+		<Nombre>Suicune</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>187.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>246</IdPok>
+		<Nombre>Larvitar</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>72.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>247</IdPok>
+		<Nombre>Pupitar</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>152.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>248</IdPok>
+		<Nombre>Tyranitar</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>202.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>249</IdPok>
+		<Nombre>Lugia</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>216.0 kg</Peso>
+		<Altura>5.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>250</IdPok>
+		<Nombre>HoOh</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>199.0 kg</Peso>
+		<Altura>3.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>251</IdPok>
+		<Nombre>Celebi</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>252</IdPok>
+		<Nombre>Treecko</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>253</IdPok>
+		<Nombre>Grovyle</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>21.6 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>254</IdPok>
+		<Nombre>Sceptile</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>52.2 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>255</IdPok>
+		<Nombre>Torchic</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>256</IdPok>
+		<Nombre>Combusken</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>19.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>257</IdPok>
+		<Nombre>Blaziken</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>52.0 kg</Peso>
+		<Altura>1.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>258</IdPok>
+		<Nombre>Mudkip</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.6 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>259</IdPok>
+		<Nombre>Marshtomp</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>260</IdPok>
+		<Nombre>Swampert</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>81.9 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>261</IdPok>
+		<Nombre>Poochyena</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>13.6 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>262</IdPok>
+		<Nombre>Mightyena</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>37.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>263</IdPok>
+		<Nombre>Zigzagoon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>17.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>264</IdPok>
+		<Nombre>Linoone</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>32.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>265</IdPok>
+		<Nombre>Wurmple</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.6 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>266</IdPok>
+		<Nombre>Silcoon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>10.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>267</IdPok>
+		<Nombre>Beautifly</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.4 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>268</IdPok>
+		<Nombre>Cascoon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.5 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>269</IdPok>
+		<Nombre>Dustox</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>31.6 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>270</IdPok>
+		<Nombre>Lotad</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.6 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>271</IdPok>
+		<Nombre>Lombre</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>32.5 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>272</IdPok>
+		<Nombre>Ludicolo</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>55.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>273</IdPok>
+		<Nombre>Seedot</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>4.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>274</IdPok>
+		<Nombre>Nuzleaf</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>275</IdPok>
+		<Nombre>Shiftry</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>59.6 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>276</IdPok>
+		<Nombre>Taillow</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.3 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>277</IdPok>
+		<Nombre>Swellow</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>19.8 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>278</IdPok>
+		<Nombre>Wingull</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>9.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>279</IdPok>
+		<Nombre>Pelipper</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>28.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>280</IdPok>
+		<Nombre>Ralts</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.6 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>281</IdPok>
+		<Nombre>Kirlia</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.2 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>282</IdPok>
+		<Nombre>Gardevoir</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>48.4 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>283</IdPok>
+		<Nombre>Surskit</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.7 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>284</IdPok>
+		<Nombre>Masquerain</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.6 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>285</IdPok>
+		<Nombre>Shroomish</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>4.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>286</IdPok>
+		<Nombre>Breloom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>39.2 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>287</IdPok>
+		<Nombre>Slakoth</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>24.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>288</IdPok>
+		<Nombre>Vigoroth</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>46.5 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>289</IdPok>
+		<Nombre>Slaking</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>130.5 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>290</IdPok>
+		<Nombre>Nincada</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>291</IdPok>
+		<Nombre>Ninjask</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>12.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>292</IdPok>
+		<Nombre>Shedinja</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>6</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.2 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>293</IdPok>
+		<Nombre>Whismur</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>16.3 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>294</IdPok>
+		<Nombre>Loudred</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>40.5 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>295</IdPok>
+		<Nombre>Exploud</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>84.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>296</IdPok>
+		<Nombre>Makuhita</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>86.4 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>297</IdPok>
+		<Nombre>Hariyama</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>253.8 kg</Peso>
+		<Altura>2.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>298</IdPok>
+		<Nombre>Azurill</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.0 kg</Peso>
+		<Altura>0.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>299</IdPok>
+		<Nombre>Nosepass</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>97.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>300</IdPok>
+		<Nombre>Skitty</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>301</IdPok>
+		<Nombre>Delcatty</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>32.6 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>302</IdPok>
+		<Nombre>Sableye</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>303</IdPok>
+		<Nombre>Mawile</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>304</IdPok>
+		<Nombre>Aron</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>60.0 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>305</IdPok>
+		<Nombre>Lairon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>120.0 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>306</IdPok>
+		<Nombre>Aggron</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>360.0 kg</Peso>
+		<Altura>2.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>307</IdPok>
+		<Nombre>Meditite</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.2 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>308</IdPok>
+		<Nombre>Medicham</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>31.5 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>309</IdPok>
+		<Nombre>Electrike</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.2 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>310</IdPok>
+		<Nombre>Manectric</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>40.2 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>311</IdPok>
+		<Nombre>Plusle</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>4.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>312</IdPok>
+		<Nombre>Minun</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>4.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>313</IdPok>
+		<Nombre>Volbeat</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>17.7 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>314</IdPok>
+		<Nombre>Illumise</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>17.7 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>315</IdPok>
+		<Nombre>Roselia</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.0 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>316</IdPok>
+		<Nombre>Gulpin</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>10.3 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>317</IdPok>
+		<Nombre>Swalot</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>80.0 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>318</IdPok>
+		<Nombre>Carvanha</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.8 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>319</IdPok>
+		<Nombre>Sharpedo</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>88.8 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>320</IdPok>
+		<Nombre>Wailmer</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>130.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>321</IdPok>
+		<Nombre>Wailord</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>398.0 kg</Peso>
+		<Altura>14.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>322</IdPok>
+		<Nombre>Numel</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>24.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>323</IdPok>
+		<Nombre>Camerupt</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>220.0 kg</Peso>
+		<Altura>1.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>324</IdPok>
+		<Nombre>Torkoal</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>80.4 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>325</IdPok>
+		<Nombre>Spoink</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>30.6 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>326</IdPok>
+		<Nombre>Grumpig</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>71.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>327</IdPok>
+		<Nombre>Spinda</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.0 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>328</IdPok>
+		<Nombre>Trapinch</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>329</IdPok>
+		<Nombre>Vibrava</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>4</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.3 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>330</IdPok>
+		<Nombre>Flygon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>4</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>82.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>331</IdPok>
+		<Nombre>Cacnea</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>51.3 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>332</IdPok>
+		<Nombre>Cacturne</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>77.4 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>333</IdPok>
+		<Nombre>Swablu</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>334</IdPok>
+		<Nombre>Altaria</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.6 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>335</IdPok>
+		<Nombre>Zangoose</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>40.3 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>336</IdPok>
+		<Nombre>Seviper</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>52.5 kg</Peso>
+		<Altura>2.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>337</IdPok>
+		<Nombre>Lunatone</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>168.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>338</IdPok>
+		<Nombre>Solrock</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>154.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>339</IdPok>
+		<Nombre>Barboach</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.9 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>340</IdPok>
+		<Nombre>Whiscash</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.6 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>341</IdPok>
+		<Nombre>Corphish</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>11.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>342</IdPok>
+		<Nombre>Crawdaunt</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>32.8 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>343</IdPok>
+		<Nombre>Baltoy</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>21.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>344</IdPok>
+		<Nombre>Claydol</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>108.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>345</IdPok>
+		<Nombre>Lileep</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.8 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>346</IdPok>
+		<Nombre>Cradily</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>60.4 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>347</IdPok>
+		<Nombre>Anorith</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>3</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>12.5 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>348</IdPok>
+		<Nombre>Armaldo</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>3</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>68.2 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>349</IdPok>
+		<Nombre>Feebas</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.4 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>350</IdPok>
+		<Nombre>Milotic</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>162.0 kg</Peso>
+		<Altura>6.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>351</IdPok>
+		<Nombre>Castform</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.8 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>352</IdPok>
+		<Nombre>Kecleon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>22.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>353</IdPok>
+		<Nombre>Shuppet</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.3 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>354</IdPok>
+		<Nombre>Banette</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>12.5 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>355</IdPok>
+		<Nombre>Duskull</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>356</IdPok>
+		<Nombre>Dusclops</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>30.6 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>357</IdPok>
+		<Nombre>Tropius</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>100.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>358</IdPok>
+		<Nombre>Chimecho</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>359</IdPok>
+		<Nombre>Absol</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>47.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>360</IdPok>
+		<Nombre>Wynaut</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>14.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>361</IdPok>
+		<Nombre>Snorunt</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>16.8 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>362</IdPok>
+		<Nombre>Glalie</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>256.5 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>363</IdPok>
+		<Nombre>Spheal</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>39.5 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>364</IdPok>
+		<Nombre>Sealeo</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>87.6 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>365</IdPok>
+		<Nombre>Walrein</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>150.6 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>366</IdPok>
+		<Nombre>Clamperl</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>52.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>367</IdPok>
+		<Nombre>Huntail</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>27.0 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>368</IdPok>
+		<Nombre>Gorebyss</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>22.6 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>369</IdPok>
+		<Nombre>Relicanth</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.4 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>370</IdPok>
+		<Nombre>Luvdisc</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>8.7 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>371</IdPok>
+		<Nombre>Bagon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>42.1 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>372</IdPok>
+		<Nombre>Shelgon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>110.5 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>373</IdPok>
+		<Nombre>Salamence</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>102.6 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>374</IdPok>
+		<Nombre>Beldum</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>95.2 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>375</IdPok>
+		<Nombre>Metang</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>202.5 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>376</IdPok>
+		<Nombre>Metagross</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>550.0 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>377</IdPok>
+		<Nombre>Regirock</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>230.0 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>378</IdPok>
+		<Nombre>Regice</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>175.0 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>379</IdPok>
+		<Nombre>Registeel</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>205.0 kg</Peso>
+		<Altura>1.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>380</IdPok>
+		<Nombre>Latias</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>40.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>381</IdPok>
+		<Nombre>Latios</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>60.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>382</IdPok>
+		<Nombre>Kyogre</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>352.0 kg</Peso>
+		<Altura>4.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>383</IdPok>
+		<Nombre>Groudon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>950.0 kg</Peso>
+		<Altura>3.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>384</IdPok>
+		<Nombre>Rayquaza</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>206.5 kg</Peso>
+		<Altura>7.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>385</IdPok>
+		<Nombre>Jirachi</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.1 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>386</IdPok>
+		<Nombre>Deoxys</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>60.8 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>387</IdPok>
+		<Nombre>Turtwig</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>10.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>388</IdPok>
+		<Nombre>Grotle</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>97.0 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>389</IdPok>
+		<Nombre>Torterra</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>310.0 kg</Peso>
+		<Altura>2.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>390</IdPok>
+		<Nombre>Chimchar</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.2 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>391</IdPok>
+		<Nombre>Monferno</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>22.0 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>392</IdPok>
+		<Nombre>Infernape</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>55.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>393</IdPok>
+		<Nombre>Piplup</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>394</IdPok>
+		<Nombre>Prinplup</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>395</IdPok>
+		<Nombre>Empoleon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>84.5 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>396</IdPok>
+		<Nombre>Starly</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.0 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>397</IdPok>
+		<Nombre>Staravia</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.5 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>398</IdPok>
+		<Nombre>Staraptor</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>24.9 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>399</IdPok>
+		<Nombre>Bidoof</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>400</IdPok>
+		<Nombre>Bibarel</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>2</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>31.5 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>401</IdPok>
+		<Nombre>Kricketot</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.2 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>402</IdPok>
+		<Nombre>Kricketune</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>25.5 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>403</IdPok>
+		<Nombre>Shinx</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>9.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>404</IdPok>
+		<Nombre>Luxio</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>30.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>405</IdPok>
+		<Nombre>Luxray</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>42.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>406</IdPok>
+		<Nombre>Budew</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.2 kg</Peso>
+		<Altura>0.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>407</IdPok>
+		<Nombre>Roserade</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>17</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>14.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>408</IdPok>
+		<Nombre>Cranidos</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>31.5 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>409</IdPok>
+		<Nombre>Rampardos</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>102.5 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>410</IdPok>
+		<Nombre>Shieldon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>57.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>411</IdPok>
+		<Nombre>Bastiodon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>149.5 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>412</IdPok>
+		<Nombre>Burmy</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.4 kg</Peso>
+		<Altura>0.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>413</IdPok>
+		<Nombre>Wormadam</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>12</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>414</IdPok>
+		<Nombre>Mothim</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.3 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>415</IdPok>
+		<Nombre>Combee</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.5 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>416</IdPok>
+		<Nombre>Vespiquen</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>38.5 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>417</IdPok>
+		<Nombre>Pachirisu</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.9 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>418</IdPok>
+		<Nombre>Buizel</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>29.5 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>419</IdPok>
+		<Nombre>Floatzel</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>33.5 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>420</IdPok>
+		<Nombre>Cherubi</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.3 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>421</IdPok>
+		<Nombre>Cherrim</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>9.3 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>422</IdPok>
+		<Nombre>Shellos</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>6.3 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>423</IdPok>
+		<Nombre>Gastrodon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>29.9 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>424</IdPok>
+		<Nombre>Ambipom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.3 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>425</IdPok>
+		<Nombre>Drifloon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>426</IdPok>
+		<Nombre>Drifblim</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>427</IdPok>
+		<Nombre>Buneary</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>5.5 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>428</IdPok>
+		<Nombre>Lopunny</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>33.3 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>429</IdPok>
+		<Nombre>Mismagius</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>4.4 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>430</IdPok>
+		<Nombre>Honchkrow</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>27.3 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>431</IdPok>
+		<Nombre>Glameow</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.9 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>432</IdPok>
+		<Nombre>Purugly</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>43.8 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>433</IdPok>
+		<Nombre>Chingling</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.6 kg</Peso>
+		<Altura>0.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>434</IdPok>
+		<Nombre>Stunky</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>19.2 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>435</IdPok>
+		<Nombre>Skuntank</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>38.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>436</IdPok>
+		<Nombre>Bronzor</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>60.5 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>437</IdPok>
+		<Nombre>Bronzong</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>13</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>187.0 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>438</IdPok>
+		<Nombre>Bonsly</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>15.0 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>439</IdPok>
+		<Nombre>Mime_Jr</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>13.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>440</IdPok>
+		<Nombre>Happiny</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>24.4 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>441</IdPok>
+		<Nombre>Chatot</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.9 kg</Peso>
+		<Altura>0.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>442</IdPok>
+		<Nombre>Spiritomb</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>108.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>443</IdPok>
+		<Nombre>Gible</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.5 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>444</IdPok>
+		<Nombre>Gabite</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>56.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>445</IdPok>
+		<Nombre>Garchomp</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>4</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>95.0 kg</Peso>
+		<Altura>1.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>446</IdPok>
+		<Nombre>Munchlax</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>105.0 kg</Peso>
+		<Altura>0.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>447</IdPok>
+		<Nombre>Riolu</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>20.2 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>448</IdPok>
+		<Nombre>Lucario</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>10</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>54.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>449</IdPok>
+		<Nombre>Hippopotas</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>49.5 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>450</IdPok>
+		<Nombre>Hippowdon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>300.0 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>451</IdPok>
+		<Nombre>Skorupi</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>3</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>12.0 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>452</IdPok>
+		<Nombre>Drapion</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>15</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>61.5 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>453</IdPok>
+		<Nombre>Croagunk</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>23.0 kg</Peso>
+		<Altura>0.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>454</IdPok>
+		<Nombre>Toxicroak</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>17</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>44.4 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>455</IdPok>
+		<Nombre>Carnivine</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>27.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>456</IdPok>
+		<Nombre>Finneon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>7.0 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>457</IdPok>
+		<Nombre>Lumineon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>24.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>458</IdPok>
+		<Nombre>Mantyke</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>65.0 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>459</IdPok>
+		<Nombre>Snover</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>50.5 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>460</IdPok>
+		<Nombre>Abomasnow</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>135.5 kg</Peso>
+		<Altura>2.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>461</IdPok>
+		<Nombre>Weavile</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>9</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>34.0 kg</Peso>
+		<Altura>1.1 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>462</IdPok>
+		<Nombre>Magnezone</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>180.0 kg</Peso>
+		<Altura>1.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>463</IdPok>
+		<Nombre>Lickilicky</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>140.0 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>464</IdPok>
+		<Nombre>Rhyperior</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>14</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>282.8 kg</Peso>
+		<Altura>2.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>465</IdPok>
+		<Nombre>Tangrowth</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>128.6 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>466</IdPok>
+		<Nombre>Electivire</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>138.6 kg</Peso>
+		<Altura>1.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>467</IdPok>
+		<Nombre>Magmortar</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>68.0 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>468</IdPok>
+		<Nombre>Togekiss</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>38.0 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>469</IdPok>
+		<Nombre>Yanmega</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>3</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>51.5 kg</Peso>
+		<Altura>1.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>470</IdPok>
+		<Nombre>Leafeon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>25.5 kg</Peso>
+		<Altura>1.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>471</IdPok>
+		<Nombre>Glaceon</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>25.9 kg</Peso>
+		<Altura>0.8 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>472</IdPok>
+		<Nombre>Gliscor</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>16</Tipo1>
+		<Tipo2>18</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>42.5 kg</Peso>
+		<Altura>2.0 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>473</IdPok>
+		<Nombre>Mamoswine</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>16</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>291.0 kg</Peso>
+		<Altura>2.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>474</IdPok>
+		<Nombre>PorygonZ</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>34.0 kg</Peso>
+		<Altura>0.9 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>475</IdPok>
+		<Nombre>Gallade</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>10</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>52.0 kg</Peso>
+		<Altura>1.6 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>476</IdPok>
+		<Nombre>Probopass</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>14</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>340.0 kg</Peso>
+		<Altura>1.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>477</IdPok>
+		<Nombre>Dusknoir</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>106.6 kg</Peso>
+		<Altura>2.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>478</IdPok>
+		<Nombre>Froslass</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>9</Tipo1>
+		<Tipo2>6</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>26.6 kg</Peso>
+		<Altura>1.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>479</IdPok>
+		<Nombre>Rotom</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>5</Tipo1>
+		<Tipo2>6</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.3 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>480</IdPok>
+		<Nombre>Uxie</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.3 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>481</IdPok>
+		<Nombre>Mesprit</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.3 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>482</IdPok>
+		<Nombre>Azelf</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>0.3 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>483</IdPok>
+		<Nombre>Dialga</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>1</Tipo1>
+		<Tipo2>4</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>683.0 kg</Peso>
+		<Altura>5.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>484</IdPok>
+		<Nombre>Palkia</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>4</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>336.0 kg</Peso>
+		<Altura>4.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>485</IdPok>
+		<Nombre>Heatran</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>7</Tipo1>
+		<Tipo2>1</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>430.0 kg</Peso>
+		<Altura>1.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>486</IdPok>
+		<Nombre>Regigigas</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>420.0 kg</Peso>
+		<Altura>3.7 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>487</IdPok>
+		<Nombre>Giratina</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>6</Tipo1>
+		<Tipo2>4</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>750.0 kg</Peso>
+		<Altura>4.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>488</IdPok>
+		<Nombre>Cresselia</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>13</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>85.6 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>489</IdPok>
+		<Nombre>Phione</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>3.1 kg</Peso>
+		<Altura>0.4 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>490</IdPok>
+		<Nombre>Manaphy</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>2</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>1.4 kg</Peso>
+		<Altura>0.3 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>491</IdPok>
+		<Nombre>Darkrai</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>15</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>50.5 kg</Peso>
+		<Altura>1.5 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>492</IdPok>
+		<Nombre>Shaymin</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>12</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>2.1 kg</Peso>
+		<Altura>0.2 m</Altura>
+	</Pokemon>
+
+	<Pokemon>
+		<IdPok>493</IdPok>
+		<Nombre>Arceus</Nombre>
+		<Categoria>Vacio</Categoria>
+		<Tipo1>11</Tipo1>
+		<Tipo2>0</Tipo2>
+		<Descripcion>Sin Descripcion</Descripcion>
+		<Peso>320.0 kg</Peso>
+		<Altura>3.2 m</Altura>
+	</Pokemon>
+
+</Pokemons>
